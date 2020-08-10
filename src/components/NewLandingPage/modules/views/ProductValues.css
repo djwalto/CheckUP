@@ -1,0 +1,11 @@
+.book {
+    transform: scale(3.5);
+}
+
+.map {
+    transform: scale(3.5); 
+}
+
+.person {
+    transform: scale(3.5); 
+}
