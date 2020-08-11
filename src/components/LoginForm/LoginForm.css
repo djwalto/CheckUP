@@ -46,10 +46,17 @@
 
 .arrow {
     margin-top: 20px !important;
-    margin-right: 60%;
+    margin-right: 80%;
     transform: scale(1.8);
+    color: white;
 }
 
 .logbutton {
     margin-top: 50px !important;
+}
+
+.home {
+   color: black;
+    transform: scale(2.0);
+   
 }

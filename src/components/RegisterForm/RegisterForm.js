@@ -13,6 +13,9 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
 import "./RegisterForm.css";
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import HomeIcon from '@material-ui/icons/Home';
+import { Link } from 'react-router-dom';
 
 class RegisterForm extends Component {
   state = {
@@ -45,6 +48,7 @@ class RegisterForm extends Component {
           <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className="paper">
+              <ArrowBackIcon className="arrow" />
               <Avatar className="avatar">
               </Avatar>
               <Typography component="h1" variant="h5">
@@ -163,12 +167,17 @@ class RegisterForm extends Component {
                       Login
           </Button>
                   </center>
+                  <Link to="/home" >
+                    <HomeIcon className="home" />
+                  </Link>
                 </div>
+
               </form>
+
             </div>
           </Container>
         </Card>
-      </div>
+      </div >
 
 
     );

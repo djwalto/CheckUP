@@ -9,7 +9,7 @@ import Typography from "@material-ui/core/Typography";
 const Nav = (props) => {
     let loginLinkData = {
         path: '/login',
-        text: 'Login / Register',
+        text: 'Login',
     };
 
     if (props.store.user.id != null) {

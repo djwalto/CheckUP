@@ -15,6 +15,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Link } from 'react-router-dom';
+import HomeIcon from '@material-ui/icons/Home';
 
 
 class LoginForm extends Component {
@@ -52,7 +53,10 @@ class LoginForm extends Component {
           <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className="paper">
+
               <ArrowBackIcon className="arrow" />
+              <br></br>
+              <br></br>
               <Avatar className="avatar">
                 <LockOutlinedIcon />
               </Avatar>
@@ -127,6 +131,9 @@ class LoginForm extends Component {
           </Button>
                   </Link>
                 </center>
+                <Link to="/home">
+                  <HomeIcon className='home' />
+                </Link>
               </form>
             </div>
           </Container>
