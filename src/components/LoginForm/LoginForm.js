@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
-
+import "./LoginForm.css"
+import Card from "@material-ui/core/Card";
+import Button from "@material-ui/core/Button";
+import Checkbox from '@material-ui/core/Checkbox';
+import Grid from '@material-ui/core/Grid';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Typography from '@material-ui/core/Typography';
+import Avatar from '@material-ui/core/Avatar';
+import Container from '@material-ui/core/Container';
 class LoginForm extends Component {
   state = {
     username: '',
@@ -32,49 +43,82 @@ class LoginForm extends Component {
 
   render() {
     return (
-      <form className="formPanel" onSubmit={this.login}>
-        <h2>Login</h2>
-        {this.props.store.errors.loginMessage && (
-          <h3
-            className="alert"
-            role="alert"
-          >
-            {this.props.store.errors.loginMessage}
-          </h3>
-        )}
-        <div>
-          <label htmlFor="username">
-            Username:
-            <input
-              type="text"
-              name="username"
-              required
-              value={this.state.username}
-              onChange={this.handleInputChangeFor('username')}
-            />
-          </label>
-        </div>
-        <div>
-          <label htmlFor="password">
-            Password:
-            <input
-              type="password"
-              name="password"
-              required
-              value={this.state.password}
-              onChange={this.handleInputChangeFor('password')}
-            />
-          </label>
-        </div>
-        <div>
-          <input
-            className="log-in"
-            type="submit"
-            name="submit"
-            value="Log In"
-          />
-        </div>
-      </form>
+      <div className="login">
+        <Card onSubmit={this.login}>
+          <Container component="main" maxWidth="xs">
+            <CssBaseline />
+            <div className="paper">
+              <Avatar className="avatar">
+                <LockOutlinedIcon />
+              </Avatar>
+              <Typography component="h1" variant="h5">
+                Sign in
+                    </Typography>
+              {this.props.store.errors.loginMessage && (
+                <h3
+                  className="alert"
+                  role="alert"
+                >
+                  {this.props.store.errors.loginMessage}
+                </h3>
+              )}
+              <form className="form" noValidate>
+                <TextField
+                  variant="outlined"
+                  margin="normal"
+                  required
+                  fullWidth
+
+                  label="Username"
+
+
+                  autoFocus
+                  type="text"
+                  name="username"
+                  required
+                  value={this.state.username}
+                  onChange={this.handleInputChangeFor('username')}
+                />
+                <TextField
+                  variant="outlined"
+                  margin="normal"
+                  required
+                  fullWidth
+                  name="password"
+                  label="Password"
+                  type="password"
+                  id="password"
+                  autoComplete="current-password"
+                  type="password"
+                  name="password"
+                  required
+                  value={this.state.password}
+                  onChange={this.handleInputChangeFor('password')}
+                />
+
+                <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  color="primary"
+                  className="submit"
+                  variant="contained"
+                  color="primary"
+                  type="submit"
+                  value="Log In"
+                >
+                  Sign In
+                         </Button>
+
+
+              </form>
+            </div>
+          </Container>
+        </Card>
+
+      </div>
+
+
     );
   }
 }

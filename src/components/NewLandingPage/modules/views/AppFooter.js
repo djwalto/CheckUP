@@ -6,6 +6,8 @@ import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
 import TextField from '../components/TextField';
 import "./AppFooter.css";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
 
 
 
@@ -16,15 +18,19 @@ export default function AppFooter() {
 
 
     return (
-        <Typography component="footer" className="root">
-            <Container className="container">
 
 
-
-                <p className="copy">CheckUP 2020</p>
-
-
+        <AppBar position="static" className="footer">
+            <Container maxWidth="md" className="container">
+                <Toolbar>
+                    <Typography variant="body1" color="inherit" component="footer" className="root">
+                        &copy; 2020 CheckUP Health
+              </Typography>
+                </Toolbar>
             </Container>
-        </Typography>
+        </AppBar>
+
+
+
     );
 }

@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
-
+import { Link } from 'react-router-dom';
 const backgroundImage =
     'https://images.unsplash.com/photo-1589169011402-8b2cbd1ee593?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2294&q=80';
 
@@ -53,8 +53,9 @@ function ProductHero(props) {
                 size="large"
                 className={classes.button}
                 component="a"
-                href=""
+                push="/login"
             >
+                <Link to="/login"></Link>
                 Register
       </Button>
 

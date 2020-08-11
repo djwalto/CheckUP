@@ -1,0 +1,46 @@
+.paper {
+    background-color: white !important;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2.0);
+    border-radius: 85px;
+    width: 400px !important;
+   
+}
+
+.avatar {
+    margin-top: 45px;;
+}
+
+.form {
+    padding: 80px;
+    flex: 1;
+    justify-content: space-between;
+    width: 100%; 
+    margin-top: 0px;
+  
+
+}
+
+.login {
+    display: flex;
+    justify-content: space-evenly;
+    height: 720px;
+    background-color:#838386;
+    padding: 1rem;
+  
+   
+}
+
+.MuiPaper-rounded {
+    background-color: rgb(221, 221, 219) !important;
+    border-radius: 10px !important;
+    width: 1300px !important;
+    justify-content: space-around !important;
+    
+    display: flex;
+    flex-direction: column;
+
+}
