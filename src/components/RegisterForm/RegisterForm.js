@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
+import "./RegisterForm.css";
 
 class RegisterForm extends Component {
   state = {
@@ -40,16 +41,14 @@ class RegisterForm extends Component {
   render() {
     return (
       <div className="login">
-
         <Card onSubmit={this.registerUser}>
           <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className="paper">
               <Avatar className="avatar">
-                <LockOutlinedIcon />
               </Avatar>
               <Typography component="h1" variant="h5">
-                Register User
+                Register your profile
                 </Typography>
               {this.props.errors.registrationMessage && (
                 <h3
@@ -137,13 +136,15 @@ class RegisterForm extends Component {
                     onChange={this.handleInputChangeFor('password')}
                   />
 
-
-                  <Button
+                  <Button className="genderM" variant="contained"
+                    color="inherit">Male</Button><Button className="genderF" variant="contained"
+                      color="inherit">Female</Button>
+                  <Button className="register"
                     type="submit"
                     fullWidth
                     variant="contained"
                     color="primary"
-                    className="submit"
+
                     variant="contained"
                     color="primary"
                     type="submit"
@@ -153,7 +154,15 @@ class RegisterForm extends Component {
                     value="Register"
                   >Register
                      </Button>
-
+                  <center>
+                    <Button
+                      type="logbutton"
+                      className="link-button"
+                      onClick={() => { this.props.history.push('/login') }}
+                    >
+                      Login
+          </Button>
+                  </center>
                 </div>
               </form>
             </div>

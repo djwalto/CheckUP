@@ -12,18 +12,6 @@ class LoginPage extends Component {
       <div>
         <Nav />
         <LoginForm />
-        <center>
-          <Button
-            className="button"
-            variant="contained"
-            color="primary"
-            type="button"
-
-            onClick={() => { this.props.history.push('/registration') }}
-          >
-            Register
-          </Button>
-        </center>
         <AppFooter />
       </div>
     );

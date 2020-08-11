@@ -56,7 +56,7 @@ class LoginForm extends Component {
                 <LockOutlinedIcon />
               </Avatar>
               <Typography component="h1" variant="h5">
-                Sign in
+                Log in to your profile
                     </Typography>
               {this.props.store.errors.loginMessage && (
                 <h3
@@ -105,22 +105,31 @@ class LoginForm extends Component {
                   fullWidth
                   variant="contained"
                   color="primary"
-                  className="submit"
+                  className="logbutton"
                   variant="contained"
                   color="primary"
                   type="submit"
                   value="Log In"
                 >
-                  Sign In
+                  Log In
                          </Button>
+                <center>
+                  <Button
+                    className="button"
+                    color="primary"
+                    type="button"
 
-
+                    onClick={() => { this.props.history.push('/registration') }}
+                  >
+                    Register
+          </Button>
+                </center>
               </form>
             </div>
           </Container>
         </Card>
 
-      </div>
+      </div >
 
 
     );
