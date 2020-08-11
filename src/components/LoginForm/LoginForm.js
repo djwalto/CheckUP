@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { Link } from 'react-router-dom';
 
 
 class LoginForm extends Component {
@@ -114,15 +115,17 @@ class LoginForm extends Component {
                   Log In
                          </Button>
                 <center>
-                  <Button
-                    className="button"
-                    color="primary"
-                    type="button"
+                  <Link to="/registration">
+                    <Button
+                      className="button"
+                      color="primary"
+                      type="button"
 
-                    onClick={() => { this.props.history.push('/registration') }}
-                  >
-                    Register
+
+                    >
+                      Register
           </Button>
+                  </Link>
                 </center>
               </form>
             </div>

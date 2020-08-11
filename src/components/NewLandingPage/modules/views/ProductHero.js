@@ -15,7 +15,7 @@ const styles = (theme) => ({
         backgroundPosition: 'center',
     },
     button: {
-        backgroundColor: '#60BFBF',
+        backgroundColor: '#4d8bbd',
         color: 'white',
         minWidth: 200,
 
@@ -47,18 +47,20 @@ function ProductHero(props) {
 <br></br>
               CheckUP is here to help guide you along the way
       </Typography>
-            <Button
+            <Link to="/registration">
+                <Button
 
-                variant="contained"
-                size="large"
-                className={classes.button}
-                component="a"
-                push="/login"
-            >
-                <Link to="/login"></Link>
-                Register
+                    variant="contained"
+                    size="large"
+                    className={classes.button}
+                    component="a"
+                    push="/registration"
+
+                >
+
+                    Register
       </Button>
-
+            </Link >
         </ProductHeroLayout>
     );
 }

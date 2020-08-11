@@ -50,7 +50,7 @@ const styles = (theme) => ({
     },
     button: {
         marginTop: theme.spacing(8),
-        backgroundColor: '#60BFBF',
+        backgroundColor: '#4d8bbd',
         color: 'white',
     },
 });
