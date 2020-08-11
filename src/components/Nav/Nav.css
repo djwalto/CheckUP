@@ -1,3 +1,21 @@
+body {
+color: rgba(0, 0, 0, 0.87);
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+*. *::before, *after {
+  box-sizing: inherit;
+}
+
 .nav-title {
     font-size: 24px;
     font-weight: 700;
@@ -43,6 +61,3 @@
   justify-content: flex-end;
 }
 
-.appp {
-  background-color: #23956f
-}

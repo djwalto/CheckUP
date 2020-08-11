@@ -4,7 +4,7 @@ import LogOutButton from '../../../LogOutButton/LogOutButton';
 import '../../../../components/Nav/Nav.css';
 import mapStoreToProps from '../../../../redux/mapStoreToProps';
 import { Link } from 'react-router-dom';
-import Typography from "../components/Typography";
+import Typography from "@material-ui/core/Typography";
 
 const Nav = (props) => {
     let loginLinkData = {
@@ -21,7 +21,7 @@ const Nav = (props) => {
         <div className="nav">
             <Link to="/home">
 
-                <h2 className="nav-title"></h2>
+                <h2 className="nav-title">CheckUP Health</h2>
             </Link>
             <div className="nav-right">
                 <Typography
