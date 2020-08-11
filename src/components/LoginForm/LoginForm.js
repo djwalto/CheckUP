@@ -13,6 +13,9 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+
+
 class LoginForm extends Component {
   state = {
     username: '',
@@ -48,6 +51,7 @@ class LoginForm extends Component {
           <Container component="main" maxWidth="xs">
             <CssBaseline />
             <div className="paper">
+              <ArrowBackIcon className="arrow" />
               <Avatar className="avatar">
                 <LockOutlinedIcon />
               </Avatar>
@@ -64,7 +68,7 @@ class LoginForm extends Component {
               )}
               <form className="form" noValidate>
                 <TextField
-                  variant="outlined"
+
                   margin="normal"
                   required
                   fullWidth
@@ -80,7 +84,7 @@ class LoginForm extends Component {
                   onChange={this.handleInputChangeFor('username')}
                 />
                 <TextField
-                  variant="outlined"
+
                   margin="normal"
                   required
                   fullWidth

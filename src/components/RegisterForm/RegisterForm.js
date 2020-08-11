@@ -61,7 +61,43 @@ class RegisterForm extends Component {
               )}
               <form className="form" noValidate>
                 <TextField
-                  variant="outlined"
+
+                  margin="normal"
+                  required
+                  fullWidth
+
+                  label="Name"
+
+
+                  autoFocus
+                  type="text"
+                  name="username"
+                  type="text"
+                  name="username"
+                  //value={this.state.username}
+                  required
+                //onChange={this.handleInputChangeFor('username')}
+                />
+                <TextField
+
+                  margin="normal"
+                  required
+                  fullWidth
+
+                  label="Birth Year"
+
+
+                  autoFocus
+                  type="text"
+                  name="username"
+                  type="text"
+                  name="username"
+                  // value={this.state.username}
+                  required
+                //onChange={this.handleInputChangeFor('username')}
+                />
+                <TextField
+
                   margin="normal"
                   required
                   fullWidth
@@ -82,7 +118,7 @@ class RegisterForm extends Component {
 
                 <div>
                   <TextField
-                    variant="outlined"
+
                     margin="normal"
                     required
                     fullWidth

@@ -1,13 +1,13 @@
 .paper {
     background-color: white !important;
-
+margin-top: 40px;;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2.0);
     border-radius: 85px;
     width: 400px !important;
-   
+   opacity: 100% !important;
 }
 
 .avatar {
@@ -20,6 +20,7 @@
     justify-content: space-between;
     width: 100%; 
     margin-top: 0px;
+   
   
 
 }
@@ -28,19 +29,24 @@
     display: flex;
     justify-content: space-evenly;
     height: 720px;
-    background-color:#838386;
     padding: 1rem;
-  
-   
+  background-color: silver;
+  background-image: url(https://images.unsplash.com/photo-1508904635850-d986b19765d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);
+
 }
 
-.MuiPaper-rounded {
-    background-color: rgb(221, 221, 219) !important;
+ .MuiPaper-rounded {
+    background-image: url(https://images.unsplash.com/photo-1508904635850-d986b19765d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);
     border-radius: 10px !important;
     width: 1300px !important;
     justify-content: space-around !important;
-    
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+  
+} 
 
+.arrow {
+    margin-top: 20px !important;
+    margin-right: 60%;
+    transform: scale(1.8);
 }
