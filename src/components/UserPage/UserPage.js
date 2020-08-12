@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import mapStoreToProps from '../../redux/mapStoreToProps';
+import { Link } from 'react-router-dom';
 
 // this could also be written with destructuring parameters as:
 // const UserPage = ({ user }) => (
@@ -9,9 +10,10 @@ import mapStoreToProps from '../../redux/mapStoreToProps';
 const UserPage = (props) => (
   <div>
     <h1 id="welcome">
-      Welcome, { props.store.user.username }!
+      Welcome, {props.store.user.username}!
     </h1>
     <p>Your ID is: {props.store.user.id}</p>
+    <Link to="/journal">Journal</Link>
     <LogOutButton className="log-in" />
   </div>
 );

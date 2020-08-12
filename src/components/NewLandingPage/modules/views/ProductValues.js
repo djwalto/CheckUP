@@ -8,12 +8,13 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import MapIcon from '@material-ui/icons/Map';
 import PersonIcon from '@material-ui/icons/Person';
 import './ProductValues.css';
+import Card from "@material-ui/core/Card";
 
 const styles = (theme) => ({
     root: {
         display: 'flex',
         overflow: 'hidden',
-        backgroundColor: '#faf9f1',
+        backgroundColor: '#fffffe',
     },
     container: {
         marginTop: theme.spacing(15),
@@ -26,6 +27,7 @@ const styles = (theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         padding: theme.spacing(0, 5),
+
     },
     image: {
         height: 55,
@@ -50,6 +52,7 @@ function ProductValues(props) {
                 <Grid container spacing={5}>
                     <Grid item xs={12} md={4}>
                         <div className={classes.item}>
+
                             <MenuBookIcon className="book" />
                             <Typography variant="h6" className={classes.title}>
                                 CheckUP Journal
@@ -59,6 +62,7 @@ function ProductValues(props) {
                                 {'as well as your loved ones with your daily health journal.'}
                             </Typography>
                         </div>
+
                     </Grid>
                     <Grid item xs={12} md={4}>
                         <div className={classes.item}>

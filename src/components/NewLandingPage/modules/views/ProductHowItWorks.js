@@ -8,10 +8,14 @@ import Typography from '../components/Typography';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import MapIcon from '@material-ui/icons/Map';
 import PersonIcon from '@material-ui/icons/Person';
+import { Link } from 'react-router-dom';
+
+
+
 const styles = (theme) => ({
     root: {
         display: 'flex',
-        backgroundColor: '#faf9f1',
+        backgroundColor: '#fffffe',
         overflow: 'hidden',
     },
     container: {
@@ -50,7 +54,7 @@ const styles = (theme) => ({
     },
     button: {
         marginTop: theme.spacing(8),
-        backgroundColor: '#4d8bbd',
+        backgroundColor: '#2597f5',
         color: 'white',
     },
 });
@@ -115,6 +119,7 @@ function ProductHowItWorks(props) {
                         </Grid>
                     </Grid>
                 </div>
+                <Link to="/registration">
                 <Button
                     color="secondary"
                     size="large"
@@ -125,6 +130,7 @@ function ProductHowItWorks(props) {
                 >
                     Get started
         </Button>
+        </Link>
             </Container>
         </section>
     );

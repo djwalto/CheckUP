@@ -18,7 +18,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import NewLandingPage from '../NewLandingPage/NewLandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-
+import JournalPage from '../JournalPage/JournalPage';
 import './App.css';
 
 class App extends Component {
@@ -77,6 +77,13 @@ class App extends Component {
               authRedirect="/admin"
               component={NewLandingPage}
             />
+            <ProtectedRoute
+              exact
+              path="/journal"
+              // authRedirect="/journal"
+              component={JournalPage}
+            />
+
 
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />

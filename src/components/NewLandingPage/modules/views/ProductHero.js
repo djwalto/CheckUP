@@ -15,7 +15,7 @@ const styles = (theme) => ({
         backgroundPosition: 'center',
     },
     button: {
-        backgroundColor: '#4d8bbd',
+        backgroundColor: '#2597f5',
         color: 'white',
         minWidth: 200,
 

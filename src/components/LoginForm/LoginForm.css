@@ -30,12 +30,12 @@
     height: 720px;
     padding: 1rem;
   background-color: silver;
-  background-image: url(https://images.unsplash.com/photo-1508904635850-d986b19765d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);
+  background-image: url(https://lh3.googleusercontent.com/proxy/iX1ybr7743AhbY53vN9eT0S_BJlf5cyWazr4zDaVZ89xNlIq56RqBcY_utvwPtd1SKZCKVxf28lMullrk0HOgV6hwpqkt2rxKm69N7gBhxhaK11n1ICa6ptY1s4q49zrjSKuc89l63nWMRE);
 
 }
 
  .MuiPaper-rounded {
-    background-image: url(https://images.unsplash.com/photo-1508904635850-d986b19765d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);
+    background-image: url(https://lh3.googleusercontent.com/proxy/iX1ybr7743AhbY53vN9eT0S_BJlf5cyWazr4zDaVZ89xNlIq56RqBcY_utvwPtd1SKZCKVxf28lMullrk0HOgV6hwpqkt2rxKm69N7gBhxhaK11n1ICa6ptY1s4q49zrjSKuc89l63nWMRE);
     border-radius: 10px !important;
     width: 1500px !important;
     justify-content: space-around !important;

@@ -21,6 +21,7 @@ class RegisterForm extends Component {
   state = {
     username: '',
     password: '',
+    email: '',
   };
 
   registerUser = (event) => {
@@ -31,6 +32,7 @@ class RegisterForm extends Component {
       payload: {
         username: this.state.username,
         password: this.state.password,
+        email: this.state.email,
       },
     });
   } // end registerUser
@@ -64,108 +66,60 @@ class RegisterForm extends Component {
               )}
               <form className="form" noValidate>
                 <TextField
-
                   margin="normal"
-                  required
                   fullWidth
-
-                  label="Name"
-
-
-                  autoFocus
-                  type="text"
-                  name="username"
-                  type="text"
-                  name="username"
-                  //value={this.state.username}
-                  required
-                //onChange={this.handleInputChangeFor('username')}
-                />
-                <TextField
-
-                  margin="normal"
-                  required
-                  fullWidth
-
-                  label="Birth Year"
-
-
-                  autoFocus
-                  type="text"
-                  name="username"
-                  type="text"
-                  name="username"
-                  // value={this.state.username}
-                  required
-                //onChange={this.handleInputChangeFor('username')}
-                />
-                <TextField
-
-                  margin="normal"
-                  required
-                  fullWidth
-
                   label="Username"
-
-
                   autoFocus
-                  type="text"
-                  name="username"
                   type="text"
                   name="username"
                   value={this.state.username}
                   required
                   onChange={this.handleInputChangeFor('username')}
                 />
-
-
                 <div>
                   <TextField
-
                     margin="normal"
-                    required
                     fullWidth
                     name="password"
                     label="Password"
                     type="password"
                     id="password"
-                    autoComplete="current-password"
-                    type="password"
-                    name="password"
-
-                    type="password"
-                    name="password"
                     value={this.state.password}
                     required
                     onChange={this.handleInputChangeFor('password')}
                   />
+                  <TextField
+                    margin="normal"
+                    fullWidth
+                    label="Email"
+                    autoFocus
+                    type="text"
+                    name="email"
+                    id="email"
+                    value={this.state.email}
+                    required
+                    onChange={this.handleInputChangeFor('email')}
+                  />
 
-                  <Button className="genderM" variant="contained"
-                    color="inherit">Male</Button><Button className="genderF" variant="contained"
-                      color="inherit">Female</Button>
                   <Button className="register"
                     type="submit"
                     fullWidth
                     variant="contained"
                     color="primary"
-
-                    variant="contained"
-                    color="primary"
-                    type="submit"
-                    value="Log In"
-
                     name="submit"
                     value="Register"
                   >Register
                      </Button>
                   <center>
-                    <Button
-                      type="logbutton"
-                      className="link-button"
-                      onClick={() => { this.props.history.push('/login') }}
-                    >
-                      Login
+                    <Link to="/login">
+                      <Button
+                        type="logbutton"
+                        className="link-button"
+                        color="primary"
+                      >
+                        Login
           </Button>
+                    </Link>
                   </center>
                   <Link to="/home" >
                     <HomeIcon className="home" />

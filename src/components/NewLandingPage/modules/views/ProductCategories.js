@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
-
+import "./ProductCategories.css";
 const styles = (theme) => ({
     root: {
         marginTop: theme.spacing(8),
@@ -126,9 +126,9 @@ function ProductCategories(props) {
     ];
 
     return (
-        <Container className={classes.root} component="section">
-            <Typography variant="h4" align="center" component="h2">
-                PERSONAL HEALTH MATTERS
+        <Container className={classes.root} component="section" className="bluestripe">
+            <Typography variant="h4" align="center" component="h2" className="title" >
+                YOUR HEALTH MATTERS
       </Typography>
             <div className={classes.images}>
                 {images.map((image) => (

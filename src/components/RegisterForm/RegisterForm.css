@@ -29,13 +29,12 @@
     height: 720px;
     padding: 1rem;
   background-color: silver;
-  background-image: url(https://images.unsplash.com/photo-1508904635850-d986b19765d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);
+  background-image: url(http://imagedata01.sage-fox.com/2017/02/01/Medicalhealthcare_124821562_original.jpg);
 
 }
 
  .MuiPaper-rounded {
-    background-image: url(https://images.unsplash.com/photo-1508904635850-d986b19765d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80);
-    border-radius: 10px !important;
+    background-image: url(http://imagedata01.sage-fox.com/2017/02/01/Medicalhealthcare_124821562_original.jpg);
     width: 1500px !important;
     justify-content: space-around !important;
     display: flex;

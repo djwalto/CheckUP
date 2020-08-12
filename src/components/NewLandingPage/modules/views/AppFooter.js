@@ -25,9 +25,18 @@ export default function AppFooter() {
         <AppBar position="static" className="footer">
             <Container maxWidth="md" className="container">
                 <Toolbar>
-
                     <Typography variant="body1" color="inherit" component="footer" className="root">
-                        &copy; 2020 CheckUP Health
+
+                        shjfsjf shfijsbvf jkbvjsdbfvk  fvbkjbvskjsf
+
+
+                        <h6 >GitHub</h6>
+
+
+
+
+
+                                                &copy; 2020 CheckUP Health
               </Typography>
                 </Toolbar>
             </Container>
