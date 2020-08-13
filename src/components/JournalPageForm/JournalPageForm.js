@@ -19,7 +19,7 @@ class JournalPageForm extends Component {
     onInputChange = (input) => (event) => {
         this.setState({
             [input]: (event.target.value),
-        });
+        }, () => { console.log(this.state) });
     };
 
     onClick = (event) => {
@@ -27,23 +27,20 @@ class JournalPageForm extends Component {
             alert('You forgot to answer!');
             return;
         }
-        this.addToState();
+        // this.addToState();
         console.log(this.state);
         this.props.dispatch({
-            type: 'SET_FORM',
-            payload: {
-                feeling: this.state.feeling,
-                symptoms: this.state.symptoms,
-            }
+            type: 'POST_FORM',
+            payload: this.state
         });
     };
 
-    addToState = (event) => {
-        this.setState({
-            feeling: this.state.feeling,
-            symptoms: this.state.symptoms,
-        });
-    };
+    // addToState = (event) => {
+    //     this.setState([{
+    //         feeling: this.state.feeling,
+    //         symptoms: this.state.symptoms,
+    //     }]);
+    // };
 
     render() {
         return (

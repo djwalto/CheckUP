@@ -6,31 +6,39 @@ const router = express.Router();
  * GET route template
  */
 router.get('/', (req, res) => {
-    res.send(req.form);
-});
-
-/**
- * POST route template
- */
-router.post('/form', (req, res) => {
-    const feeling = req.body.feeling;
-    const symptoms = req.body.symptoms;
-    console.log(req.body);
-    let queryText = `INSERT INTO "journal" ("feeling", "symptom")
-                         VALUES ($1, $2);`;
+    const queryText = `SELECT * FROM "journal";`;
     pool
-        .query(queryText, [
-            feeling,
-            symptoms,
-        ])
-        .then(() => {
-            res.sendStatus(201);
+        .query(queryText)
+        .then((response) => {
+            res.send(response.rows);
         })
-        .catch(() => {
-            console.log(`Error adding new form`, error);
+        .catch((err) => {
+            console.log('Error completing GET details in formrouter', err);
             res.sendStatus(500);
         });
-});
 
+    /**
+     * POST route template
+     */
+    router.post('/', (req, res) => {
+
+
+        const queryText = `INSERT INTO "journal" ("feeling", "symptom")
+                         VALUES ($1, $2);`;
+        const data = req.body;
+        pool
+            .query(queryText, [
+                data.feeling,
+                data.symptoms,
+            ])
+            .then((response) => {
+                res.sendStatus(201);
+            })
+            .catch((err) => {
+                console.log(`Error adding new form, ${err}`);
+                res.sendStatus(500);
+            });
+    });
+});
 
 module.exports = router;

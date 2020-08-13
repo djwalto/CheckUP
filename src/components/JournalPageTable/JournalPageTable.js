@@ -1,25 +1,42 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import mapStoreToProps from '../../redux/mapStoreToProps';
-import AppFooter from '../NewLandingPage/modules/views/AppFooter';
-import Nav from "../NewLandingPage/modules/views/Nav";
-import { Link } from 'react-router-dom';
+import Table from "@material-ui/core/Table";
+import Button from "@material-ui/core/Button";
+//import JournalPageTableItem from '../JournalPageTableItem/JournalPageTableItem';
 
-// Basic class component structure for React with default state
-// value setup. When making a new component be sure to replace 
-// the component name TemplateClass with the name for the new 
-// component.
-class JournalPage extends Component {
+
+class JournalPageTable extends Component {
+
+
+    componentDidMount() {
+        this.props.dispatch({ type: 'GET_FORM' });
+    }
+
+
     render() {
+        const formArray = this.props.store.formReducer.map((item, index) => {
+            return (
+                <div>
+                    <li
+                        key={index}>{item.feeling} {item.symptom}</li>
+
+
+
+
+                </div>
+            );
+        });
+
         return (
             <div>
-
-                <h1>Journal Page Table</h1>
-
-
+                <h1>Home Page!</h1>
+                <div>{formArray}</div>
             </div>
         );
     }
 }
 
-export default connect(mapStoreToProps)(JournalPage);
+const mapStoreToProps = (store) => ({ store });
+
+
+export default connect(mapStoreToProps)(JournalPageTable);
