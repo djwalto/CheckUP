@@ -46,8 +46,8 @@ class RegisterForm extends Component {
   render() {
     return (
       <div className="login">
-        <Card onSubmit={this.registerUser}>
-          <Container component="main" maxWidth="xs">
+        <Card className="login" onSubmit={this.registerUser}>
+          <Container className="login" component="main" maxWidth="xs">
             <CssBaseline />
             <div className="paper">
               <ArrowBackIcon className="arrow" />

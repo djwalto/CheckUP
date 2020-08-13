@@ -18,7 +18,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import NewLandingPage from '../NewLandingPage/NewLandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-import JournalPage from '../JournalPage/JournalPage';
+import Journal from '../Journal/Journal';
 import './App.css';
 
 class App extends Component {
@@ -81,7 +81,7 @@ class App extends Component {
               exact
               path="/journal"
               // authRedirect="/journal"
-              component={JournalPage}
+              component={Journal}
             />
 
 

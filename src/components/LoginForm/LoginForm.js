@@ -49,8 +49,8 @@ class LoginForm extends Component {
   render() {
     return (
       <div className="login">
-        <Card onSubmit={this.login}>
-          <Container component="main" maxWidth="xs">
+        <Card className="login" onSubmit={this.login}>
+          <Container className="login" component="main" maxWidth="xs">
             <CssBaseline />
             <div className="paper">
 
