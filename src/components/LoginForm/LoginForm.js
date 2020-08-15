@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
-import "./LoginForm.css"
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
-import Checkbox from '@material-ui/core/Checkbox';
-import Grid from '@material-ui/core/Grid';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
@@ -16,7 +12,7 @@ import Container from '@material-ui/core/Container';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
-
+import "./LoginForm.css"
 
 class LoginForm extends Component {
   state = {
@@ -48,16 +44,15 @@ class LoginForm extends Component {
 
   render() {
     return (
-      <div className="login">
-        <Card className="login" onSubmit={this.login}>
-          <Container className="login" component="main" maxWidth="xs">
+      <div className="loginDiv">
+        <Card className="loginCard" onSubmit={this.login}>
+          <Container className="loginContainer" component="main" maxWidth="xs">
             <CssBaseline />
-            <div className="paper">
-
-              <ArrowBackIcon className="arrow" />
+            <div className="loginPaper">
+              <ArrowBackIcon className="loginArrow" />
               <br></br>
               <br></br>
-              <Avatar className="avatar">
+              <Avatar className="loginAvatar">
                 <LockOutlinedIcon />
               </Avatar>
               <Typography component="h1" variant="h5">
@@ -71,7 +66,7 @@ class LoginForm extends Component {
                   {this.props.store.errors.loginMessage}
                 </h3>
               )}
-              <form className="form" noValidate>
+              <form className="loginForm" noValidate>
                 <TextField
 
                   margin="normal"
@@ -132,7 +127,7 @@ class LoginForm extends Component {
                   </Link>
                 </center>
                 <Link to="/home">
-                  <HomeIcon className='home' />
+                  <HomeIcon className='loginHome' />
                 </Link>
               </form>
             </div>

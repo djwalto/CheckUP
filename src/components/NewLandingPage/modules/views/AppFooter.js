@@ -22,15 +22,19 @@ export default function AppFooter() {
     return (
 
 
-        <AppBar position="static" className="footer">
-            <Container maxWidth="md" className="container">
-                <Toolbar>
-                    <Typography variant="body1" color="inherit" component="footer" className="root">
+        <div id="footer">
+            <AppBar position="static" className="footer">
+                <Container maxWidth="md" className="container">
+                    <Toolbar>
+                        <Typography variant="body1" color="inherit" component="footer" className="root">
 
-                        shjfsjf shfijsbvf jkbvjsdbfvk  fvbkjbvskjsf
 
 
-                        <h6 >GitHub</h6>
+
+                            <h6 >GitHub</h6>
+                            <h6 >LinkedIn</h6>
+                            <h6 >Email</h6>
+                            <h6 >Phone</h6>
 
 
 
@@ -38,11 +42,11 @@ export default function AppFooter() {
 
                                                 &copy; 2020 CheckUP Health
               </Typography>
-                </Toolbar>
-            </Container>
-        </AppBar>
+                    </Toolbar>
+                </Container>
+            </AppBar>
 
-
+        </div>
 
     );
 }

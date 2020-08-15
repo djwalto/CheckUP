@@ -1,4 +1,4 @@
-/* .paper {
+.userPaper {
     background-color: white !important;
     display: flex;
     flex-direction: column;
@@ -10,63 +10,43 @@
    margin-bottom: 0px;
 }
 
-.avatar {
+.userAvatar {
     margin-top: -10px;
     margin-bottom: 5px;
 }
 
-.form {
-    padding: 80px;
-    flex: 1;
-    justify-content: space-between;
-    width: 100%; 
-    margin-top: -20px;
-}
-
-.login {
+.userDiv {
     display: flex;
     justify-content: space-evenly;
     height: 720px;
     padding: 1rem;
-  background-color: silver;
-  background-image: url(https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
-  background-size: inherit;
-  background-position: top;
-
-}
-
- .MuiPaper-rounded {
-    background-image: url(https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
-    width: 1500px !important;
-    justify-content: space-around !important;
-    display: flex;
-    flex-direction: column; 
-    background-position: top;
   
-} 
-
-.arrow {
-    margin-top: 20px !important;
-    margin-right: 60%;
-    transform: scale(1.8);
-}
-
-.genderM {
-    margin: 15px 10px 15px 32px !important;
+    background-image: url(https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
+    background-size: inherit;
+    background-position: top;
     
+    } 
+
+    .userCard {
+        background-image: url(https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
+        width: 1500px !important;
+        justify-content: space-around !important;
+        display: flex;
+        flex-direction: column; 
+        background-position: top;
+      
+}  
+
+.userArrow {
+    margin-top: 20px !important;
+    margin-right: 80%;
+    transform: scale(1.8);
+    color: white;
 }
 
-.genderF {
-    margin: 15px 10px 15px 10px !important;
-}
 
-.register {
-    margin-top: 10px !important;
+.userHome {
+   color: black;
+    transform: scale(2.0);
    
 }
-
-.home {
-    color: black;
-     transform: scale(2.0);
-    
- } */

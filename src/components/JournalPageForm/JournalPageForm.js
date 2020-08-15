@@ -1,23 +1,25 @@
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
-import AppFooter from '../NewLandingPage/modules/views/AppFooter';
-import Nav from "../NewLandingPage/modules/views/Nav";
-import { Link } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
-import Drawer from '@material-ui/core/Drawer';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
+import "./JournalPageForm.css"
+import Card from "@material-ui/core/Card";
+import Button from "@material-ui/core/Button";
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Dashboard from '../Journal/Dashboard';
-// Basic class component structure for React with default state
-// value setup. When making a new component be sure to replace 
-// the component name TemplateClass with the name for the new 
-// component.
+import TextField from '@material-ui/core/TextField';
+import BookIcon from '@material-ui/icons/Book';
+import Typography from '@material-ui/core/Typography';
+import Avatar from '@material-ui/core/Avatar';
+import Container from '@material-ui/core/Container';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { Link } from 'react-router-dom';
+import HomeIcon from '@material-ui/icons/Home';
+import './JournalPageForm.css';
 
 
 
 class JournalPageForm extends Component {
+
     state = {
         feeling: '',
         symptoms: '',
@@ -53,35 +55,91 @@ class JournalPageForm extends Component {
 
 
         return (
-            <div >
+
+            <div className="journalFormDiv">
+                <Card className="journalFormCard">
+                    <Container className="journalFormContainer" component="main" maxWidth="xs">
+                        <CssBaseline />
+                        <div className="journalFormPaper">
+
+                            <ArrowBackIcon className="journalFormArrow" />
+                            <br></br>
+                            <br></br>
+                            <Avatar className="journalFormAvatar">
+                                <BookIcon />
+                            </Avatar>
+                            <Typography component="h1" variant="h5">
+                                Health Journal
+                  </Typography>
+                            <form className="journalForm" noValidate>
+                                <TextField
+
+                                    margin="normal"
+                                    required
+                                    fullWidth
+
+                                    label="How did you feel today?"
 
 
+                                    autoFocus
+                                    type="text"
+                                    name="feelings"
+                                    required
 
-                <div className="container">
-                    <div className="card text-center">
-                        <div className="card border-dark mb-3">
-                            <div className="card-header">
-                                <h1>How are you feeling?</h1>
-                            </div>
-                            <div className="card-body text-dark">
+                                    onChange={this.onInputChange('feeling')}
+                                />
+                                <TextField
 
-                                <div>
-                                    <input type="text" onChange={this.onInputChange('feeling')} />
-                                </div>
-                                <div>
-                                    <input type="text" onChange={this.onInputChange('symptoms')} />
-                                </div>
-                                <br></br>
-                                <Button variant="primary" onClick={this.onClick}>
-                                    Next
+                                    margin="normal"
+                                    required
+                                    fullWidth
+
+                                    label="Did you have any symptoms today?"
+
+
+                                    autoFocus
+                                    type="text"
+                                    name="symptoms"
+                                    required
+
+                                    onChange={this.onInputChange('symptoms')}
+                                />
+
+                                <center>
+                                    <Button
+                                        type="submit"
+
+                                        variant="contained"
+                                        color="primary"
+                                        className="logbutton"
+                                        variant="contained"
+                                        color="primary"
+                                        type="submit"
+                                        value="Log In"
+                                        onClick={this.onClick}
+                                    >
+
+
+                                        Submit
                   </Button>
-                            </div>
+                                </center>
+                                <Link to="/home">
+                                    <HomeIcon className='journalFormHome' />
+                                </Link>
+                            </form>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </Container>
+                </Card>
+            </div >
+
+
         );
     }
+
 }
 
+
 export default connect(mapStoreToProps)(JournalPageForm);
+
+
+

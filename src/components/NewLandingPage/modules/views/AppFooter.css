@@ -8,9 +8,18 @@
 
 
 
-    .footer {
+    #footer {
+    bottom: 0;
     height: 8.5rem;
     width: 100%;
     background-color: rgb(53, 53, 54) !important;
-    display: flex;
+    position: flex;
+    }
+
+    .footer {
+        bottom: 0;
+        height: 8.5rem;
+        width: 100%;
+        background-color: rgb(53, 53, 54) !important;
+        position: absolute;
     }

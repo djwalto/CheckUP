@@ -19,8 +19,6 @@ class RegisterPage extends Component {
       <div>
         <Nav />
         <RegisterForm />
-
-
         <AppFooter />
       </div>
     );

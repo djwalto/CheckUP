@@ -1,32 +1,100 @@
+import React from 'react';
 import { connect } from 'react-redux';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 import { Link } from 'react-router-dom';
+import Nav from '../NewLandingPage/modules/views/Nav';
 import AppFooter from '../NewLandingPage/modules/views/AppFooter';
-import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 import Card from "@material-ui/core/Card";
-import Button from "@material-ui/core/Button";
-import Checkbox from '@material-ui/core/Checkbox';
-import Grid from '@material-ui/core/Grid';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
-import "./UserPage.css";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import HomeIcon from '@material-ui/icons/Home';
-import Nav from "../NewLandingPage/modules/views/Nav";
-import Dashboard from '../Journal/Dashboard';
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import './UserPage.css';
 
 // this could also be written with destructuring parameters as:
 // const UserPage = ({ user }) => (
 // and then instead of `props.user.username` you could use `user.username`
 const UserPage = (props) => (
   <div>
+
     <Nav />
+    <Avatar className="userAvatar">
+      <AccountCircleIcon />
+    </Avatar>
+    <div className="userDiv">
+      <Card className="userCard" >
+        <Container className="userContainer" component="main" maxWidth="xs">
+
+          <CssBaseline />
+          <div className="userPaper">
+            <ArrowBackIcon className="userArrow" />
+            <br></br>
+            <br></br>
+            <Avatar className="userAvatar">
+            </Avatar>
+            <Typography component="h1" variant="h5">
+
+              Welcome, {props.store.user.username}!
+         Your ID is: {props.store.user.id}
+            </Typography>
+          </div>
+
+          <div className="userPaper">
+            <ArrowBackIcon className="userArrow" />
+            <Avatar className="userAvatar">
+            </Avatar>
+            <Typography component="h1" variant="h5">
+              HOME
+              </Typography>
+            <Link to="/home">
+              <HomeIcon className='loginHome' />
+            </Link>
+          </div>
+
+
+
+
+
+
+
+          <CssBaseline />
+          <div className="userPaper">
+            <ArrowBackIcon className="userArrow" />
+
+            <Avatar className="userAvatar">
+
+            </Avatar>
+            <Typography component="h1" variant="h5">
+              HOME
+               </Typography>
+            <Link to="/home">
+              <HomeIcon className='loginHome' />
+            </Link>
+          </div>
+
+
+
+
+
+
+
+          <CssBaseline />
+          <div className="userPaper">
+            <ArrowBackIcon className="userArrow" />
+
+            <Avatar className="userAvatar">
+
+            </Avatar>
+            <Typography component="h1" variant="h5">
+            </Typography>
+            <Link to="/journal">
+              <Button variant="contained" color="primary">JOURNAL</Button></Link>
+          </div>
 
 
 
@@ -35,91 +103,81 @@ const UserPage = (props) => (
 
 
 
-    {/* 
-    <h1 id="welcome">
-      Welcome, {props.store.user.username}!
-    </h1> */}
-    {/* <p>Your ID is: {props.store.user.id}</p> */}
+          <CssBaseline />
+          <div className="userPaper">
+            <ArrowBackIcon className="userArrow" />
 
-    <Dashboard />
+            <Avatar className="userAvatar">
 
-    {/* <Card >
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <div className="paper">
-          <ArrowBackIcon className="arrow" />
-          <Avatar className="avatar">
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Register your profile
-                </Typography>
-        </div>
-      </Container>
-    </Card>
+            </Avatar>
+            <Typography component="h1" variant="h5">
 
+              Covid Tracker
+        </Typography>
+            <Link to="/tracker">
+              <Button variant="contained" color="primary">TRACKER</Button></Link>
 
-    <Card >
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <div className="paper">
-          <ArrowBackIcon className="arrow" />
-          <Avatar className="avatar">
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Register your profile
-                </Typography>
-        </div>
-      </Container>
-    </Card>
-
-
-    <Card >
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <div className="paper">
-          <ArrowBackIcon className="arrow" />
-          <Avatar className="avatar">
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Register your profile
-                </Typography>
-        </div>
-      </Container>
-    </Card>
-    <Button className="register"
-      type="submit"
-      fullWidth
-      variant="contained"
-      color="primary"
-      name="submit"
-      value="Register"
-    >Register
-                     </Button>
-    <center>
-      <Link to="/login">
-        <Button
-          type="logbutton"
-          className="link-button"
-          color="primary"
-        >
-          Login
-          </Button>
-      </Link>
-    </center>
-    <Link to="/home" >
-      <HomeIcon className="home" />
-    </Link>
+          </div>
 
 
 
 
- */}
 
+
+
+
+          <CssBaseline />
+          <div className="userPaper">
+            <ArrowBackIcon className="userArrow" />
+            <br></br>
+            <br></br>
+            <Avatar className="userAvatar">
+
+            </Avatar>
+            <Typography component="h1" variant="h5">
+
+              Covid BOT
+           </Typography>
+            <Link to="/chat">
+              <Button variant="contained" color="primary">CHAT</Button></Link>
+
+          </div>
+
+
+
+
+
+          <CssBaseline />
+          <div className="userPaper">
+            <ArrowBackIcon className="userArrow" />
+            <br></br>
+            <br></br>
+            <Avatar className="userAvatar">
+
+            </Avatar>
+            <Typography component="h1" variant="h5">
+              LOGOUT
+</Typography>
+            <LogOutButton className="log-in" />
+
+          </div>
+
+
+
+
+
+
+        </Container>
+      </Card>
+    </div >
 
     <AppFooter />
 
-  </div>
+  </div >
+
+
+
 );
 
-
+// this allows us to use <App /> in index.js
 export default connect(mapStoreToProps)(UserPage);

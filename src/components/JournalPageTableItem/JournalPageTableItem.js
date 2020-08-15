@@ -1,47 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import LogOutButton from '../LogOutButton/LogOutButton';
+import TableCell from '@material-ui/core/TableCell';
+import TableRow from '@material-ui/core/TableRow';
 import mapStoreToProps from '../../redux/mapStoreToProps';
-import { Link } from 'react-router-dom';
-import Table from "@material-ui/core/Table";
-import Button from "@material-ui/core/Button";
 
 
-// this could also be written with destructuring parameters as:
-// const UserPage = ({ user }) => (
-// and then instead of `props.user.username` you could use `user.username`
-const JournalTablePageItem = (props) => (
-    <div>
-        <Table >
-            <thead>
-                <tr>
-                    <th>Feelings for today</th>
-                    <th>Symptoms for today</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+class JournalPageTableItem extends Component {
 
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{props.store.formReducer.feeling} </td>
-                    <td>{props.store.formReducer.symptoms}</td>
-                    <td>
-                        <Button >
-                            Edit
-                </Button></td>
-                    <td>
-                        <Button >
-                            Delete
-                </Button></td>
-                </tr>
-            </tbody>
-        </Table>
-    </div>
-);
+    render() {
+        const formArray = this.props.store.formReducer.map((item, index) => {
+            return (
+                <TableRow key={index} className="journalTableItemRow">
+                    <TableCell className="journalTableItemCell">Date</TableCell>
+                    <TableCell className="journalTableItemCell">{item.feeling}</TableCell>
+                    <TableCell className="journalTableItemCell">{item.symptom}</TableCell>
+                    <TableCell className="journalTableItemCell">Edit</TableCell>
+                    <TableCell className="journalTableItemCell" align="right">Delete</TableCell>
+                </TableRow>
 
-
-
-
-// this allows us to use <App /> in index.js
-export default connect(mapStoreToProps)(JournalTablePageItem);
+            )
+        })
+        return (
+            <div>
+                {formArray}
+            </div>
+        );
+    }
+}
+export default connect(mapStoreToProps)(JournalPageTableItem);
