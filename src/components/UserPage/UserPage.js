@@ -13,7 +13,8 @@ import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import HomeIcon from '@material-ui/icons/Home';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import PersonIcon from '@material-ui/icons/Person';
+import Grid from '@material-ui/core/Grid';
 import './UserPage.css';
 
 // this could also be written with destructuring parameters as:
@@ -23,27 +24,50 @@ const UserPage = (props) => (
   <div>
 
     <Nav />
-    <Avatar className="userAvatar">
-      <AccountCircleIcon />
-    </Avatar>
+
     <div className="userDiv">
-      <Card className="userCard" >
-        <Container className="userContainer" component="main" maxWidth="xs">
 
-          <CssBaseline />
-          <div className="userPaper">
-            <ArrowBackIcon className="userArrow" />
-            <br></br>
-            <br></br>
+      {/* <Card className="userCard" > */}
+      {/* 
+      <Container className="userContainer" component="main" maxWidth="xs"> */}
+
+
+
+      <CssBaseline />
+      <Grid container spacing={5}>
+        <Grid item xs={12} md={4}>
+
+          <div className="userWelcome">
             <Avatar className="userAvatar">
+              <PersonIcon />
             </Avatar>
-            <Typography component="h1" variant="h5">
+            <div className="userTextDivGreeting">
+              <Typography className="userTextGreeting" component="h1" variant="h5">
 
-              Welcome, {props.store.user.username}!
-         Your ID is: {props.store.user.id}
-            </Typography>
+                Welcome to CheckUP, {props.store.user.username}!
+
+              </Typography>
+            </div>
           </div>
+        </Grid>
 
+
+
+        {/* <ArrowBackIcon className="userArrow" />
+              <br></br>
+              <br></br>
+              <Avatar className="userAvatar">
+              </Avatar>
+              <Typography component="h1" variant="h5">
+
+                Welcome, {props.store.user.username}!
+         Your ID is: {props.store.user.id}
+              </Typography>
+            </div> */}
+
+
+        {/* 
+        <Grid item xs={12} md={4}>
           <div className="userPaper">
             <ArrowBackIcon className="userArrow" />
             <Avatar className="userAvatar">
@@ -55,13 +79,12 @@ const UserPage = (props) => (
               <HomeIcon className='loginHome' />
             </Link>
           </div>
+        </Grid> */}
 
 
+        {/* 
 
-
-
-
-
+        <Grid item xs={12} md={4}>
           <CssBaseline />
           <div className="userPaper">
             <ArrowBackIcon className="userArrow" />
@@ -76,105 +99,84 @@ const UserPage = (props) => (
               <HomeIcon className='loginHome' />
             </Link>
           </div>
+        </Grid> */}
 
 
 
 
 
-
-
-          <CssBaseline />
-          <div className="userPaper">
-            <ArrowBackIcon className="userArrow" />
-
-            <Avatar className="userAvatar">
-
-            </Avatar>
-            <Typography component="h1" variant="h5">
-            </Typography>
-            <Link to="/journal">
-              <Button variant="contained" color="primary">JOURNAL</Button></Link>
+        <Grid className="userItem" item xs={12} md={2}>
+          <div className="userTextDiv">
+            <Typography className="userText" component="h1" variant="h5">
+              Health Journal
+               </Typography>
           </div>
-
-
-
-
-
-
-
-
           <CssBaseline />
-          <div className="userPaper">
-            <ArrowBackIcon className="userArrow" />
+          <Link to="/journal">
+            <div className="userPaperJournal">
+            </div>
+          </Link>
+        </Grid>
 
-            <Avatar className="userAvatar">
 
-            </Avatar>
-            <Typography component="h1" variant="h5">
 
-              Covid Tracker
-        </Typography>
-            <Link to="/tracker">
-              <Button variant="contained" color="primary">TRACKER</Button></Link>
 
+
+
+        <Grid className="userItem" item xs={12} md={2}>
+          <div className="userTextDiv">
+            <Typography className="userText" component="h1" variant="h5">
+              COVID Tracker
+               </Typography>
           </div>
-
-
-
-
-
-
-
-
           <CssBaseline />
-          <div className="userPaper">
-            <ArrowBackIcon className="userArrow" />
-            <br></br>
-            <br></br>
-            <Avatar className="userAvatar">
+          <Link to="/tracker">
+            <div className="userPaperTracker">
+            </div>
+          </Link>
+        </Grid>
 
-            </Avatar>
-            <Typography component="h1" variant="h5">
 
-              Covid BOT
-           </Typography>
-            <Link to="/chat">
-              <Button variant="contained" color="primary">CHAT</Button></Link>
 
+
+
+
+
+        <Grid className="userItem" item xs={12} md={2}>
+          <div className="userTextDiv">
+            <Typography className="userText" component="h1" variant="h5">
+              COVID ChatBot
+               </Typography>
           </div>
-
-
-
-
-
           <CssBaseline />
-          <div className="userPaper">
-            <ArrowBackIcon className="userArrow" />
-            <br></br>
-            <br></br>
-            <Avatar className="userAvatar">
+          <Link to="/chat">
+            <div className="userPaperChat">
+            </div>
+          </Link>
+        </Grid>
 
-            </Avatar>
-            <Typography component="h1" variant="h5">
-              LOGOUT
-</Typography>
-            <LogOutButton className="log-in" />
 
-          </div>
+      </Grid>
 
 
 
 
 
 
-        </Container>
-      </Card>
+
+
+
+      {/* </Container> */}
+
+      {/* </Card> */}
+      {/* </Grid> */}
+
+
+
+
     </div >
-
     <AppFooter />
-
-  </div >
-
+  </div>
 
 
 );
