@@ -20,6 +20,8 @@ import NewLandingPage from '../NewLandingPage/NewLandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import JournalPage from '../JournalPage/JournalPage';
+import AddProfilePage from '../JournalPage/AddProfilePage';
+import SwitchProfilesPage from '../JournalPage/SwitchProfiles';
 import Chatbot from '../Chatbot/Chatbot';
 
 import './App.css';
@@ -86,6 +88,18 @@ class App extends Component {
               path="/journal"
               // authRedirect="/journal"
               component={JournalPage}
+            />
+            <ProtectedRoute
+              exact
+              path="/addprofile"
+              // authRedirect="/journal"
+              component={AddProfilePage}
+            />
+            <ProtectedRoute
+              exact
+              path="/switchprofiles"
+              // authRedirect="/journal"
+              component={SwitchProfilesPage}
             />
             <ProtectedRoute
               exact

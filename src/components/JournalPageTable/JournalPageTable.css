@@ -1,11 +1,5 @@
 .tableContainer {
-    display: flex;
-    justify-content: space-evenly;
-    height: 720px;
-    padding: 1rem;
 
-  background-size: inherit;
-  background-position: top;
 
 }  
 /* 

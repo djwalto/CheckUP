@@ -14,7 +14,9 @@ import Container from '@material-ui/core/Container';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
+import PersonIcon from '@material-ui/icons/Person';
 import './JournalPageForm.css';
+import MenuListComposition from '../JournalPage/MenuButton';
 
 
 
@@ -24,6 +26,10 @@ class JournalPageForm extends Component {
         feeling: '',
         symptoms: '',
     };
+
+    componentDidMount() {
+        console.log(this.props.store.user.username);
+    }
 
     onInputChange = (input) => (event) => {
         this.setState({
@@ -57,12 +63,25 @@ class JournalPageForm extends Component {
         return (
 
             <div className="journalFormDiv">
+                <CssBaseline />
+
+
+                <div className="userWelcome">
+                    <Avatar className="userAvatar">
+                        <PersonIcon />
+                    </Avatar>
+                    <div className="journalGreeting"><h1>{this.props.store.user.username}</h1></div>
+
+                    <div className="journalMenuButton">
+                        <MenuListComposition />
+                    </div>
+                </div>
                 <Card className="journalFormCard">
                     <Container className="journalFormContainer" component="main" maxWidth="xs">
                         <CssBaseline />
                         <div className="journalFormPaper">
 
-                            <ArrowBackIcon className="journalFormArrow" />
+
                             <br></br>
                             <br></br>
                             <Avatar className="journalFormAvatar">

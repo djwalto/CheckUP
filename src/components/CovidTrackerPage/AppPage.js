@@ -13,6 +13,8 @@ import Table from "./Table";
 import { sortData, prettyPrintStat } from "./util";
 import numeral from "numeral";
 import Map from "./Map";
+import AppFooter from '../NewLandingPage/modules/views/AppFooter';
+import Nav from '../NewLandingPage/modules/views/Nav';
 import "leaflet/dist/leaflet.css";
 
 const AppPage = () => {
@@ -72,65 +74,70 @@ const AppPage = () => {
     };
 
     return (
-        <div className="covidapp">
-            <div className="covidapp__left">
-                <div className="covidapp__header">
-                    <h1>COVID-19 Tracker</h1>
-                    <FormControl className="covidapp__dropdown">
-                        <Select
-                            variant="outlined"
-                            value={country}
-                            onChange={onCountryChange}
-                        >
-                            <MenuItem value="worldwide">Worldwide</MenuItem>
-                            {countries.map((country) => (
-                                <MenuItem value={country.value}>{country.name}</MenuItem>
-                            ))}
-                        </Select>
-                    </FormControl>
-                </div>
-                <div className="covidapp__stats">
-                    <InfoBox
-                        onClick={(e) => setCasesType("cases")}
-                        title="Coronavirus Cases"
-                        isRed
-                        active={casesType === "cases"}
-                        cases={prettyPrintStat(countryInfo.todayCases)}
-                        total={numeral(countryInfo.cases).format("0.0a")}
-                    />
-                    <InfoBox
-                        onClick={(e) => setCasesType("recovered")}
-                        title="Recovered"
-                        active={casesType === "recovered"}
-                        cases={prettyPrintStat(countryInfo.todayRecovered)}
-                        total={numeral(countryInfo.recovered).format("0.0a")}
-                    />
-                    <InfoBox
-                        onClick={(e) => setCasesType("deaths")}
-                        title="Deaths"
-                        isRed
-                        active={casesType === "deaths"}
-                        cases={prettyPrintStat(countryInfo.todayDeaths)}
-                        total={numeral(countryInfo.deaths).format("0.0a")}
-                    />
-                </div>
-                <Map
-                    countries={mapCountries}
-                    casesType={casesType}
-                    center={mapCenter}
-                    zoom={mapZoom}
-                />
-            </div>
-            <Card className="covidapp__right">
-                <CardContent>
-                    <div className="covidapp__information">
-                        <h3>Live Cases by Country</h3>
-                        <Table countries={tableData} />
-                        <h3>Worldwide new {casesType}</h3>
-                        <LineGraph casesType={casesType} />
+        <div>
+            <Nav />
+            <div className="covidapp">
+                <div className="covidapp__left">
+                    <div className="covidapp__header">
+                        <h1>COVID-19 Tracker</h1>
+                        <FormControl className="covidapp__dropdown">
+                            <Select
+                                variant="outlined"
+                                value={country}
+                                onChange={onCountryChange}
+                            >
+                                <MenuItem value="worldwide">Worldwide</MenuItem>
+                                {countries.map((country) => (
+                                    <MenuItem value={country.value}>{country.name}</MenuItem>
+                                ))}
+                            </Select>
+                        </FormControl>
                     </div>
-                </CardContent>
-            </Card>
+                    <div className="covidapp__stats">
+                        <InfoBox
+                            onClick={(e) => setCasesType("cases")}
+                            title="Coronavirus Cases"
+                            isRed
+                            active={casesType === "cases"}
+                            cases={prettyPrintStat(countryInfo.todayCases)}
+                            total={numeral(countryInfo.cases).format("0.0a")}
+                        />
+                        <InfoBox
+                            onClick={(e) => setCasesType("recovered")}
+                            title="Recovered"
+                            active={casesType === "recovered"}
+                            cases={prettyPrintStat(countryInfo.todayRecovered)}
+                            total={numeral(countryInfo.recovered).format("0.0a")}
+                        />
+                        <InfoBox
+                            onClick={(e) => setCasesType("deaths")}
+                            title="Deaths"
+                            isRed
+                            active={casesType === "deaths"}
+                            cases={prettyPrintStat(countryInfo.todayDeaths)}
+                            total={numeral(countryInfo.deaths).format("0.0a")}
+                        />
+                    </div>
+                    <Map
+                        countries={mapCountries}
+                        casesType={casesType}
+                        center={mapCenter}
+                        zoom={mapZoom}
+                    />
+                </div>
+                <Card className="covidapp__right">
+                    <CardContent>
+                        <div className="covidapp__information">
+                            <h3>Live Cases by Country</h3>
+                            <Table countries={tableData} />
+                            <h3>Worldwide new {casesType}</h3>
+                            <LineGraph casesType={casesType} />
+                        </div>
+                    </CardContent>
+                </Card>
+
+            </div>
+            <AppFooter />
         </div>
     );
 };

@@ -1,6 +1,32 @@
+* {
+    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif !important;
+    text-transform: uppercase;
+}
+
 .disclaimer {
     background-color: rgb(64, 122, 160);
     color: white;
-    min-height: 800px !important;;
+    min-height: 700px !important;;
 }
 
+.chatbot {
+    transform: scale(3.5);
+}
+
+.app-wrapper {
+    transform: scale(3.5) !important;
+}
+
+.welcome-screen {
+    transform: scale(3.5) !important;
+}
+
+.chatDiv {
+    height: 720px;
+    padding: 1rem;
+    background-image: url(https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
+    background-size: inherit;
+    background-position: top;
+    
+}

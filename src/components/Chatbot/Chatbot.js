@@ -26,15 +26,16 @@ class Chatbot extends Component {
 
             <div>
                 <Nav />
-                <h1 className="checker">Chatbot</h1>
-                <div className="chatbot" ref={el => (this.div = el)}>
+                <div className="chatDiv">
 
 
 
 
 
 
-                    <p className="disclaimer">*Results are not meant to replace professional medical advice. Credit: Infermedica API</p>
+
+                    <div className="chatbot" ref={el => (this.div = el)}>
+                    </div>
                 </div>
                 <AppFooter />
             </div>

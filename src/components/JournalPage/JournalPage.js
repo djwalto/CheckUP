@@ -5,7 +5,7 @@ import AppFooter from '../NewLandingPage/modules/views/AppFooter';
 import Nav from "../NewLandingPage/modules/views/Nav";
 import JournalPageForm from '../JournalPageForm/JournalPageForm';
 import JournalPageTable from '../JournalPageTable/JournalPageTable';
-import './JournalPage.css';
+import '../JournalPageForm/JournalPageForm.css';
 
 
 class JournalPage extends Component {

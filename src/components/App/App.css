@@ -17,6 +17,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: lighter;
+  font-family: 'Montserrat', sans-serif !important;
+  text-transform: uppercase;
 }
 
 code {
@@ -24,7 +27,11 @@ code {
     monospace;
 }
 
-
+* {
+  font-weight: lighter;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
 
 
 

@@ -29,34 +29,10 @@ class JournalPageTable extends Component {
     render() {
         return (
             <div>
-                <div className="tableDiv">
-                    <Card className="tableCard">
-                        <Container className="tableContainer" component="main" maxWidth="xs">
-                            <CssBaseline />
-                            <div className="tablePaper">
 
 
-                                <Typography component="h1" variant="h5">
-                                    Health Journal
-                  </Typography>
-                                <Table size="large">
-                                    <TableHead>
-                                        <TableRow>
-                                            <TableCell>Date</TableCell>
-                                            <TableCell>How Are You Feeling?</TableCell>
-                                            <TableCell>What Symptoms Are You Experiencing?</TableCell>
-                                            <TableCell>Edit</TableCell>
-                                            <TableCell align="right">Delete</TableCell>
-                                        </TableRow>
-                                    </TableHead>
-                                    <TableBody>
-                                        <JournalPageTableItem />
-                                    </TableBody>
-                                </Table>
-                            </div>
-                        </Container>
-                    </Card>
-                </div>
+                <JournalPageTableItem />
+
             </div>
         )
     }
