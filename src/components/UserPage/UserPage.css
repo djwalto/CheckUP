@@ -10,9 +10,9 @@
      flex-direction: row;  */
      align-items: center; 
     box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2.0);
-
+margin-left: 70px;
     border-radius: 35px;
-    width: 230px !important;
+    width: 250px !important;
     height: 350px !important;
    opacity: 100% !important;
  
@@ -30,9 +30,9 @@
 
 }
 .userTextDiv {
-    padding-left: 20px !important;
+    padding-left: 100px !important;
     margin-bottom: 5px;
-    width: 230px !important;
+    width: 430px !important;
 justify-content: stretch;
 }
 .userTextDivGreeting {
@@ -51,9 +51,10 @@ justify-content: stretch;
      align-items: center; 
     box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2.0);
     background-image: url(https://images.ctfassets.net/iqo3fk8od6t9/4h0JXH94YZ1McOM9yAOKhh/abc2e91e0d80cde9268d9b5438168945/virus-icons.png?fm=webp&w=700&q=60);
+    margin-left: 70px;
 
     border-radius: 35px;
-    width: 230px !important;
+    width: 250px !important;
     height: 350px !important;
    opacity: 100% !important;
  
@@ -66,9 +67,10 @@ justify-content: stretch;
      align-items: center; 
     box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2.0);
     background-image: url(https://images.idgesg.net/images/article/2018/02/artificial_intelligence_ai_virtual_assistant_robot_chatbot_thinkstock_856909876-100749925-medium.jpg);
+    margin-left: 70px;
 
     border-radius: 35px;
-    width: 230px !important;
+    width: 250px !important;
     height: 350px !important;
    opacity: 100% !important;
    background-size: cover;
