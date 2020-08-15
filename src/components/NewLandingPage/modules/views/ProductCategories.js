@@ -89,7 +89,7 @@ function ProductCategories(props) {
     const images = [
         {
             url:
-                'https://images.unsplash.com/photo-1505318985551-5793f4a707bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3367&q=80',
+                'https://images.unsplash.com/photo-1472067527074-10cff617399a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
             title: 'Stay Enlightened',
             width: '40%',
         },

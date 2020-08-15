@@ -31,17 +31,17 @@ export default function AppFooter() {
 
 
 
-                            <h6 >GitHub</h6>
-                            <h6 >LinkedIn</h6>
-                            <h6 >Email</h6>
-                            <h6 >Phone</h6>
+                            <h5 ><a className="links" href="https://github.com/djwalto" target="_blank">GitHub</a></h5>
+                            <h5 ><a className="links" href="https://www.linkedin.com/in/davidwaltonkc/" target="_blank">LinkedIn</a></h5>
+                            <h5 ><a className="links" href="mailto:davidjwalton2020@gmail.com" target="_blank">Email</a></h5>
 
 
 
 
 
-                                                &copy; 2020 CheckUP Health
-              </Typography>
+
+                        </Typography>
+                        <h3 className="copy">    &copy; 2020 CheckUP Health</h3>
                     </Toolbar>
                 </Container>
             </AppBar>

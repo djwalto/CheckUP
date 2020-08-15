@@ -17,9 +17,21 @@
     }
 
     .footer {
+        padding-top: 20px;
         bottom: 0;
         height: 8.5rem;
         width: 100%;
         background-color: rgb(53, 53, 54) !important;
         position: absolute;
     }
+
+    .links {
+        color: white;
+        text-decoration-line: none;
+    margin-left: -400px;
+    }
+ .menulinks {
+    color: black;
+    text-decoration-line: none;
+ }
+  

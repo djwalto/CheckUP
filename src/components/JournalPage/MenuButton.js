@@ -87,9 +87,9 @@ export default function MenuListComposition() {
                             <Paper>
                                 <ClickAwayListener onClickAway={handleClose}>
                                     <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                        <Link to="/journal">    <MenuItem onClick={handleClose}>My Profile</MenuItem></Link>
-                                        <Link to="/switchprofiles"> <MenuItem onClick={handleClose}>Switch profile</MenuItem></Link>
-                                        <Link to="/addprofile"> <MenuItem onClick={handleClose}>Add profile</MenuItem></Link>
+                                        <Link className="menulinks" to="/journal">    <MenuItem onClick={handleClose}>My Profile</MenuItem></Link>
+                                        <Link className="menulinks" to="/switchprofiles"> <MenuItem onClick={handleClose}>Switch profile</MenuItem></Link>
+                                        <Link className="menulinks" to="/addprofile"> <MenuItem onClick={handleClose}>Add profile</MenuItem></Link>
                                     </MenuList>
                                 </ClickAwayListener>
                             </Paper>

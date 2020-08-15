@@ -78,15 +78,9 @@ function ProductCTA(props) {
                     <div className={classes.card}>
                         <form onSubmit={handleSubmit} className={classes.cardContent}>
                             <Typography variant="h2" component="h2" gutterBottom>
-                                WE ARE ADDING FEATURES!
+                                WE ARE ALWAYS ADDING FEATURES!
               </Typography>
-                            <Typography variant="h5">
 
-                            </Typography>
-                            <TextField noBorder className={classes.textField} placeholder="Your email" />
-                            <Button type="submit" color="primary" variant="contained" className={classes.button}>
-                                Keep me updated on new features
-              </Button>
                         </form>
                     </div>
                 </Grid>
