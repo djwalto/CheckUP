@@ -145,7 +145,7 @@ const UserPage = (props) => (
         <Grid className="userItem" item xs={12} md={2}>
           <div className="userTextDiv">
             <Typography className="userText" component="h1" variant="h5">
-              COVID ChatBot
+              COVID Checker
                </Typography>
           </div>
           <CssBaseline />
