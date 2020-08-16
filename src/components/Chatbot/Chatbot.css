@@ -25,8 +25,8 @@
 .chatDiv {
     height: 720px;
     padding: 1rem;
-    background-image: url(https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
-    background-size: inherit;
-    background-position: top;
+    background-image: url(https://infermedica.com/images/4be7301e-ogimage-page-symptom-checker.png);
+    background-size: cover;
+    background-position: middle;
     
 }

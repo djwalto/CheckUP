@@ -77,7 +77,7 @@ class SwitchProfilesPage extends Component {
                             <CssBaseline />
                             <div className="journalFormPaper">
 
-                                <ArrowBackIcon className="journalFormArrow" />
+
                                 <br></br>
                                 <br></br>
                                 <Avatar className="journalFormAvatar">
@@ -91,7 +91,9 @@ class SwitchProfilesPage extends Component {
                                     <Link to="/journal">
                                         <Typography component="h1" variant="h4">{this.props.store.user.username}</Typography>
                                     </Link>
-
+                                    <Link to="/journal">
+                                        <Typography component="h1" variant="h4">{this.props.store.user.username}</Typography>
+                                    </Link>
                                     <center>
 
                                         <Button
@@ -111,6 +113,8 @@ class SwitchProfilesPage extends Component {
                                             Submit
                   </Button>
                                     </center>
+                                    <br></br>
+                                    <br></br>
                                     <Link to="/home">
                                         <HomeIcon className='journalFormHome' />
                                     </Link>
@@ -120,7 +124,7 @@ class SwitchProfilesPage extends Component {
                     </Card>
                 </div >
                 <AppFooter />
-            </div>
+            </div >
 
         );
     }

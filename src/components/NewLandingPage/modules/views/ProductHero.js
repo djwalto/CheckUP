@@ -40,14 +40,14 @@ function ProductHero(props) {
             {/* Increase the network loading priority of the background image. */}
             <br></br>
             <Typography color="inherit" align="center" variant="h2" >
-                Welcome to CheckUP
+                Welcome to CheckUP Health
       </Typography>
             <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
                 The path to great health starts with your own self-care and
 <br></br>
-              CheckUP is here to help guide you along the way
+              CheckUP Health is here to help guide you along the way
       </Typography>
-            <Link to="/registration">
+            <Link className="landinglinks" to="/registration">
                 <Button
 
                     variant="contained"

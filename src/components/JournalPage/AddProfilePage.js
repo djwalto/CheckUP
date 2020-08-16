@@ -131,6 +131,8 @@ class AddProfilePage extends Component {
                                             Submit
                   </Button>
                                     </center>
+                                    <br></br>
+                                    <br></br>
                                     <Link to="/home">
                                         <HomeIcon className='journalFormHome' />
                                     </Link>

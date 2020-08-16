@@ -15,10 +15,18 @@ import Card from "@material-ui/core/Card";
 import Table from "@material-ui/core/Table";
 import mapStoreToProps from '../../redux/mapStoreToProps';
 import './JournalPageTableItem.css';
+import DeleteForeverTwoToneIcon from '@material-ui/icons/DeleteForeverTwoTone';
 
 class JournalPageTableItem extends Component {
 
+    deleteEntry = (event) => (index) => {
+        console.log(index);
+    }
+
     render() {
+
+
+
         const formArray = this.props.store.formReducer.map((item, index) => {
             return (
                 <TableBody>
@@ -27,7 +35,7 @@ class JournalPageTableItem extends Component {
                         <TableCell className="journalTableItemCell">{item.feeling}</TableCell>
                         <TableCell className="journalTableItemCell">{item.symptom}</TableCell>
                         <TableCell className="journalTableItemCell">Edit</TableCell>
-                        <TableCell className="journalTableItemCell" align="right">Delete</TableCell>
+                        <TableCell className="journalTableItemCell" align="right"><DeleteForeverTwoToneIcon onClick={this.deleteEntry(item, index)} /></TableCell>
                     </TableRow>
                 </TableBody>
             )
@@ -51,7 +59,7 @@ class JournalPageTableItem extends Component {
                                         <TableCell>How Are You Feeling?</TableCell>
                                         <TableCell>What Symptoms Are You Experiencing?</TableCell>
                                         <TableCell>Edit</TableCell>
-                                        <TableCell align="right">Delete</TableCell>
+                                        <TableCell align="right">DELETE</TableCell>
                                     </TableRow>
                                 </TableHead>
                                 {formArray}
