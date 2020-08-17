@@ -24,7 +24,7 @@ import Nav from "../NewLandingPage/modules/views/Nav";
 class AddProfilePage extends Component {
 
     state = {
-        profileName: '',
+        profile_name: '',
 
     };
 
@@ -39,7 +39,8 @@ class AddProfilePage extends Component {
     };
 
     onClick = (event) => {
-        if (this.state.profileName === '') {
+        console.log(this.state);
+        if (this.state.profile_name === '') {
             alert('You forgot to answer!');
             return;
         }
@@ -105,10 +106,10 @@ class AddProfilePage extends Component {
 
                                         autoFocus
                                         type="text"
-                                        name="profileName"
+                                        name="profile_name"
                                         required
 
-                                        onChange={this.onInputChange('profileName')}
+                                        onChange={this.onInputChange('profile_name')}
                                     />
 
 

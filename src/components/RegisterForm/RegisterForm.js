@@ -15,6 +15,8 @@ import "./RegisterForm.css";
 
 class RegisterForm extends Component {
   state = {
+    first_name: '',
+    last_name: '',
     username: '',
     password: '',
     email: '',
@@ -22,10 +24,12 @@ class RegisterForm extends Component {
 
   registerUser = (event) => {
     event.preventDefault();
-
+    console.log(this.state);
     this.props.dispatch({
       type: 'REGISTER',
       payload: {
+        first_name: this.state.first_name,
+        last_name: this.state.last_name,
         username: this.state.username,
         password: this.state.password,
         email: this.state.email,
@@ -61,6 +65,28 @@ class RegisterForm extends Component {
                 </h3>
               )}
               <form className="registerForm" noValidate>
+                <TextField
+                  margin="normal"
+                  fullWidth
+                  label="First Name"
+                  autoFocus
+                  type="text"
+                  name="first_name"
+                  value={this.state.first_name}
+                  required
+                  onChange={this.handleInputChangeFor('first_name')}
+                />
+                <TextField
+                  margin="normal"
+                  fullWidth
+                  label="Last Name"
+                  autoFocus
+                  type="text"
+                  name="last_name"
+                  value={this.state.last_name}
+                  required
+                  onChange={this.handleInputChangeFor('last_name')}
+                />
                 <TextField
                   margin="normal"
                   fullWidth

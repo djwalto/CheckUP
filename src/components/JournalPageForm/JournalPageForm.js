@@ -99,12 +99,12 @@ class JournalPageForm extends Component {
 
                                     label="How did you feel today?"
 
-
+                                    select
                                     autoFocus
                                     type="text"
                                     name="feelings"
                                     required
-
+                                    variant="outlined"
                                     onChange={this.onInputChange('feeling')}
                                 />
                                 <TextField
@@ -115,7 +115,7 @@ class JournalPageForm extends Component {
 
                                     label="Did you have any symptoms today?"
 
-
+                                    variant="outlined"
                                     autoFocus
                                     type="text"
                                     name="symptoms"
