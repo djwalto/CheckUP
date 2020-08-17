@@ -24,7 +24,6 @@ import Nav from "../NewLandingPage/modules/views/Nav";
 class SwitchProfilesPage extends Component {
 
 
-
     componentDidMount() {
         console.log(this.props.store.user.username);
         console.log(this.props.store.profileReducer);
@@ -36,7 +35,7 @@ class SwitchProfilesPage extends Component {
 
 
     onClick = (event) => {
-        if (this.state.profileName === '') {
+        if (this.state.profile_name === '') {
             alert('You forgot to answer!');
             return;
         }

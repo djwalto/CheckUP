@@ -23,14 +23,19 @@ import MenuListComposition from '../JournalPage/MenuButton';
 class JournalPageForm extends Component {
 
     state = {
+        user_id: this.props.store.user.id,
         date: this.setDate(),
         feeling: '',
         symptoms: '',
     };
 
     componentDidMount() {
-        console.log(this.props.store.profileReducer);
+
+        console.log(this.props.store.user.username);
+
+        this.props.dispatch({ type: 'GET_FORM' });
     }
+
 
     onInputChange = (input) => (event) => {
         this.setState({

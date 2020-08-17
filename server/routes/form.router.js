@@ -6,16 +6,18 @@ const router = express.Router();
  * GET route template
  */
 router.get('/', (req, res) => {
-    const queryText = `SELECT * FROM "journal_profile_entries";`;
+    const queryText = `SELECT * FROM "journal" WHERE "journal".user_id=$1;`;
     pool
-        .query(queryText)
+        .query(queryText, [req.user.id])
         .then((response) => {
             res.send(response.rows);
+            console.log(response.rows);
         })
         .catch((err) => {
             console.log('Error completing GET details in formrouter', err);
             res.sendStatus(500);
         });
+
 
     /**
      * POST route template
@@ -23,11 +25,12 @@ router.get('/', (req, res) => {
     router.post('/', (req, res) => {
 
 
-        const queryText = `INSERT INTO "journal_profile_entries" ("date", "feeling", "symptom")
-                         VALUES ($1, $2, $3);`;
+        const queryText = `INSERT INTO "journal" ("user_id", "date", "feeling", "symptom")
+                         VALUES ($1, $2, $3, $4);`;
         const data = req.body;
         pool
             .query(queryText, [
+                data.user_id,
                 data.date,
                 data.feeling,
                 data.symptoms,
