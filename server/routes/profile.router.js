@@ -5,14 +5,15 @@ const router = express.Router();
 
 // Handles Ajax request for user information if user is authenticated
 router.get('/', (req, res) => {
-    const queryText = `SELECT * FROM "additional_profile";`;
+    const queryText = `SELECT * FROM "profile";`;
     pool
         .query(queryText)
         .then((response) => {
+
             res.send(response.rows);
         })
         .catch((err) => {
-            console.log('Error completing GET details in profileRouterr', err);
+            console.log('Error completing GET details in profileRouter', err);
             res.sendStatus(500);
         });
 });
@@ -22,10 +23,11 @@ router.get('/', (req, res) => {
 // is that the password gets encrypted before being inserted
 router.post('/', (req, res, next) => {
     console.log(req.body);
-    const queryText = 'INSERT INTO "additional_profile" ("profile_name") VALUES ($1) RETURNING id';
+    const queryText = 'INSERT INTO "profile" ("user_id", "profile_name") VALUES ($1, $2) RETURNING id';
     const data = req.body;
     pool
         .query(queryText, [
+            data.user_id,
             data.profile_name,
         ])
         .then(() => res.sendStatus(201))

@@ -27,7 +27,11 @@ class SwitchProfilesPage extends Component {
 
     componentDidMount() {
         console.log(this.props.store.user.username);
+        console.log(this.props.store.profileReducer);
+        this.props.dispatch({ type: 'GET_PROFILE' });
     }
+
+
 
 
 
@@ -54,6 +58,14 @@ class SwitchProfilesPage extends Component {
 
     render() {
 
+        const profileArray = this.props.store.profileReducer.map((item, index) => {
+            return (
+                <Link to="/journal">
+                    <Typography component="h1" variant="h4" key={index}>
+                        {item.profile_name}</Typography></Link>
+
+            )
+        })
 
         return (
             <div>
@@ -87,13 +99,10 @@ class SwitchProfilesPage extends Component {
                                     Your Profiles
                   </Typography>
                                 <form className="journalForm" noValidate>
+                                    {profileArray}
 
-                                    <Link to="/journal">
-                                        <Typography component="h1" variant="h4">{this.props.store.user.username}</Typography>
-                                    </Link>
-                                    <Link to="/journal">
-                                        <Typography component="h1" variant="h4">{this.props.store.user.username}</Typography>
-                                    </Link>
+
+
                                     <center>
 
                                         <Button

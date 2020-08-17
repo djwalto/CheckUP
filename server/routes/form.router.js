@@ -6,7 +6,7 @@ const router = express.Router();
  * GET route template
  */
 router.get('/', (req, res) => {
-    const queryText = `SELECT * FROM "journal";`;
+    const queryText = `SELECT * FROM "journal_profile_entries";`;
     pool
         .query(queryText)
         .then((response) => {
@@ -23,11 +23,12 @@ router.get('/', (req, res) => {
     router.post('/', (req, res) => {
 
 
-        const queryText = `INSERT INTO "journal" ("feeling", "symptom")
-                         VALUES ($1, $2);`;
+        const queryText = `INSERT INTO "journal_profile_entries" ("date", "feeling", "symptom")
+                         VALUES ($1, $2, $3);`;
         const data = req.body;
         pool
             .query(queryText, [
+                data.date,
                 data.feeling,
                 data.symptoms,
             ])

@@ -24,12 +24,13 @@ import Nav from "../NewLandingPage/modules/views/Nav";
 class AddProfilePage extends Component {
 
     state = {
+        user_id: this.props.store.user.id,
         profile_name: '',
 
     };
 
     componentDidMount() {
-        console.log(this.props.store.user.username);
+        console.log(this.props.store.user.id);
     }
 
     onInputChange = (input) => (event) => {

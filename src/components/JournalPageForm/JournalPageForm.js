@@ -23,12 +23,13 @@ import MenuListComposition from '../JournalPage/MenuButton';
 class JournalPageForm extends Component {
 
     state = {
+        date: this.setDate(),
         feeling: '',
         symptoms: '',
     };
 
     componentDidMount() {
-        console.log(this.props.store.user.username);
+        console.log(this.props.store.profileReducer);
     }
 
     onInputChange = (input) => (event) => {
@@ -37,11 +38,23 @@ class JournalPageForm extends Component {
         }, () => { console.log(this.state) });
     };
 
+    setDate() {
+        let date = new Date();
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+        if (month < 10) month = "0" + month;
+        if (day < 10) day = "0" + day;
+        let today = year + "-" + month + "-" + day;
+        return today;
+
+    }
     onClick = (event) => {
-        if (this.state.feeling === '' || this.state.symptoms === '') {
-            alert('You forgot to answer!');
-            return;
-        }
+        this.setDate();
+        // if (this.state.feeling === '' || this.state.symptoms === '') {
+        //     alert('You forgot to answer!');
+        //     return;
+        // }
         // this.addToState();
         console.log(this.state);
         this.props.dispatch({
@@ -99,7 +112,7 @@ class JournalPageForm extends Component {
 
                                     label="How did you feel today?"
 
-                                    select
+
                                     autoFocus
                                     type="text"
                                     name="feelings"
