@@ -16,6 +16,7 @@ import Table from "@material-ui/core/Table";
 import mapStoreToProps from '../../redux/mapStoreToProps';
 import './JournalPageTableItem.css';
 import DeleteForeverTwoToneIcon from '@material-ui/icons/DeleteForeverTwoTone';
+import CreateIcon from '@material-ui/icons/Create';
 
 class JournalPageTableItem extends Component {
 
@@ -31,10 +32,10 @@ class JournalPageTableItem extends Component {
             return (
                 <TableBody>
                     <TableRow className="journalTableItemRow" key={index} className="journalTableItemRow">
-                        <TableCell className="journalTableItemCell">Date</TableCell>
+                        <TableCell className="journalTableItemCell">{item.date}</TableCell>
                         <TableCell className="journalTableItemCell">{item.feeling}</TableCell>
                         <TableCell className="journalTableItemCell">{item.symptom}</TableCell>
-                        <TableCell className="journalTableItemCell">Edit</TableCell>
+                        <TableCell className="journalTableItemCell"><CreateIcon></CreateIcon></TableCell>
                         <TableCell className="journalTableItemCell" align="right"><DeleteForeverTwoToneIcon onClick={this.deleteEntry(item, index)} /></TableCell>
                     </TableRow>
                 </TableBody>

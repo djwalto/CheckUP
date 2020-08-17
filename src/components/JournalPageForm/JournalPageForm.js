@@ -30,9 +30,7 @@ class JournalPageForm extends Component {
     };
 
     componentDidMount() {
-
         console.log(this.props.store.user.username);
-
         this.props.dispatch({ type: 'GET_FORM' });
     }
 
@@ -50,7 +48,7 @@ class JournalPageForm extends Component {
         let year = date.getFullYear();
         if (month < 10) month = "0" + month;
         if (day < 10) day = "0" + day;
-        let today = year + "-" + month + "-" + day;
+        let today = month + "-" + day + "-" + year;
         return today;
 
     }
