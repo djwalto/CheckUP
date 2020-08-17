@@ -3,22 +3,20 @@ import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
-import Checkbox from '@material-ui/core/Checkbox';
-import Grid from '@material-ui/core/Grid';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
-import "./RegisterForm.css";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import HomeIcon from '@material-ui/icons/Home';
 import { Link } from 'react-router-dom';
+import "./RegisterForm.css";
 
 class RegisterForm extends Component {
   state = {
+    first_name: '',
+    last_name: '',
     username: '',
     password: '',
     email: '',
@@ -26,10 +24,12 @@ class RegisterForm extends Component {
 
   registerUser = (event) => {
     event.preventDefault();
-
+    console.log(this.state);
     this.props.dispatch({
       type: 'REGISTER',
       payload: {
+        first_name: this.state.first_name,
+        last_name: this.state.last_name,
         username: this.state.username,
         password: this.state.password,
         email: this.state.email,
@@ -45,13 +45,13 @@ class RegisterForm extends Component {
 
   render() {
     return (
-      <div className="login">
-        <Card onSubmit={this.registerUser}>
-          <Container component="main" maxWidth="xs">
+      <div className="registerDiv">
+        <Card className="registerCard" onSubmit={this.registerUser}>
+          <Container className="registerContainer" component="main" maxWidth="xs">
             <CssBaseline />
-            <div className="paper">
-              <ArrowBackIcon className="arrow" />
-              <Avatar className="avatar">
+            <div className="registerPaper">
+              <ArrowBackIcon className="registerArrow" />
+              <Avatar className="registerAvatar">
               </Avatar>
               <Typography component="h1" variant="h5">
                 Register your profile
@@ -64,7 +64,29 @@ class RegisterForm extends Component {
                   {this.props.errors.registrationMessage}
                 </h3>
               )}
-              <form className="form" noValidate>
+              <form className="registerForm" noValidate>
+                <TextField
+                  margin="normal"
+                  fullWidth
+                  label="First Name"
+                  autoFocus
+                  type="text"
+                  name="first_name"
+                  value={this.state.first_name}
+                  required
+                  onChange={this.handleInputChangeFor('first_name')}
+                />
+                <TextField
+                  margin="normal"
+                  fullWidth
+                  label="Last Name"
+                  autoFocus
+                  type="text"
+                  name="last_name"
+                  value={this.state.last_name}
+                  required
+                  onChange={this.handleInputChangeFor('last_name')}
+                />
                 <TextField
                   margin="normal"
                   fullWidth
@@ -118,22 +140,18 @@ class RegisterForm extends Component {
                         color="primary"
                       >
                         Login
-          </Button>
+                      </Button>
                     </Link>
                   </center>
                   <Link to="/home" >
-                    <HomeIcon className="home" />
+                    <HomeIcon className="registerHome" />
                   </Link>
                 </div>
-
               </form>
-
             </div>
           </Container>
         </Card>
       </div >
-
-
     );
   }
 }

@@ -22,27 +22,31 @@ export default function AppFooter() {
     return (
 
 
-        <AppBar position="static" className="footer">
-            <Container maxWidth="md" className="container">
-                <Toolbar>
-                    <Typography variant="body1" color="inherit" component="footer" className="root">
-
-                        shjfsjf shfijsbvf jkbvjsdbfvk  fvbkjbvskjsf
-
-
-                        <h6 >GitHub</h6>
+        <div id="footer">
+            <AppBar position="static" className="footer">
+                <Container maxWidth="md" className="container">
+                    <Toolbar>
+                        <Typography variant="body1" color="inherit" component="footer" className="root">
 
 
 
 
-
-                                                &copy; 2020 CheckUP Health
-              </Typography>
-                </Toolbar>
-            </Container>
-        </AppBar>
+                            <h5 ><a className="links" href="https://github.com/djwalto" target="_blank">GitHub</a></h5>
+                            <h5 ><a className="links" href="https://www.linkedin.com/in/davidwaltonkc/" target="_blank">LinkedIn</a></h5>
+                            <h5 ><a className="links" href="mailto:davidjwalton2020@gmail.com" target="_blank">Email</a></h5>
 
 
+
+
+
+
+                        </Typography>
+                        <h3 className="copy">    &copy; 2020 CheckUP Health</h3>
+                    </Toolbar>
+                </Container>
+            </AppBar>
+
+        </div>
 
     );
 }

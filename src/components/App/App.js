@@ -11,6 +11,7 @@ import { connect } from 'react-redux';
 
 
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
+//import AppPage from '../CovidTrackerPage/AppPage';
 
 import AboutPage from '../AboutPage/AboutPage';
 import UserPage from '../UserPage/UserPage';
@@ -19,7 +20,12 @@ import NewLandingPage from '../NewLandingPage/NewLandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import JournalPage from '../JournalPage/JournalPage';
+import AddProfilePage from '../JournalPage/AddProfilePage';
+import SwitchProfilesPage from '../JournalPage/SwitchProfiles';
+import Chatbot from '../Chatbot/Chatbot';
+
 import './App.css';
+import CovidTrackerPage from '../CovidTrackerPage/CovidTrackerPage';
 
 class App extends Component {
   componentDidMount() {
@@ -83,7 +89,30 @@ class App extends Component {
               // authRedirect="/journal"
               component={JournalPage}
             />
-
+            <ProtectedRoute
+              exact
+              path="/addprofile"
+              // authRedirect="/journal"
+              component={AddProfilePage}
+            />
+            <ProtectedRoute
+              exact
+              path="/switchprofiles"
+              // authRedirect="/journal"
+              component={SwitchProfilesPage}
+            />
+            <ProtectedRoute
+              exact
+              path="/tracker"
+              // authRedirect="/journal"
+              component={CovidTrackerPage}
+            />
+            <ProtectedRoute
+              exact
+              path="/chat"
+              // authRedirect="/journal"
+              component={Chatbot}
+            />
 
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />

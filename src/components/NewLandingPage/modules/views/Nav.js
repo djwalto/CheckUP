@@ -65,6 +65,8 @@ const Nav = (props) => {
                         to="/about">
                         About
         </Link>
+                    <br></br>
+                    <br></br>
                 </Typography>
             </div>
         </div>

@@ -1,4 +1,4 @@
-.paper {
+.registerPaper {
     background-color: white !important;
     display: flex;
     flex-direction: column;
@@ -8,62 +8,56 @@
     width: 400px !important;
    opacity: 100% !important;
    margin-bottom: 0px;
-}
+} 
 
-.avatar {
+.registerAvatar {
     margin-top: -10px;
     margin-bottom: 5px;
 }
 
-.form {
+.registerForm {
     padding: 80px;
     flex: 1;
     justify-content: space-between;
     width: 100%; 
     margin-top: -20px;
-}
+} 
 
-.login {
+ .registerDiv {
     display: flex;
     justify-content: space-evenly;
     height: 720px;
     padding: 1rem;
-  background-color: silver;
-  background-image: url(http://imagedata01.sage-fox.com/2017/02/01/Medicalhealthcare_124821562_original.jpg);
+ 
+    background-image: url(https://images.unsplash.com/photo-1531854676938-4d5f9703df2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
+    background-size: inherit;
+    background-position: right;
 
-}
+} 
 
- .MuiPaper-rounded {
-    background-image: url(http://imagedata01.sage-fox.com/2017/02/01/Medicalhealthcare_124821562_original.jpg);
+ .registerCard {
     width: 1500px !important;
     justify-content: space-around !important;
     display: flex;
     flex-direction: column; 
+    /* margin-right:100px ; */
+    background-position: left;
+    background-color: transparent !important;
   
-} 
+  
+}  
 
-.arrow {
+.registerArrow {
     margin-top: 20px !important;
     margin-right: 60%;
     transform: scale(1.8);
+    color: white;
 }
 
-.genderM {
-    margin: 15px 10px 15px 32px !important;
-    
-}
 
-.genderF {
-    margin: 15px 10px 15px 10px !important;
-}
 
-.register {
-    margin-top: 10px !important;
-   
-}
-
-.home {
+.registerHome {
     color: black;
      transform: scale(2.0);
     
- }
+ } 

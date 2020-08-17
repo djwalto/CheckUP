@@ -1,0 +1,32 @@
+* {
+    font-weight: lighter;
+    font-family: 'Montserrat', sans-serif !important;
+    text-transform: uppercase;
+}
+
+.disclaimer {
+    background-color: rgb(64, 122, 160);
+    color: white;
+    min-height: 700px !important;;
+}
+
+.chatbot {
+    transform: scale(3.5);
+}
+
+.app-wrapper {
+    transform: scale(3.5) !important;
+}
+
+.welcome-screen {
+    transform: scale(3.5) !important;
+}
+
+.chatDiv {
+    height: 720px;
+    padding: 1rem;
+    background-image: url(https://infermedica.com/images/4be7301e-ogimage-page-symptom-checker.png);
+    background-size: cover;
+    background-position: middle;
+    
+}

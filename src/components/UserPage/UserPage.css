@@ -1,0 +1,127 @@
+.userContainer{
+    border: 1px solid black;
+}
+
+.userPaperJournal {
+    background-color: rgb(30, 232, 247) !important;
+    background-image: url(https://images.ctfassets.net/iqo3fk8od6t9/4JIipVtwOQ7oe28tUrZCW4/9f17c4f916f1ffe44a4af0bc01ee499d/group-269_2x.png?fm=webp&w=700&q=60);
+
+     /* display: flex; 
+     flex-direction: row;  */
+     align-items: center; 
+    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2.0);
+margin-left: 70px;
+    border-radius: 35px;
+    width: 250px !important;
+    height: 350px !important;
+   opacity: 100% !important;
+ 
+}
+
+.userText {
+    color: whitesmoke;
+    font-size: 1.8rem !important;
+}
+
+.userTextGreeting {
+    color: whitesmoke;
+    font-size: 2.8rem !important;
+    padding-bottom: 120px !important;
+
+}
+.userTextDiv {
+    padding-left: 70px !important;
+    margin-bottom: 10px;
+    width: 430px !important;
+justify-content: stretch;
+}
+.userTextDivGreeting {
+    margin-top: -50px;
+    padding-left: 150px !important;
+    padding-bottom: 120px !important;
+    margin-bottom: 50px !important;
+    width: 830px !important;
+
+}
+
+.userPaperTracker {
+    background-color: rgb(98, 228, 195) !important;
+     /* display: flex; 
+     flex-direction: row;  */
+     align-items: center; 
+    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2.0);
+    background-image: url(https://images.ctfassets.net/iqo3fk8od6t9/4h0JXH94YZ1McOM9yAOKhh/abc2e91e0d80cde9268d9b5438168945/virus-icons.png?fm=webp&w=700&q=60);
+    margin-left: 70px;
+
+    border-radius: 35px;
+    width: 250px !important;
+    height: 350px !important;
+   opacity: 100% !important;
+ 
+}
+
+.userPaperChat {
+    background-color: rgb(32, 144, 230) !important;
+     /* display: flex; 
+     flex-direction: row;  */
+     align-items: center; 
+    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2.0);
+    background-image: url(https://images.idgesg.net/images/article/2018/02/artificial_intelligence_ai_virtual_assistant_robot_chatbot_thinkstock_856909876-100749925-medium.jpg);
+    margin-left: 70px;
+
+    border-radius: 35px;
+    width: 250px !important;
+    height: 350px !important;
+   opacity: 100% !important;
+   background-size: cover;
+   background-position: bottom;
+ 
+}
+.userItem {
+    margin: 200px 20px 0px 20px !important;
+    
+}
+
+.userAvatar {
+    margin-top: 35px;
+    margin-bottom: 5px;
+    margin-left: 35px;
+    transform: scale(3.0);
+    background-color: rgb(17, 126, 250) !important;
+}
+
+.userDiv {
+     /* display: flex; 
+     justify-content: column;  */
+    height: 720px;
+    padding: 1rem;
+    background-image: url(https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
+    background-size: inherit;
+    background-position: top;
+    
+    } 
+
+    /* .userCard {
+        background-image: url(https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
+        width: 1500px !important;
+        /* justify-content: space-around !important; */
+        /* display: flex; */
+        /* flex-direction: column;  */
+        /* background-position: top; */
+      
+      
+
+
+.userArrow {
+    margin-top: 20px !important;
+    margin-right: 80%;
+    transform: scale(1.8);
+    color: white;
+}
+
+
+.userHome {
+   color: black;
+    transform: scale(2.0);
+   
+}

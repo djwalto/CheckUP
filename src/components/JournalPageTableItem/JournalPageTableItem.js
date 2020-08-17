@@ -1,47 +1,76 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import LogOutButton from '../LogOutButton/LogOutButton';
-import mapStoreToProps from '../../redux/mapStoreToProps';
-import { Link } from 'react-router-dom';
+import TableRow from '@material-ui/core/TableRow';
+import TableBody from '@material-ui/core/TableBody';
+//import JournalPageTableItem from '../JournalPageTableItem/JournalPageTableItem';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import Title from "@material-ui/icons/Title";
+import Typography from '@material-ui/core/Typography';
+import Avatar from '@material-ui/core/Avatar';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import Container from '@material-ui/core/Container';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Card from "@material-ui/core/Card";
 import Table from "@material-ui/core/Table";
-import Button from "@material-ui/core/Button";
+import mapStoreToProps from '../../redux/mapStoreToProps';
+import './JournalPageTableItem.css';
+import DeleteForeverTwoToneIcon from '@material-ui/icons/DeleteForeverTwoTone';
 
+class JournalPageTableItem extends Component {
 
-// this could also be written with destructuring parameters as:
-// const UserPage = ({ user }) => (
-// and then instead of `props.user.username` you could use `user.username`
-const JournalTablePageItem = (props) => (
-    <div>
-        <Table >
-            <thead>
-                <tr>
-                    <th>Feelings for today</th>
-                    <th>Symptoms for today</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+    deleteEntry = (event) => (index) => {
+        console.log(index);
+    }
 
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{props.store.formReducer.feeling} </td>
-                    <td>{props.store.formReducer.symptoms}</td>
-                    <td>
-                        <Button >
-                            Edit
-                </Button></td>
-                    <td>
-                        <Button >
-                            Delete
-                </Button></td>
-                </tr>
-            </tbody>
-        </Table>
-    </div>
-);
+    render() {
 
 
 
+        const formArray = this.props.store.formReducer.map((item, index) => {
+            return (
+                <TableBody>
+                    <TableRow className="journalTableItemRow" key={index} className="journalTableItemRow">
+                        <TableCell className="journalTableItemCell">Date</TableCell>
+                        <TableCell className="journalTableItemCell">{item.feeling}</TableCell>
+                        <TableCell className="journalTableItemCell">{item.symptom}</TableCell>
+                        <TableCell className="journalTableItemCell">Edit</TableCell>
+                        <TableCell className="journalTableItemCell" align="right"><DeleteForeverTwoToneIcon onClick={this.deleteEntry(item, index)} /></TableCell>
+                    </TableRow>
+                </TableBody>
+            )
+        })
+        return (
 
-// this allows us to use <App /> in index.js
-export default connect(mapStoreToProps)(JournalTablePageItem);
+            <div className="tableDiv">
+                <Card className="tableCard">
+                    <Container className="tableContainer" component="main" maxWidth="xs">
+                        <CssBaseline />
+                        <div className="tablePaper">
+
+
+                            <Typography component="h1" variant="h5">
+                                Health Journal
+                  </Typography>
+                            <Table size="small">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell>Date</TableCell>
+                                        <TableCell>How Are You Feeling?</TableCell>
+                                        <TableCell>What Symptoms Are You Experiencing?</TableCell>
+                                        <TableCell>Edit</TableCell>
+                                        <TableCell align="right">DELETE</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                {formArray}
+                            </Table>
+                        </div>
+                    </Container>
+                </Card>
+            </div>
+
+        )
+    }
+}
+
+export default connect(mapStoreToProps)(JournalPageTableItem);

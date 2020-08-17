@@ -1,0 +1,84 @@
+ .journalFormCard {
+    background-color: transparent !important;  
+    width: 1500px !important;
+  justify-content: space-around !important;
+  display: flex;
+  flex-direction: column; 
+  background-position: top;
+}  
+
+ .journalFormDiv {
+    display: flex;
+    justify-content: space-evenly;
+    height: 720px;
+    padding: 1rem;
+    background-image: url(https://images.unsplash.com/photo-1524855567984-d7bbc2893539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80);
+    background-size: cover !important;
+    background-position: center;
+    
+}   
+
+.journalFormPaper {
+    background: linear-gradient(to bottom, #1c6cf7 0%, #ffffff 100%);    color: rgb(7, 7, 7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2.0);
+    border-radius: 85px;
+    width: 600px !important;
+    height: 450px;
+   opacity: 100% !important;
+   margin-bottom: 0px;
+   margin-left: -65% !important;
+  
+}
+
+.journalFormAvatar {
+    margin-top: 25px;;
+}
+
+.journalForm {
+    
+    padding: 80px;
+    flex: 1;
+    justify-content: space-between;
+    width: 100%; 
+    margin-top: -40px;
+} 
+
+.journalFormArrow {
+    margin-top: 20px !important;
+    margin-right: 80%;
+    transform: scale(1.8);
+    color: black;
+}
+
+.logbutton {
+    margin-top: 30px !important;
+}
+
+.journalFormHome {
+   margin-top: -90px !important;
+   color: black;
+    transform: scale(3.0);
+
+}
+
+.journalGreeting {
+    margin-top: 35px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.journalProfileCreate {
+    color: white;
+    font-size: 1.0rem;
+}
+
+.journalMenuButton {
+   max-width: 110px;
+    background-color: whitesmoke;
+    text-decoration-line: none !important;
+    color: black !important;
+   
+}
