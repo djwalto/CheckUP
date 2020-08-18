@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import PersonIcon from '@material-ui/icons/Person';
 import './JournalPageForm.css';
-import MenuListComposition from '../JournalPage/MenuButton';
+
 
 
 
@@ -29,10 +29,14 @@ class JournalPageForm extends Component {
         symptoms: '',
     };
 
+
+
     componentDidMount() {
+
         console.log(this.props.store.user.username);
         this.props.dispatch({ type: 'GET_FORM' });
     }
+
 
 
     onInputChange = (input) => (event) => {
@@ -66,6 +70,7 @@ class JournalPageForm extends Component {
         });
     };
 
+
     // addToState = (event) => {
     //     this.setState([{
     //         feeling: this.state.feeling,
@@ -88,9 +93,7 @@ class JournalPageForm extends Component {
                     </Avatar>
                     <div className="journalGreeting"><h1>{this.props.store.user.username}</h1></div>
 
-                    <div className="journalMenuButton">
-                        <MenuListComposition />
-                    </div>
+
                 </div>
                 <Card className="journalFormCard">
                     <Container className="journalFormContainer" component="main" maxWidth="xs">
@@ -158,9 +161,7 @@ class JournalPageForm extends Component {
                                         Submit
                   </Button>
                                 </center>
-                                <Link to="/home">
-                                    <HomeIcon className='journalFormHome' />
-                                </Link>
+
                             </form>
                         </div>
                     </Container>
