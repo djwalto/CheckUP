@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import LogOutButton from '../LogOutButton/LogOutButton';
 import mapStoreToProps from '../../redux/mapStoreToProps';
@@ -20,40 +20,47 @@ import './UserPage.css';
 // this could also be written with destructuring parameters as:
 // const UserPage = ({ user }) => (
 // and then instead of `props.user.username` you could use `user.username`
-const UserPage = (props) => (
-  <div>
+class UserPage extends Component {
 
-    <Nav />
+  // onClick = (event) => {
+  //   this.props.history.push('/journal');
+  // }
 
-    <div className="userDiv">
 
-      {/* <Card className="userCard" > */}
-      {/* 
+
+
+  render() {
+
+
+    return (
+      < div >
+
+        <Nav />
+
+        <div className="userDiv">
+
+          {/* <Card className="userCard" > */}
+          {/* 
       <Container className="userContainer" component="main" maxWidth="xs"> */}
 
 
 
-      <CssBaseline />
-      <Grid container spacing={5}>
-        <Grid item xs={12} md={4}>
+          <CssBaseline />
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={4}>
 
-          <div className="userWelcome">
-            <Avatar className="userAvatar">
-              <PersonIcon />
-            </Avatar>
-            <div className="userTextDivGreeting">
-              <Typography className="userTextGreeting" component="h1" variant="h5">
-
-                Welcome to CheckUP, {props.store.user.username}!
-
+              <div className="userWelcome">
+                <Avatar className="userAvatar">
+                  <PersonIcon />
+                </Avatar>
+                <div className="userTextDivGreeting">
+                  <Typography className="userTextGreeting" component="h1" variant="h5">
+                    Welcome to CheckUP, {this.props.store.user.username}!
               </Typography>
-            </div>
-          </div>
-        </Grid>
-
-
-
-        {/* <ArrowBackIcon className="userArrow" />
+                </div>
+              </div>
+            </Grid>
+            {/* <ArrowBackIcon className="userArrow" />
               <br></br>
               <br></br>
               <Avatar className="userAvatar">
@@ -66,7 +73,7 @@ const UserPage = (props) => (
             </div> */}
 
 
-        {/* 
+            {/* 
         <Grid item xs={12} md={4}>
           <div className="userPaper">
             <ArrowBackIcon className="userArrow" />
@@ -82,7 +89,7 @@ const UserPage = (props) => (
         </Grid> */}
 
 
-        {/* 
+            {/* 
 
         <Grid item xs={12} md={4}>
           <CssBaseline />
@@ -105,36 +112,36 @@ const UserPage = (props) => (
 
 
 
-        <Grid className="userItem" item xs={12} md={2}>
-          <div className="userTextDiv">
-            <Typography className="userText" component="h1" variant="h5">
-              Health Journal
+            <Grid className="userItem" item xs={12} md={2}>
+              <div className="userTextDiv">
+                <Typography className="userText" component="h1" variant="h5">
+                  Health Journal
                </Typography>
-          </div>
-          <CssBaseline />
-          <Link to="/journal">
-            <div className="userPaperJournal">
-            </div>
-          </Link>
-        </Grid>
+              </div>
+              <CssBaseline />
+              <Link to="/journaltable">
+                <div className="userPaperJournal">
+                </div>
+              </Link>
+            </Grid>
 
 
 
 
 
 
-        <Grid className="userItem" item xs={12} md={2}>
-          <div className="userTextDiv">
-            <Typography className="userText" component="h1" variant="h5">
-              COVID Tracker
+            <Grid className="userItem" item xs={12} md={2}>
+              <div className="userTextDiv">
+                <Typography className="userText" component="h1" variant="h5">
+                  COVID Tracker
                </Typography>
-          </div>
-          <CssBaseline />
-          <Link to="/tracker">
-            <div className="userPaperTracker">
-            </div>
-          </Link>
-        </Grid>
+              </div>
+              <CssBaseline />
+              <Link to="/tracker">
+                <div className="userPaperTracker">
+                </div>
+              </Link>
+            </Grid>
 
 
 
@@ -142,44 +149,47 @@ const UserPage = (props) => (
 
 
 
-        <Grid className="userItem" item xs={12} md={2}>
-          <div className="userTextDiv">
-            <Typography className="userText" component="h1" variant="h5">
-              COVID Checker
+            <Grid className="userItem" item xs={12} md={2}>
+              <div className="userTextDiv">
+                <Typography className="userText" component="h1" variant="h5">
+                  COVID Checker
                </Typography>
-          </div>
-          <CssBaseline />
-          <Link to="/chat">
-            <div className="userPaperChat">
-            </div>
-          </Link>
-        </Grid>
+              </div>
+              <CssBaseline />
+              <Link to="/chat">
+                <div className="userPaperChat">
+                </div>
+              </Link>
+            </Grid>
 
 
-      </Grid>
-
-
-
+          </Grid>
 
 
 
 
 
 
-      {/* </Container> */}
-
-      {/* </Card> */}
-      {/* </Grid> */}
 
 
 
+          {/* </Container> */}
 
-    </div >
-    <AppFooter />
-  </div>
+          {/* </Card> */}
+          {/* </Grid> */}
 
 
-);
 
+
+        </div >
+        <AppFooter />
+      </div >
+
+
+    );
+
+  }
+
+}
 // this allows us to use <App /> in index.js
 export default connect(mapStoreToProps)(UserPage);

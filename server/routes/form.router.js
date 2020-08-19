@@ -63,10 +63,11 @@ router.delete('/:id', (req, res) => {
         })
 })
 
-router.put('/form/:id', (req, res) => {
-
-    const sqlText = `UPDATE "journal" SET ("date", "feeling", "symptom") = ($1, $2, $3) WHERE "id" = $4`;
-    pool.query(sqlText, [req.body.date, req.body.feeling, req.body.symptom, req.params.id,])
+router.put('/:id', (req, res) => {
+    console.log(req.params);
+    console.log(req.params.id);
+    const sqlText = `UPDATE "journal" SET ("id", "date", "feeling", "symptom") = ($1, $2, $3, $4) WHERE "id" = $1`;
+    pool.query(sqlText, [req.params.id, req.body.date, req.body.feeling, req.body.symptoms])
         .then((result) => {
             res.sendStatus(200);
         })

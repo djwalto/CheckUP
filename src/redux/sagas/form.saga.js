@@ -13,11 +13,13 @@ function* postForm(action) {
     }
 }
 
-function* updateForm(action) {
+function* putForm(action) {
+    console.log(action.payload);
+    console.log(action.payload.id);
     try {
-        yield axios.put('/api/form/:id', action.payload);
-        yield put({ type: 'SET_FORM' });
-        yield put({ type: 'GET_FORM' });
+        const response = yield axios.put(`/api/form/${action.payload.id}`, action.payload);
+        console.log(response);
+        yield put({ type: 'GET_FORM', payload: response.data });
     } catch (error) {
         console.log('Error with putForm:', error);
 
@@ -53,7 +55,7 @@ function* formSaga() {
     yield takeLatest('POST_FORM', postForm);
     yield takeLatest('GET_FORM', getForm);
     yield takeLatest('DELETE_FORM', deleteForm);
-    yield takeLatest('UPDATE_FORM', updateForm);
+    yield takeLatest('PUT_FORM', putForm);
 
 }
 

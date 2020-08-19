@@ -7,9 +7,6 @@ import {
 } from 'react-router-dom';
 
 import { connect } from 'react-redux';
-
-
-
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 //import AppPage from '../CovidTrackerPage/AppPage';
 
@@ -19,11 +16,10 @@ import InfoPage from '../InfoPage/InfoPage';
 import NewLandingPage from '../NewLandingPage/NewLandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-import JournalPage from '../JournalPage/JournalPage';
-import AddProfilePage from '../JournalPage/AddProfilePage';
-import SwitchProfilesPage from '../JournalPage/SwitchProfiles';
+// import JournalPageForm from '../JournalPageForm/JournalPageForm';
 import Chatbot from '../Chatbot/Chatbot';
-
+import JournalPageTableItem from '../JournalPageTableItem/JournalPageTableItem';
+import EditJournalPage from '../EditJournalPage/EditJournalPage';
 import './App.css';
 import CovidTrackerPage from '../CovidTrackerPage/CovidTrackerPage';
 
@@ -83,23 +79,23 @@ class App extends Component {
               authRedirect="/admin"
               component={NewLandingPage}
             />
+            {/* <ProtectedRoute
+              exact
+              path="/journalform"
+              // authRedirect="/journal"
+              component={JournalPageForm}
+            /> */}
             <ProtectedRoute
               exact
-              path="/journal"
+              path="/journaltable"
               // authRedirect="/journal"
-              component={JournalPage}
+              component={JournalPageTableItem}
             />
             <ProtectedRoute
               exact
-              path="/addprofile"
+              path="/editjournal/:id"
               // authRedirect="/journal"
-              component={AddProfilePage}
-            />
-            <ProtectedRoute
-              exact
-              path="/switchprofiles"
-              // authRedirect="/journal"
-              component={SwitchProfilesPage}
+              component={EditJournalPage}
             />
             <ProtectedRoute
               exact
