@@ -32,12 +32,15 @@ class EditJournalPage extends Component {
         this.props.dispatch({ type: 'GET_FORM' });
         console.log(this.props.location.state.data);
         let rowid = (this.props.location.state.data);
+
         // this.setState({
         //     id: rowid
         // })
         console.log(rowid);
+
         this.setState({
             id: rowid
+
         })
         console.log(this.props.store.formReducer);
         console.log(this.props.store.user.username);
@@ -153,6 +156,7 @@ class EditJournalPage extends Component {
                                         type="text"
                                         name="contact"
                                         required
+                                        value={this.state.contact}
                                         onChange={this.onInputChange('contact')}
                                     />
                                     <center>

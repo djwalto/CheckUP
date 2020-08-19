@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Nav from '../NewLandingPage/modules/views/Nav';
 import AppFooter from '../NewLandingPage/modules/views/AppFooter';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { Link } from 'react-router-dom';
 import './Chatbot.css';
 
 class Chatbot extends Component {
@@ -27,12 +29,9 @@ class Chatbot extends Component {
             <div>
                 <Nav />
                 <div className="chatDiv">
-
-
-
-
-
-
+                    <Link to="/admin">
+                        <ArrowBackIcon className="chatArrowIcon" />
+                    </Link>
 
                     <div className="chatbot" ref={el => (this.div = el)}>
                     </div>

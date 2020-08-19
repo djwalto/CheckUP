@@ -89,7 +89,7 @@ function ProductCategories(props) {
     const images = [
         {
             url:
-                'https://images.unsplash.com/photo-1472067527074-10cff617399a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
+                'https://images.unsplash.com/photo-1584309832315-39d404eecc77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
             title: 'Stay Aware',
             width: '40%',
         },
@@ -101,7 +101,7 @@ function ProductCategories(props) {
         },
         {
             url:
-                'https://images.unsplash.com/photo-1494451930944-8998635c2123?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80',
+                'https://images.unsplash.com/photo-1586293403445-ffa224197984?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
             title: 'Stay Connected',
             width: '40%',
         },

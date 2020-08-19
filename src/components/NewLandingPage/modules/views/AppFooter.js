@@ -41,7 +41,9 @@ export default function AppFooter() {
 
 
                         </Typography>
-                        <h3 className="copy">    &copy; 2020 CheckUP Health</h3>
+                        <div className="copyright">
+                            <h3 className="copy">    &copy; 2020 CheckUP Health</h3>
+                        </div>
                     </Toolbar>
                 </Container>
             </AppBar>

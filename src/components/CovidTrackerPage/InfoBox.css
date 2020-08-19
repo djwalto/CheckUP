@@ -34,8 +34,9 @@
   }
 
   .icovidnfoBox {
-    width: 200px;
+    width: 275px;
     text-align: center;
+    border-radius: 20px !important;
   }
 
   .covidinfoBox__title{

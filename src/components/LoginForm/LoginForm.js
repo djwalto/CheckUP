@@ -127,9 +127,7 @@ class LoginForm extends Component {
           </Button>
                   </Link>
                 </center>
-                <Link to="/home">
-                  <HomeIcon className='loginHome' />
-                </Link>
+
               </form>
             </div>
           </Container>

@@ -152,7 +152,7 @@ function ProductHowItWorks(props) {
                             <div className={classes.item}>
                                 <div className={classes.number1}>1.</div>
                                 <img
-                                    src="https://www.verywellmind.com/thmb/ayBHd1pmYkNu7auqapNyhXGHevg=/400x250/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-551704623-56a7973e3df78cf772976a5e.jpg"
+                                    src="https://images.unsplash.com/photo-1537072087284-b53024c3f332?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
                                     alt="graph"
                                     className={classes.image1}
                                 /> 
@@ -170,7 +170,7 @@ function ProductHowItWorks(props) {
                             <div className={classes.item}>
                                 <div className={classes.number2}>2.</div>
                                 <img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRpKwb6xVEu5bYJwanxp9ybQRNihtU7LAlshQ&usqp=CAU"
+                                    src="https://images.unsplash.com/photo-1584757283930-246cb931242b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
                                     alt="graph"
                                     className={classes.image2}
                                 /> 
@@ -186,7 +186,7 @@ function ProductHowItWorks(props) {
                             <div className={classes.item}>
                                 <div className={classes.number3}>3.</div>
                                 <img
-                                    src="https://www.mobinius.com/wp-content/uploads/2020/03/chatbot-development-company-in-usa.jpg"
+                                    src="https://images.unsplash.com/photo-1548101307-a757d5f06d27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80"
                                     alt="clock"
                                     className={classes.image3}
                                 /> 

@@ -30,3 +30,10 @@
     background-position: middle;
     
 }
+
+.chatArrowIcon {
+    color: white;
+    margin-top: 80px;
+    margin-left: 80px;
+    transform: scale(4.0);
+}

@@ -55,7 +55,7 @@ class UserPage extends Component {
                 </Avatar>
                 <div className="userTextDivGreeting">
                   <Typography className="userTextGreeting" component="h1" variant="h5">
-                    Welcome to CheckUP, {this.props.store.user.username}!
+                    Welcome {this.props.store.user.username}!
               </Typography>
                 </div>
               </div>

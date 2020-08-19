@@ -21,3 +21,24 @@ margin-bottom: 5px !important;
 .tableCell {
     max-width: 100% !important;
 }
+
+.titleCell {
+    font-weight: 900 !important;
+    font-size: 1.0rem !important;
+}
+
+  .journalTableItemRow:hover {
+    background-color: #2b97ee;
+  }
+
+  .tableEditIcon {
+      transform: scale(1.5);
+      color: rgb(49, 209, 9);
+      cursor: pointer;
+  }
+
+  .tableDeleteIcon {
+    transform: scale(1.5);
+    color: red;
+    cursor: pointer;
+}
