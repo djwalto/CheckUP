@@ -15,6 +15,8 @@ import numeral from "numeral";
 import Map from "./Map";
 import AppFooter from '../NewLandingPage/modules/views/AppFooter';
 import Nav from '../NewLandingPage/modules/views/Nav';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { Link } from 'react-router-dom';
 import "leaflet/dist/leaflet.css";
 
 const AppPage = () => {
@@ -79,6 +81,9 @@ const AppPage = () => {
             <div className="covidapp">
                 <div className="covidapp__left">
                     <div className="covidapp__header">
+                        <Link to="/admin">
+                            <ArrowBackIcon className="covidArrowIcon" />
+                        </Link>
                         <h1>COVID-19 Tracker</h1>
                         <FormControl className="covidapp__dropdown">
                             <Select
@@ -96,7 +101,7 @@ const AppPage = () => {
                     <div className="covidapp__stats">
                         <InfoBox
                             onClick={(e) => setCasesType("cases")}
-                            title="Coronavirus Cases"
+                            title="COVID Cases"
                             isRed
                             active={casesType === "cases"}
                             cases={prettyPrintStat(countryInfo.todayCases)}

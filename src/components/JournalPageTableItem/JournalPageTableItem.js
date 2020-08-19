@@ -14,6 +14,7 @@ import './JournalPageTableItem.css';
 import DeleteForeverTwoToneIcon from '@material-ui/icons/DeleteForeverTwoTone';
 import CreateIcon from '@material-ui/icons/Create';
 import JournalPageForm from '../JournalPageForm/JournalPageForm';
+import AppFooter from '../NewLandingPage/modules/views/AppFooter';
 
 
 
@@ -24,6 +25,8 @@ class JournalPageTableItem extends Component {
         date: this.setDate(),
         feeling: '',
         symptoms: '',
+        medication: '',
+        contact: '',
     };
 
     getId = (rowid) => {
@@ -72,6 +75,8 @@ class JournalPageTableItem extends Component {
                         <TableCell className="journalTableItemCell">{item.date}</TableCell>
                         <TableCell className="journalTableItemCell">{item.feeling}</TableCell>
                         <TableCell className="journalTableItemCell">{item.symptom}</TableCell>
+                        <TableCell className="journalTableItemCell">{item.medication}</TableCell>
+                        <TableCell className="journalTableItemCell">{item.contact}</TableCell>
                         <TableCell className="journalTableItemCell"><CreateIcon rowid={item.id} onClick={this.editJournal(item.id)} ></CreateIcon></TableCell>
                         <TableCell className="journalTableItemCell" align="right"><DeleteForeverTwoToneIcon id={item.id} onClick={this.deleteEntry(item.id)} /></TableCell>
 
@@ -88,17 +93,17 @@ class JournalPageTableItem extends Component {
                         <Container className="tableContainer" component="main" maxWidth="xs">
                             <CssBaseline />
                             <div className="tablePaper">
-                                <Typography component="h1" variant="h5">
-                                    Health Journal
-                                </Typography>
-                                <Table size="small">
+
+                                <Table size="large">
                                     <TableHead>
-                                        <TableRow>
-                                            <TableCell>Date</TableCell>
-                                            <TableCell>How Are You Feeling?</TableCell>
-                                            <TableCell>What Symptoms Are You Experiencing?</TableCell>
-                                            <TableCell>Edit</TableCell>
-                                            <TableCell align="right">DELETE</TableCell>
+                                        <TableRow className="tableRow">
+                                            <TableCell className="tableCell">Date</TableCell>
+                                            <TableCell className="tableCell">Overall Feeling</TableCell>
+                                            <TableCell className="tableCell">Symptoms Experienced</TableCell>
+                                            <TableCell className="tableCell">Medications</TableCell>
+                                            <TableCell className="tableCell">Contact With Anyone Diagnosed with COVID</TableCell>
+                                            <TableCell className="tableCell">Edit</TableCell>
+                                            <TableCell className="tableCell" align="right">DELETE</TableCell>
                                         </TableRow>
                                     </TableHead>
                                     {formArray}
@@ -106,6 +111,7 @@ class JournalPageTableItem extends Component {
                             </div>
                         </Container>
                     </Card>
+                    <AppFooter />
                 </div>
             </>
         )

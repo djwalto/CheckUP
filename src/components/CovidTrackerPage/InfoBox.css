@@ -1,5 +1,6 @@
 .covidinfoBox {
     flex: 1;
+    width: 250px;
   }
   
   .covidinfoBox:not(:last-child) {
@@ -21,13 +22,23 @@
   .covidinfoBox__cases {
     color: #cc1034;
     font-weight: 600;
-    font-size: 1.75rem;
+    font-size: 2.25rem;
     margin-bottom: 0.5rem;
   }
   
   .covidinfoBox__total {
     color: #6c757d;
     font-weight: 700 !important;
-    font-size: 0.8rem !important;
+    font-size: 1.0rem !important;
     margin-top: 15px !important;
+  }
+
+  .icovidnfoBox {
+    width: 200px;
+    text-align: center;
+  }
+
+  .covidinfoBox__title{
+    font-weight: 900 !important;
+    font-size: 1.3rem !important;
   }

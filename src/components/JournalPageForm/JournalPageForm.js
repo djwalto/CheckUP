@@ -14,7 +14,8 @@ import Container from '@material-ui/core/Container';
 import PersonIcon from '@material-ui/icons/Person';
 import AppFooter from '../NewLandingPage/modules/views/AppFooter';
 import Nav from "../NewLandingPage/modules/views/Nav";
-import JournalPageTableItem from '../JournalPageTableItem/JournalPageTableItem';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import { Link } from 'react-router-dom';
 
 class JournalPageForm extends Component {
 
@@ -23,6 +24,8 @@ class JournalPageForm extends Component {
         date: this.setDate(),
         feeling: '',
         symptoms: '',
+        medication: '',
+        contact: '',
     };
 
     componentDidMount() {
@@ -70,6 +73,9 @@ class JournalPageForm extends Component {
                             <PersonIcon />
                         </Avatar>
                         <div className="journalGreeting"><h1>{this.props.store.user.username}</h1></div>
+                        <Link to="/admin">
+                            <ArrowBackIcon className="editArrowIcon" />
+                        </Link>
                     </div>
                     <Card className="journalFormCard">
                         <Container className="journalFormContainer" component="main" maxWidth="xs">
@@ -108,6 +114,30 @@ class JournalPageForm extends Component {
                                         required
                                         onChange={this.onInputChange('symptoms')}
                                     />
+                                    <TextField
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        label="Did you take any medications today?"
+                                        autoFocus
+                                        type="text"
+                                        name="medications"
+                                        required
+                                        variant="outlined"
+                                        onChange={this.onInputChange('medication')}
+                                    />
+                                    <TextField
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        label="Have you had contact with anyone diagnosed with COVID-19?"
+                                        variant="outlined"
+                                        autoFocus
+                                        type="text"
+                                        name="contact"
+                                        required
+                                        onChange={this.onInputChange('contact')}
+                                    />
                                     <center>
                                         <Button
                                             type="submit"
@@ -129,7 +159,7 @@ class JournalPageForm extends Component {
                     </Card>
                 </div >
                 {/* <JournalPageTableItem /> */}
-                <AppFooter />
+
             </div>
 
         );

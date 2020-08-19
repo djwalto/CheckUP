@@ -13,6 +13,8 @@ import Container from '@material-ui/core/Container';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Link } from 'react-router-dom';
 import PersonIcon from '@material-ui/icons/Person';
+import Nav from "../NewLandingPage/modules/views/Nav";
+import AppFooter from "../NewLandingPage/modules/views/AppFooter";
 
 
 class EditJournalPage extends Component {
@@ -22,6 +24,8 @@ class EditJournalPage extends Component {
         date: this.setDate(),
         feeling: '',
         symptom: '',
+        medication: '',
+        contact: '',
     };
 
     componentDidMount() {
@@ -75,73 +79,107 @@ class EditJournalPage extends Component {
     };
     render() {
         return (
-            <div className="journalFormDiv">
-                <CssBaseline />
-                <div className="userWelcome">
-                    <Avatar className="userAvatar">
-                        <PersonIcon />
-                    </Avatar>
-                    <div className="journalGreeting"><h1>{this.props.store.user.username}</h1></div>
-                </div>
-                <Card className="journalFormCard">
-                    <Container className="journalFormContainer" component="main" maxWidth="xs">
-                        <CssBaseline />
-                        <div className="journalFormPaper">
-                            <br></br>
-                            <br></br>
-                            <Avatar className="journalFormAvatar">
-                                <BookIcon />
-                            </Avatar>
-                            <Typography component="h1" variant="h5">
-                                Edit Journal Entry
+            <div>
+                <Nav />
+
+                <div className="journalFormDiv">
+
+                    <CssBaseline />
+                    <div className="userWelcome">
+                        <Avatar className="userAvatar">
+                            <PersonIcon />
+                        </Avatar>
+                        <div className="journalGreeting"><h1>{this.props.store.user.username}</h1></div>
+                        <Link to="/journaltable">
+                            <ArrowBackIcon className="editArrowIcon" />
+                        </Link>
+                    </div>
+                    <Card className="journalFormCard">
+                        <Container className="journalFormContainer" component="main" maxWidth="xs">
+                            <CssBaseline />
+                            <div className="journalFormPaper">
+                                <br></br>
+                                <br></br>
+                                <Avatar className="journalFormAvatar">
+                                    <BookIcon />
+                                </Avatar>
+                                <Typography component="h1" variant="h5">
+                                    Change Your Journal Entry
                              </Typography>
-                            <form className="journalForm" noValidate>
-                                <TextField
-                                    margin="normal"
-                                    required
-                                    fullWidth
-                                    label="How did you feel today?"
-                                    autoFocus
-                                    type="text"
-                                    name="feelings"
-                                    required
-                                    variant="outlined"
-                                    onChange={this.onInputChange('feeling')}
-                                />
-                                <TextField
-                                    margin="normal"
-                                    required
-                                    fullWidth
-                                    label="Did you have any symptoms today?"
-                                    variant="outlined"
-                                    autoFocus
-                                    type="text"
-                                    name="symptoms"
-                                    required
-                                    onChange={this.onInputChange('symptoms')}
-                                />
-                                <center>
-                                    <Link to="/journaltable">
-                                        <Button
-                                            type="submit"
-                                            variant="contained"
-                                            color="primary"
-                                            className="logbutton"
-                                            variant="contained"
-                                            color="primary"
-                                            type="submit"
-                                            value="Log In"
-                                            onClick={this.onClick(this.props)}
-                                        >
-                                            Submit
+                                <form className="journalForm" noValidate>
+                                    <TextField
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        label="How did you feel today?"
+                                        autoFocus
+                                        type="text"
+                                        name="feelings"
+                                        required
+                                        variant="outlined"
+                                        onChange={this.onInputChange('feeling')}
+                                    />
+                                    <TextField
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        label="Did you have any symptoms today?"
+                                        variant="outlined"
+                                        autoFocus
+                                        type="text"
+                                        name="symptoms"
+                                        required
+                                        onChange={this.onInputChange('symptoms')}
+                                    />
+                                    <TextField
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        label="Did you take any medications today?"
+                                        autoFocus
+                                        type="text"
+                                        name="medications"
+                                        required
+                                        variant="outlined"
+                                        onChange={this.onInputChange('medication')}
+                                    />
+                                    <TextField
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        label="Have you had contact with anyone diagnosed with COVID-19?"
+                                        variant="outlined"
+                                        autoFocus
+                                        type="text"
+                                        name="contact"
+                                        required
+                                        onChange={this.onInputChange('contact')}
+                                    />
+                                    <center>
+                                        <Link to="/journaltable">
+                                            <Button
+                                                type="submit"
+                                                variant="contained"
+                                                color="primary"
+                                                className="logbutton"
+                                                variant="contained"
+                                                color="primary"
+                                                type="submit"
+                                                value="Log In"
+                                                onClick={this.onClick(this.props)}
+                                            >
+                                                Submit
                                         </Button>
-                                    </Link>
-                                </center>
-                            </form>
-                        </div>
-                    </Container>
-                </Card>
-            </div >
+                                        </Link>
+                                    </center>
+                                </form>
+                            </div>
+                        </Container>
+                    </Card>
+
+                </div >
+                <AppFooter />
+            </div>
         );
     }
 }

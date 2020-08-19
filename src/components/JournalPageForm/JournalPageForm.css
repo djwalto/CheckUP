@@ -26,7 +26,7 @@
     box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2.0);
     border-radius: 85px;
     width: 600px !important;
-    height: 450px;
+    height: 600px;
    opacity: 100% !important;
    margin-bottom: 0px;
    margin-left: -65% !important;
@@ -81,4 +81,10 @@
     text-decoration-line: none !important;
     color: black !important;
    
+}
+
+.editArrowIcon {
+    color: white;
+    margin-top: 150px;
+    transform: scale(4.0);
 }

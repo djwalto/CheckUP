@@ -4,6 +4,7 @@
   
   body {
     background-color: #fbfcff;
+    
   }
   
   .covidapp {
@@ -22,11 +23,13 @@
     align-items: center;
     margin-bottom: 20px;
     justify-content: space-between;
+   
   }
   
   .covidapp__header > h1 {
     color: #b4d8f3;
     font-size: 2rem;
+   
   }
   
   .covidapp__stats {
@@ -54,3 +57,11 @@
       flex-direction: column;
     }
   }
+
+  .covidArrowIcon {
+    color: white;
+    margin-top: 50px;
+    margin-left: 20px;
+    padding-bottom: 15px;
+    transform: scale(4.0);
+}

@@ -26,8 +26,8 @@ router.get('/', (req, res) => {
     router.post('/', (req, res) => {
 
 
-        const queryText = `INSERT INTO "journal" ("user_id", "date", "feeling", "symptom")
-                         VALUES ($1, $2, $3, $4);`;
+        const queryText = `INSERT INTO "journal" ("user_id", "date", "feeling", "symptom", "medication", "contact")
+                         VALUES ($1, $2, $3, $4, $5, $6);`;
         const data = req.body;
         pool
             .query(queryText, [
@@ -35,6 +35,8 @@ router.get('/', (req, res) => {
                 data.date,
                 data.feeling,
                 data.symptoms,
+                data.medication,
+                data.contact,
             ])
             .then((response) => {
                 res.sendStatus(201);
@@ -66,8 +68,8 @@ router.delete('/:id', (req, res) => {
 router.put('/:id', (req, res) => {
     console.log(req.params);
     console.log(req.params.id);
-    const sqlText = `UPDATE "journal" SET ("id", "date", "feeling", "symptom") = ($1, $2, $3, $4) WHERE "id" = $1`;
-    pool.query(sqlText, [req.params.id, req.body.date, req.body.feeling, req.body.symptoms])
+    const sqlText = `UPDATE "journal" SET ("id", "date", "feeling", "symptom", "medication", "contact") = ($1, $2, $3, $4, $5, $6) WHERE "id" = $1`;
+    pool.query(sqlText, [req.params.id, req.body.date, req.body.feeling, req.body.symptoms, req.body.medication, req.body.contact])
         .then((result) => {
             res.sendStatus(200);
         })
