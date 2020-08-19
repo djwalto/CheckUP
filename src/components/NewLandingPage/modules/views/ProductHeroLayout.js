@@ -10,6 +10,7 @@ const styles = (theme) => ({
         position: 'relative',
         display: 'flex',
         alignItems: 'center',
+        textTransform: 'none',
         [theme.breakpoints.up('sm')]: {
             height: '80vh',
             minHeight: 500,
@@ -22,6 +23,7 @@ const styles = (theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        textTransform: 'none',
     },
     backdrop: {
         position: 'absolute',

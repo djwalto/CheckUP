@@ -19,7 +19,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: lighter;
   font-family: 'Montserrat', sans-serif !important;
-  text-transform: uppercase;
+   text-transform: none; 
 }
 
 code {
@@ -30,7 +30,7 @@ code {
 * {
   font-weight: lighter;
   font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
+ text-transform: none; 
 }
 
 

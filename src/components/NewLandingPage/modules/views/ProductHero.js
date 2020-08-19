@@ -20,7 +20,11 @@ const styles = (theme) => ({
         minWidth: 200,
 
     },
+    text: {
+        textTransform: 'none',
+    },
     h5: {
+        textTransform: 'none',
         marginBottom: theme.spacing(4),
         marginTop: theme.spacing(4),
         [theme.breakpoints.up('sm')]: {
@@ -39,13 +43,13 @@ function ProductHero(props) {
         <ProductHeroLayout backgroundClassName={classes.background}>
             {/* Increase the network loading priority of the background image. */}
             <br></br>
-            <Typography color="inherit" align="center" variant="h2" >
+            <Typography className={classes.text} color="inherit" align="center" variant="h2" >
                 Welcome to CheckUP Health
       </Typography>
-            <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
+            <Typography className={classes.text} color="inherit" align="center" variant="h5" className={classes.h5}>
                 The path to great health starts with your own self-care and
 <br></br>
-              CheckUP Health is here to help guide you along the way
+              we are here to help guide you along the way
       </Typography>
             <Link className="landinglinks" to="/registration">
                 <Button

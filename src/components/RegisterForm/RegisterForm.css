@@ -35,6 +35,15 @@
 
 } 
 
+.registerButton {
+    margin-top: 10px !important;
+   
+}
+.loginButton {
+    margin-bottom: -10px !important;
+   
+}
+
  .registerCard {
     width: 1500px !important;
     justify-content: space-around !important;

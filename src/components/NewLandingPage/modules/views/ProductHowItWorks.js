@@ -17,10 +17,12 @@ const styles = (theme) => ({
         display: 'flex',
         backgroundColor: '#fffffe',
         overflow: 'hidden',
+        textTransform: 'none',
     },
     container: {
         marginTop: theme.spacing(10),
         marginBottom: theme.spacing(15),
+       
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
@@ -31,31 +33,106 @@ const styles = (theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         padding: theme.spacing(0, 5),
+        
+       
+        
     },
     title: {
         marginBottom: theme.spacing(14),
+      
+       
     },
-    number: {
+    number1: {
         fontSize: 24,
         fontFamily: theme.typography.fontFamily,
-        color: theme.palette.secondary.main,
+        color: theme.palette.secondary,
         fontWeight: theme.typography.fontWeightMedium,
+        marginRight: theme.spacing(15),
     },
-    image: {
-        height: 55,
+    number2: {
+        fontSize: 24,
+        fontFamily: theme.typography.fontFamily,
+        color: theme.palette.secondary,
+        fontWeight: theme.typography.fontWeightMedium,
+       
+    },
+    number3: {
+        fontSize: 24,
+        fontFamily: theme.typography.fontFamily,
+        color: theme.palette.secondary,
+        fontWeight: theme.typography.fontWeightMedium,
+        marginLeft: theme.spacing(15),
+    },
+    image1: {
+        height: 255,
+        marginTop: theme.spacing(4),
+        marginBottom: theme.spacing(4),
+        marginRight: theme.spacing(15),
+    },
+    image2: {
+        height: 255,
         marginTop: theme.spacing(4),
         marginBottom: theme.spacing(4),
     },
-    curvyLines: {
-        pointerEvents: 'none',
-        position: 'absolute',
-        top: -180,
-        opacity: 0.7,
+    image3: {
+        height: 255,
+        marginTop: theme.spacing(4),
+        marginBottom: theme.spacing(4),
+        marginLeft: theme.spacing(20),
+    }, 
+
+text1: {
+    
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: theme.spacing(0, 5),
+    textTransform: 'none',
+},
+text2: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: theme.spacing(0, 5),
+    textTransform: 'none',
+},
+text3: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: theme.spacing(0, 5),
+    textTransform: 'none',
+},
+textBox1: {
+    // display: 'flex',
+    width: 355,
+    marginRight: theme.spacing(15),
+    flexDirection: 'column',
+    // alignItems: 'center',
+    // padding: theme.spacing(0, 5),
+    textTransform: 'none',
+},
+textBox2: {
+    width: 355,
+   
+    flexDirection: 'column',
+    // alignItems: 'center',
+    // padding: theme.spacing(0, 5),
+    textTransform: 'none',
+},
+textBox3: {
+    width: 355,
+    marginLeft: theme.spacing(20),
+    flexDirection: 'column',
+    // alignItems: 'center',
+    // padding: theme.spacing(0, 5),
+    textTransform: 'none',
     },
     button: {
         marginTop: theme.spacing(8),
         backgroundColor: '#2597f5',
         color: 'white',
+        
     },
 });
 
@@ -65,11 +142,7 @@ function ProductHowItWorks(props) {
     return (
         <section className={classes.root}>
             <Container className={classes.container}>
-                <img
-                    src="../"
-                    className={classes.curvyLines}
-                    alt="curvy lines"
-                />
+             
                 <Typography variant="h4" className={classes.title} component="h2">
                     How it works
         </Typography>
@@ -77,44 +150,52 @@ function ProductHowItWorks(props) {
                     <Grid container spacing={5}>
                         <Grid item xs={12} md={4}>
                             <div className={classes.item}>
-                                <div className={classes.number}>1.</div>
-                                <MenuBookIcon />
-
-                                <Typography variant="h5" align="center">
-                                    CheckUP Journal allows you to keep track of how you or a loved 
-                                    one was feeling, or if any symptoms were present for easy reference during healthcare visits.
+                                <div className={classes.number1}>1.</div>
+                                <img
+                                    src="https://www.verywellmind.com/thmb/ayBHd1pmYkNu7auqapNyhXGHevg=/400x250/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-551704623-56a7973e3df78cf772976a5e.jpg"
+                                    alt="graph"
+                                    className={classes.image1}
+                                /> 
+                               
+<div className={classes.textBox1}>
+                                <Typography className={classes.text1} variant="h5" align="center">
+                                    CheckUP Health Journal allows you to keep track of how you are feeling, 
+                                    or if any symptoms were present for easy reference during healthcare visits.
                                       
                 </Typography>
+                </div>
                             </div>
                         </Grid>
                         <Grid item xs={12} md={4}>
                             <div className={classes.item}>
-                                <div className={classes.number}>2.</div>
-                                {/* <img
-                                    src=""
+                                <div className={classes.number2}>2.</div>
+                                <img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRpKwb6xVEu5bYJwanxp9ybQRNihtU7LAlshQ&usqp=CAU"
                                     alt="graph"
-                                    className={classes.image}
-                                /> */}
-                                <MapIcon/>
-                                <Typography variant="h5" align="center">
+                                    className={classes.image2}
+                                /> 
+                               <div className={classes.textBox2}>
+                                <Typography className={classes.text2}variant="h5" align="center">
                                     COVID CheckUP Tracker pulls the most recent data relating to Covid-19 classes including
                                     total cases, recoveries, and more.
                 </Typography>
+                </div>
                             </div>
                         </Grid>
                         <Grid item xs={12} md={4}>
                             <div className={classes.item}>
-                                <div className={classes.number}>3.</div>
-                                {/* <img
-                                    src="/static/themes/onepirate/productHowItWorks3.svg"
+                                <div className={classes.number3}>3.</div>
+                                <img
+                                    src="https://www.mobinius.com/wp-content/uploads/2020/03/chatbot-development-company-in-usa.jpg"
                                     alt="clock"
-                                    className={classes.image}
-                                /> */}
-                                <PersonIcon />
-                                <Typography variant="h5" align="center">
+                                    className={classes.image3}
+                                /> 
+                               <div className={classes.textBox3}>
+                                <Typography className={classes.text3} variant="h5" align="center">
                                     {'COVID Symptom CheckUP uses the latest in artificial intelligence '}
                                     {'to help you determine your next step if symptoms are present.'}
                                 </Typography>
+                                </div>
                             </div>
                         </Grid>
                     </Grid>

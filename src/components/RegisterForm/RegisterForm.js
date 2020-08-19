@@ -123,7 +123,7 @@ class RegisterForm extends Component {
                     onChange={this.handleInputChangeFor('email')}
                   />
 
-                  <Button className="register"
+                  <Button className="registerButton"
                     type="submit"
                     fullWidth
                     variant="contained"
@@ -136,16 +136,14 @@ class RegisterForm extends Component {
                     <Link to="/login">
                       <Button
                         type="logbutton"
-                        className="link-button"
+                        className="loginButton"
                         color="primary"
                       >
                         Login
                       </Button>
                     </Link>
                   </center>
-                  <Link to="/home" >
-                    <HomeIcon className="registerHome" />
-                  </Link>
+
                 </div>
               </form>
             </div>

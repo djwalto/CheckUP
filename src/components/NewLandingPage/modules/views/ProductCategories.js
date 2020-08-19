@@ -90,13 +90,13 @@ function ProductCategories(props) {
         {
             url:
                 'https://images.unsplash.com/photo-1472067527074-10cff617399a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80',
-            title: 'Stay Enlightened',
+            title: 'Stay Aware',
             width: '40%',
         },
         {
             url:
                 'https://images.unsplash.com/photo-1577896849786-738ed6c78bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2106&q=80',
-            title: 'Stay Playful',
+            title: 'Stay Active',
             width: '20%',
         },
         {

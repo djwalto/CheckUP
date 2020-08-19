@@ -35,6 +35,10 @@ const styles = (theme) => ({
     title: {
         marginTop: theme.spacing(5),
         marginBottom: theme.spacing(5),
+        textTransform: 'none',
+    },
+    text: {
+        textTransform: 'none',
     },
     curvyLines: {
         pointerEvents: 'none',
@@ -55,11 +59,11 @@ function ProductValues(props) {
 
                             <MenuBookIcon className="book" />
                             <Typography variant="h6" className={classes.title}>
-                                CheckUP Journal
+                                CheckUP Health Journal
               </Typography>
-                            <Typography variant="h5">
-                                {'Keep track of your own health, '}
-                                {'as well as your loved ones with your daily health journal.'}
+                            <Typography className={classes.text} variant="h5" align="center">
+                                {'Keep track of your health, self-care, '}
+                                {'or any symptoms that become present with your daily health journal.'}
                             </Typography>
                         </div>
 
@@ -72,12 +76,12 @@ function ProductValues(props) {
                             // alt="graph"
                             />
                             <MapIcon className="map" />
-                            <Typography variant="h6" className={classes.title}>
+                            <Typography variant="h6" className={classes.title} align="center">
                                 COVID CheckUP Tracker
               </Typography>
-                            <Typography variant="h5">
+                            <Typography className={classes.text} variant="h5" align="center">
                                 {'Stay up to date with the latest COVID-19 numbers '}
-                                {'from all around the world including USA.'}
+                                {'from all around the world with our easy to use world map.'}
                             </Typography>
                         </div>
                     </Grid>
@@ -90,11 +94,11 @@ function ProductValues(props) {
                             /> */}
                             <PersonIcon className="person" />
                             <Typography variant="h6" className={classes.title}>
-                                COVID SYMPTOM CHECKUP
+                                COVID Symptom CheckUP
               </Typography>
-                            <Typography variant="h5">
+                            <Typography className={classes.text} variant="h5" align="center">
                                 {'Having symptoms? '}
-                                {'Our Infermedica ChatBot is specifically designed to check your symptoms.'}
+                                {'Our COVID ChatBot is specifically designed to check your symptoms and give you advice.'}
                             </Typography>
                         </div>
                     </Grid>

@@ -47,6 +47,9 @@ const styles = (theme) => ({
         width: '100%',
         background: 'url(/static/onepirate/productCTAImageDots.png)',
     },
+    text: {
+        textTransform: 'none',
+    },
     image: {
         position: 'absolute',
         top: -28,
@@ -77,8 +80,8 @@ function ProductCTA(props) {
                 <Grid item xs={12} md={6} className={classes.cardWrapper}>
                     <div className={classes.card}>
                         <form onSubmit={handleSubmit} className={classes.cardContent}>
-                            <Typography variant="h2" component="h2" gutterBottom>
-                                WE ARE ALWAYS ADDING FEATURES!
+                            <Typography className={classes.text} variant="h2" component="h2" gutterBottom>
+                                We are adding features in the near future!
               </Typography>
 
                         </form>
