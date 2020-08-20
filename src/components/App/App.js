@@ -11,17 +11,17 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 //import AppPage from '../CovidTrackerPage/AppPage';
 
 import AboutPage from '../AboutPage/AboutPage';
-import UserPage from '../UserPage/UserPage';
-import InfoPage from '../InfoPage/InfoPage';
+import UserPageEffect from '../InfoPage/UserPageEffect.js';
+import InfoPage from '../InfoPage/UserPageEffect.js';
 import NewLandingPage from '../NewLandingPage/NewLandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 // import JournalPageForm from '../JournalPageForm/JournalPageForm';
-import Chatbot from '../Chatbot/Chatbot';
+import ChatBotEffect from '../Chatbot/ChatBotEffect';
 import JournalPageTableItem from '../JournalPageTableItem/JournalPageTableItem';
 import EditJournalPage from '../EditJournalPage/EditJournalPage';
 import './App.css';
-import CovidTrackerPage from '../CovidTrackerPage/CovidTrackerPage';
+import CovidTrackerPageEffect from '../CovidTrackerPage/CovidTrackerPageEffect';
 
 class App extends Component {
   componentDidMount() {
@@ -50,7 +50,7 @@ class App extends Component {
             <ProtectedRoute
               exact
               path="/admin"
-              component={UserPage}
+              component={UserPageEffect}
             />
             {/* This works the same as the other protected route, except that if the user is logged in,
             they will see the info page instead. */}
@@ -101,13 +101,13 @@ class App extends Component {
               exact
               path="/tracker"
               // authRedirect="/journal"
-              component={CovidTrackerPage}
+              component={CovidTrackerPageEffect}
             />
             <ProtectedRoute
               exact
               path="/chat"
               // authRedirect="/journal"
-              component={Chatbot}
+              component={ChatBotEffect}
             />
 
             {/* If none of the other routes matched, we will show a 404. */}

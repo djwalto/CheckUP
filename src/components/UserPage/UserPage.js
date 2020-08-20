@@ -5,19 +5,14 @@ import mapStoreToProps from '../../redux/mapStoreToProps';
 import { Link } from 'react-router-dom';
 import Nav from '../NewLandingPage/modules/views/Nav';
 import AppFooter from '../NewLandingPage/modules/views/AppFooter';
-import Button from '@material-ui/core/Button';
-import Card from "@material-ui/core/Card";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
-import Container from '@material-ui/core/Container';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import HomeIcon from '@material-ui/icons/Home';
 import PersonIcon from '@material-ui/icons/Person';
 import Grid from '@material-ui/core/Grid';
 
 import './UserPage.css';
-import NavbarPage from '../NewLandingPage/modules/views/NavbarPage';
+import { animated } from 'react-spring/renderprops-universal';
 
 // this could also be written with destructuring parameters as:
 // const UserPage = ({ user }) => (

@@ -46,6 +46,18 @@ const Nav = (props) => {
                         </Link>
 
                     </Typography>
+                    <Typography
+                        variant="h6"
+                        underline="none"
+                        color="inherit">
+                        <Link className="nav-link"
+
+                            to="/info">
+
+                            INFO
+                        </Link>
+
+                    </Typography>
                     {/* Show the link to the info page and the logout button if the user is logged in */}
                     {props.store.user.id && (
                         <>

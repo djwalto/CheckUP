@@ -17,6 +17,8 @@ import JournalPageForm from '../JournalPageForm/JournalPageForm';
 import AppFooter from '../NewLandingPage/modules/views/AppFooter';
 import swal from 'sweetalert';
 import { useTransition, animate } from 'react-spring';
+import { animated } from 'react-spring/renderprops-universal';
+import TableItem from './TableItem';
 
 
 class JournalPageTableItem extends Component {
@@ -29,6 +31,9 @@ class JournalPageTableItem extends Component {
         medication: '',
         contact: '',
     };
+
+
+
 
     getId = (rowid) => {
         console.log(rowid);
@@ -84,9 +89,18 @@ class JournalPageTableItem extends Component {
     }
 
     render() {
+
+
+
+
         const formArray = this.props.store.formReducer.map((item, i) => {
             return (
+
+
+
+
                 <TableBody className="tableBody">
+
                     <TableRow className="journalTableItemRow" className="journalTableItemRow">
                         <TableCell className="journalTableItemCell">{item.date}</TableCell>
                         <TableCell className="journalTableItemCell" rowFeeling={item.feeling}>{item.feeling}</TableCell>

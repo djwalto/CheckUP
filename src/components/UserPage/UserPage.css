@@ -94,12 +94,12 @@ justify-content: stretch;
 .userDiv {
      /* display: flex; 
      justify-content: column;  */
-    height: 180% !important;
+    height: 800px !important;
     padding: 1rem;
     background-image: url(https://images.unsplash.com/photo-1594911772125-07fc7a2d8d9f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
     background-size: inherit;
     background-position: top;
-    border: 5px solid yellow;
+
     } 
 
     /* .userCard {
