@@ -44,95 +44,97 @@ class LoginForm extends Component {
 
   render() {
     return (
+
       <div className="loginDiv">
+        <div className="overlay">
 
-        <Card className="loginCard" onSubmit={this.login}>
-          <Container className="loginContainer" component="main" maxWidth="xs">
-            <CssBaseline />
-            <div className="loginPaper">
-              <ArrowBackIcon className="loginArrow" />
-              <br></br>
-              <br></br>
-              <Avatar className="loginAvatar">
-                <LockOutlinedIcon />
-              </Avatar>
-              <Typography component="h1" variant="h5">
-                Log in to your profile
+          <Card className="loginCard" onSubmit={this.login}>
+            <Container className="loginContainer" component="main" maxWidth="xs">
+              <CssBaseline />
+              <div className="loginPaper">
+                <ArrowBackIcon className="loginArrow" />
+                <br></br>
+                <br></br>
+                <Avatar className="loginAvatar">
+                  <LockOutlinedIcon />
+                </Avatar>
+                <Typography component="h1" variant="h5">
+                  Log in to your profile
                     </Typography>
-              {this.props.store.errors.loginMessage && (
-                <h3
-                  className="alert"
-                  role="alert"
-                >
-                  {this.props.store.errors.loginMessage}
-                </h3>
-              )}
-              <form className="loginForm" noValidate>
-                <TextField
+                {this.props.store.errors.loginMessage && (
+                  <h3
+                    className="alert"
+                    role="alert"
+                  >
+                    {this.props.store.errors.loginMessage}
+                  </h3>
+                )}
+                <form className="loginForm" noValidate>
+                  <TextField
 
-                  margin="normal"
-                  required
-                  fullWidth
+                    margin="normal"
+                    required
+                    fullWidth
 
-                  label="Username"
+                    label="Username"
 
 
-                  autoFocus
-                  type="text"
-                  name="username"
-                  required
-                  value={this.state.username}
-                  onChange={this.handleInputChangeFor('username')}
-                />
-                <TextField
+                    autoFocus
+                    type="text"
+                    name="username"
+                    required
+                    value={this.state.username}
+                    onChange={this.handleInputChangeFor('username')}
+                  />
+                  <TextField
 
-                  margin="normal"
-                  required
-                  fullWidth
-                  name="password"
-                  label="Password"
-                  type="password"
-                  id="password"
-                  autoComplete="current-password"
-                  type="password"
-                  name="password"
-                  required
-                  value={this.state.password}
-                  onChange={this.handleInputChangeFor('password')}
-                />
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="password"
+                    label="Password"
+                    type="password"
+                    id="password"
+                    autoComplete="current-password"
+                    type="password"
+                    name="password"
+                    required
+                    value={this.state.password}
+                    onChange={this.handleInputChangeFor('password')}
+                  />
 
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  color="primary"
-                  className="logbutton"
-                  variant="contained"
-                  color="primary"
-                  type="submit"
-                  value="Log In"
-                >
-                  Log In
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    color="primary"
+                    className="logbutton"
+                    variant="contained"
+                    color="primary"
+                    type="submit"
+                    value="Log In"
+                  >
+                    Log In
                          </Button>
-                <center>
-                  <Link to="/registration">
-                    <Button
-                      className="button"
-                      color="primary"
-                      type="button"
+                  <center>
+                    <Link to="/registration">
+                      <Button
+                        className="button"
+                        color="primary"
+                        type="button"
 
 
-                    >
-                      Register
+                      >
+                        Register
           </Button>
-                  </Link>
-                </center>
+                    </Link>
+                  </center>
 
-              </form>
-            </div>
-          </Container>
-        </Card>
-
+                </form>
+              </div>
+            </Container>
+          </Card>
+        </div>
       </div >
 
 

@@ -30,13 +30,23 @@
 .loginDiv {
     display: flex;
     justify-content: space-evenly;
-    height: 720px;
+    height: 790px;
     padding: 1rem;
     
     background-image: url(https://images.unsplash.com/photo-1531854676938-4d5f9703df2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
     background-size: inherit;
     background-position: right;
 }
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
 
     .loginCard {
         width: 1500px !important;
