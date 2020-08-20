@@ -22,7 +22,7 @@ export default function AppFooter() {
     return (
 
 
-        <div id="footer">
+        <div >
             <AppBar position="static" className="footer">
                 <Container maxWidth="md" className="container">
                     <Toolbar>

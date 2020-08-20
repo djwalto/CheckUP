@@ -15,7 +15,9 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import HomeIcon from '@material-ui/icons/Home';
 import PersonIcon from '@material-ui/icons/Person';
 import Grid from '@material-ui/core/Grid';
+
 import './UserPage.css';
+import NavbarPage from '../NewLandingPage/modules/views/NavbarPage';
 
 // this could also be written with destructuring parameters as:
 // const UserPage = ({ user }) => (
@@ -28,7 +30,6 @@ class UserPage extends Component {
 
 
 
-
   render() {
 
 
@@ -36,7 +37,7 @@ class UserPage extends Component {
       < div >
 
         <Nav />
-
+        {/* <NavbarPage /> */}
         <div className="userDiv">
 
           {/* <Card className="userCard" > */}
@@ -50,6 +51,7 @@ class UserPage extends Component {
             <Grid item xs={12} md={4}>
 
               <div className="userWelcome">
+
                 <Avatar className="userAvatar">
                   <PersonIcon />
                 </Avatar>

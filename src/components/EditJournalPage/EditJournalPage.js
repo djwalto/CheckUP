@@ -89,10 +89,7 @@ class EditJournalPage extends Component {
 
                     <CssBaseline />
                     <div className="userWelcome">
-                        <Avatar className="userAvatar">
-                            <PersonIcon />
-                        </Avatar>
-                        <div className="journalGreeting"><h1>{this.props.store.user.username}</h1></div>
+
                         <Link to="/journaltable">
                             <ArrowBackIcon className="editArrowIcon" />
                         </Link>

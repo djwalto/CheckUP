@@ -16,7 +16,7 @@ import CreateIcon from '@material-ui/icons/Create';
 import JournalPageForm from '../JournalPageForm/JournalPageForm';
 import AppFooter from '../NewLandingPage/modules/views/AppFooter';
 import swal from 'sweetalert';
-
+import { useTransition, animate } from 'react-spring';
 
 
 class JournalPageTableItem extends Component {
@@ -86,7 +86,7 @@ class JournalPageTableItem extends Component {
     render() {
         const formArray = this.props.store.formReducer.map((item, i) => {
             return (
-                <TableBody>
+                <TableBody className="tableBody">
                     <TableRow className="journalTableItemRow" className="journalTableItemRow">
                         <TableCell className="journalTableItemCell">{item.date}</TableCell>
                         <TableCell className="journalTableItemCell" rowFeeling={item.feeling}>{item.feeling}</TableCell>
@@ -102,32 +102,34 @@ class JournalPageTableItem extends Component {
         })
         return (
             <>
-                <JournalPageForm />
-                <div className="tableDiv">
+                <div className="journalMainDiv">
+                    <JournalPageForm />
+                    <div className="tableDiv">
 
-                    <Card className="tableCard">
-                        <Container className="tableContainer" component="main" maxWidth="xs">
+                        {/* <Card className="tableCard"> */}
+                        <Container className="tableContainer" component="main" maxWidth="xl">
                             <CssBaseline />
-                            <div className="tablePaper">
+                            {/* <div className="tablePaper"> */}
 
-                                <Table size="large">
-                                    <TableHead>
-                                        <TableRow className="tableRow">
-                                            <TableCell className="titleCell">Date</TableCell>
-                                            <TableCell className="titleCell">Overall Feeling</TableCell>
-                                            <TableCell className="titleCell">Symptoms Experienced</TableCell>
-                                            <TableCell className="titleCell">Medications</TableCell>
-                                            <TableCell className="titleCell">Contact With Anyone Diagnosed with COVID</TableCell>
-                                            <TableCell className="titleCell">Edit</TableCell>
-                                            <TableCell className="titleCell" align="right">DELETE</TableCell>
-                                        </TableRow>
-                                    </TableHead>
-                                    {formArray}
-                                </Table>
-                            </div>
+                            <Table className="mainTable" size="large">
+                                <TableHead className="headerMain">
+                                    <TableRow className="tableRow">
+                                        <TableCell className="titleCell" align="left">Date</TableCell>
+                                        <TableCell className="titleCell" align="center" >Overall Feeling</TableCell>
+                                        <TableCell className="titleCell" align="center">Symptoms Experienced</TableCell>
+                                        <TableCell className="titleCell" align="center">Medications</TableCell>
+                                        <TableCell className="titleCell" align="center">Contact With Anyone Diagnosed with COVID</TableCell>
+                                        <TableCell className="titleCell" align="center">Edit</TableCell>
+                                        <TableCell className="titleCell" align="right">Delete</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                {formArray}
+                            </Table>
+                            {/* </div> */}
                         </Container>
-                    </Card>
-                    <AppFooter />
+                        {/* </Card> */}
+                        <AppFooter />
+                    </div>
                 </div>
             </>
         )

@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '../components/Button';
 import Typography from '../components/Typography';
 import ProductHeroLayout from './ProductHeroLayout';
+import './ProductHero.css';
 import { Link } from 'react-router-dom';
 const backgroundImage =
     'https://images.unsplash.com/photo-1589169011402-8b2cbd1ee593?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2294&q=80';
@@ -40,32 +41,49 @@ function ProductHero(props) {
     const { classes } = props;
 
     return (
-        <ProductHeroLayout backgroundClassName={classes.background}>
-            {/* Increase the network loading priority of the background image. */}
-            <br></br>
-            <Typography className={classes.text} color="inherit" align="center" variant="h2" >
-                Welcome to CheckUP Health
+        // <section class="section parallax bg1">
+        //     <h1>Cute Kitten</h1>
+        // </section>
+        // <section class="section static">
+        //     <h1>Boring</h1>
+        // </section>
+        // <section class="section parallax bg2">
+        //     <h1>Fluffy Kitten</h1>
+        // </section>
+
+        <>
+            <section class="section static">
+
+                <ProductHeroLayout backgroundClassName={classes.background}>
+                    {/* Increase the network loading priority of the background image. */}
+                    <br></br>
+
+
+                    <Typography className={classes.text} color="inherit" align="center" variant="h2" >
+                        Welcome to CheckUP Health
       </Typography>
-            <Typography className={classes.text} color="inherit" align="center" variant="h5" className={classes.h5}>
-                The path to great health starts with your own self-care and
+                    <Typography className={classes.text} color="inherit" align="center" variant="h5" className={classes.h5}>
+                        The path to great health starts with your own self-care and
 <br></br>
               we are here to help guide you along the way
       </Typography>
-            <Link className="landinglinks" to="/registration">
-                <Button
+                    <Link className="landinglinks" to="/registration">
+                        <Button
 
-                    variant="contained"
-                    size="large"
-                    className={classes.button}
-                    component="a"
-                    push="/registration"
+                            variant="contained"
+                            size="large"
+                            className={classes.button}
+                            component="a"
+                            push="/registration"
 
-                >
+                        >
 
-                    Register
+                            Register
       </Button>
-            </Link >
-        </ProductHeroLayout>
+                    </Link >
+                </ProductHeroLayout>
+            </section>
+        </>
     );
 }
 

@@ -7,8 +7,8 @@
     }  */
 
 
-
-    /* #footer {
+/* 
+    #footer {
     bottom: 0;
     height: 8.5rem;
     width: 100%;
@@ -17,18 +17,21 @@
     } */
 
     .footer {
-        padding-top: 20px;
+        padding-top: 10%;
+        padding-bottom: 10% !important;
         bottom: 0;
-        height: 8.5rem;
+        height: auto !important; 
         width: 100%;
         background-color: rgb(53, 53, 54) !important;
         position: absolute;
+        justify-content: space-evenly;
+        border: 5px solid yellow;
     }
 
     .links {
         color: white;
         text-decoration-line: none;
-    margin-left: -400px;
+    /* margin-left: -400px; */
     }
 
 /* 
@@ -38,5 +41,5 @@
  } */
   
  .copyright {
-    margin-left: 350px;
+ margin-left: 100%;
  }

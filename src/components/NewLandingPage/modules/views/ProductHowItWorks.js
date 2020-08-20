@@ -9,6 +9,7 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import MapIcon from '@material-ui/icons/Map';
 import PersonIcon from '@material-ui/icons/Person';
 import { Link } from 'react-router-dom';
+import { useSpring, animated } from 'react-spring';
 
 
 
@@ -133,6 +134,7 @@ textBox3: {
         backgroundColor: '#2597f5',
         color: 'white',
         
+        
     },
 });
 
@@ -200,18 +202,7 @@ function ProductHowItWorks(props) {
                         </Grid>
                     </Grid>
                 </div>
-                <Link to="/registration">
-                <Button
-                    color="secondary"
-                    size="large"
-                    variant="contained"
-                    className={classes.button}
-                    component="a"
-                    href="/premium-themes/onepirate/sign-up/"
-                >
-                    Get started
-        </Button>
-        </Link>
+           
             </Container>
         </section>
     );

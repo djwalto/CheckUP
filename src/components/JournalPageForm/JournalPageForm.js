@@ -68,15 +68,15 @@ class JournalPageForm extends Component {
                 <Nav />
                 <div className="journalFormDiv">
                     <CssBaseline />
-                    <div className="userWelcome">
+                    {/* <div className="userWelcome">
                         <Avatar className="userAvatar">
                             <PersonIcon />
                         </Avatar>
-                        <div className="journalGreeting"><h1>{this.props.store.user.username}</h1></div>
-                        <Link to="/admin">
-                            <ArrowBackIcon className="editArrowIcon" />
-                        </Link>
-                    </div>
+                        <div className="journalGreeting"><h1>{this.props.store.user.username}</h1></div> */}
+                    <Link to="/admin">
+                        <ArrowBackIcon className="editArrowIcon" />
+                    </Link>
+                    {/* </div> */}
                     <Card className="journalFormCard">
                         <Container className="journalFormContainer" component="main" maxWidth="xs">
                             <CssBaseline />
@@ -160,7 +160,7 @@ class JournalPageForm extends Component {
                 </div >
                 {/* <JournalPageTableItem /> */}
 
-            </div>
+            </div >
 
         );
     }

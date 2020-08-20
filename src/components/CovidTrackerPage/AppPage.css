@@ -10,7 +10,7 @@
   .covidapp {
     display: flex;
     justify-content: space-evenly;
-    background-color: rgb(150, 156, 168) ;
+    background-color: rgb(44, 46, 44) ;
     padding: 20px;
   }
   
