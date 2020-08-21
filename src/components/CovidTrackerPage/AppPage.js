@@ -84,7 +84,7 @@ const AppPage = () => {
                         <Link to="/admin">
                             <ArrowBackIcon className="covidArrowIcon" />
                         </Link>
-                        <h1>COVID-19 Tracker</h1>
+                        <h3 className="backText">Back to Home</h3><h1>COVID-19 Tracker</h1>
                         <FormControl className="covidapp__dropdown">
                             <Select
                                 variant="outlined"

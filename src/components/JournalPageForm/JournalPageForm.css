@@ -7,7 +7,7 @@
   background-position: top;
   
   align-items: center !important;
-  padding-right: 13% !important;
+  padding-right: 23% !important;
 }  
 
  .journalFormDiv {
@@ -22,16 +22,16 @@
 }   
 
 .journalFormPaper {
-    background: linear-gradient(to bottom, #99baf3 0%, #ffffff 100%);    color: rgb(7, 7, 7);
+    background: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2.0);
     border-radius: 85px;
-    width: 130%!important;
+    width: 180%!important;
     height: 100%;
    opacity: 100% !important;
- 
+  
    margin-right: 35% !important;
    /* margin-bottom: 0px; */
    /* margin-left: -65% !important; */
@@ -94,4 +94,12 @@
     padding-top: 50% !important;
     padding-left: 45%;
     transform: scale(9.0);
+}
+
+h3 {
+    color: white;
+    font-weight: 900;
+    margin-top: 6%;
+   
+    
 }

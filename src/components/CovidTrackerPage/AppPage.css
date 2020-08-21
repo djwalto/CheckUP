@@ -61,7 +61,17 @@
   .covidArrowIcon {
     color: white;
     margin-top: 50px;
-    margin-left: 20px;
-    padding-bottom: 15px;
+    margin-left: 30px;
+    
     transform: scale(4.0);
+
 }
+
+.backText {
+  font-weight: 900;
+  padding-right: 5%;
+ margin-right: -10%;
+  margin-left: -28%;
+  margin-bottom: 3%;
+  
+} 

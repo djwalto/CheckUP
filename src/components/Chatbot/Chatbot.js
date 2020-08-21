@@ -32,7 +32,7 @@ class Chatbot extends Component {
                     <Link to="/admin">
                         <ArrowBackIcon className="chatArrowIcon" />
                     </Link>
-
+                    <h3 className="backToText">Back to Home</h3>
                     <div className="chatbot" ref={el => (this.div = el)}>
                     </div>
                 </div>

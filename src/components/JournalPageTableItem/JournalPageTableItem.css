@@ -2,32 +2,28 @@
     padding-top: 20px;
     width: 100%; 
     background-color: rgb(26, 25, 25);
+    
   
 }
 
 .tableRow {
-    /* max-width: 100% !important; */
-    /* padding-right: 200px !important; */
-    justify-content: space-evenly !important;
-    width: 100% !important;
+   height: 100px;
+  
 }
 
 .tableCell {
-    /* max-width: 100% !important; */
-    width: 100% !important;
-    justify-content: space-evenly !important;
-   
+  font-weight: 900;
 }
 
 .titleCell {
     font-weight: 900 !important;
     font-size: 1.0rem !important;
-    width: 100% !important;
-    justify-content: space-evenly !important;
+     justify-content: space-evenly !important; 
+   
 }
 
   .journalTableItemRow:hover {
-    background-color: #2b97ee;
+    background-color: #9d9fa0;
     width: 100% !important;
    
   }
@@ -49,22 +45,27 @@
     margin: 0px;
     padding: 0px;
     width: 100% !important;
+    border-radius: 50px!important;
     
 }
 
 .mainTable {
     margin: 0px;
     padding: 0px;
-    width: 100% !important;
-    justify-content: space-evenly !important;
+    /* width: 100% !important; */
+    /* justify-content: space-evenly !important; */
+   
+   
    
 }
 
 .headerMain{
-    justify-content: space-between !important;
-    background-color: rgb(218, 212, 212);
+   /* // justify-content: space-between !important; */
+    background-color: rgb(243, 169, 78);
+   
 }
 
 .tableBody {
-    background-color: rgb(218, 212, 212);
+    background-color: rgb(238, 238, 236);
+    
 }

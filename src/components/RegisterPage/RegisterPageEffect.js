@@ -1,18 +1,17 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
-import CovidTrackerPage from './CovidTrackerPage';
+import RegisterPage from '../RegisterPage/RegisterPage';
 
 
 
 
 
-
-const CovidTrackerPageEffect = () => {
+const RegisterPageEffect = () => {
 
     const fade = useSpring({
 
         from: {
-            opacity: 0.5,
+            opacity: 0.5
         },
 
         opacity: 1
@@ -23,8 +22,8 @@ const CovidTrackerPageEffect = () => {
 
     return (
         <animated.div style={fade}>
-            <CovidTrackerPage />
+            <RegisterPage />
         </animated.div>
     );
 }
-export default CovidTrackerPageEffect;
+export default RegisterPageEffect;

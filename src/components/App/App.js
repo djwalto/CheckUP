@@ -12,10 +12,10 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 
 import AboutPage from '../AboutPage/AboutPage';
 import UserPageEffect from '../InfoPage/UserPageEffect.js';
-import InfoPage from '../InfoPage/UserPageEffect.js';
-import NewLandingPage from '../NewLandingPage/NewLandingPage';
-import LoginPage from '../LoginPage/LoginPage';
-import RegisterPage from '../RegisterPage/RegisterPage';
+
+import NewLandingPageEffect from '../NewLandingPage/modules/views/NewLandingPageEffect';
+import LoginFormEffect from '../LoginForm/LoginFormEffect';
+import RegisterPageEffect from '../RegisterPage/RegisterPageEffect';
 // import JournalPageForm from '../JournalPageForm/JournalPageForm';
 import ChatBotEffect from '../Chatbot/ChatBotEffect';
 import JournalPageTableItem from '../JournalPageTableItem/JournalPageTableItem';
@@ -54,30 +54,25 @@ class App extends Component {
             />
             {/* This works the same as the other protected route, except that if the user is logged in,
             they will see the info page instead. */}
-            <ProtectedRoute
-              exact
-              path="/info"
-              component={InfoPage}
-            />
             {/* This works the same as the other protected route, except that if the user is logged in,
             they will be redirected to the authRedirect path provided. */}
             <ProtectedRoute
               exact
               path="/login"
               authRedirect="/admin"
-              component={LoginPage}
+              component={LoginFormEffect}
             />
             <ProtectedRoute
               exact
               path="/registration"
               authRedirect="/admin"
-              component={RegisterPage}
+              component={RegisterPageEffect}
             />
             <ProtectedRoute
               exact
               path="/home"
               authRedirect="/admin"
-              component={NewLandingPage}
+              component={NewLandingPageEffect}
             />
             {/* <ProtectedRoute
               exact

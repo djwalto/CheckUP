@@ -11,7 +11,7 @@ const UserPageEffect = () => {
   const fade = useSpring({
 
     from: {
-      opacity: 0
+      opacity: 0.5
     },
 
     opacity: 1

@@ -6,9 +6,11 @@
     box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2.0);
     border-radius: 85px;
     width: 400px !important;
+    height: 400px !important;
    opacity: 100% !important;
    margin-bottom: 0px;
-   height: 400px;
+   margin-top: 45%;
+   margin-left: 50%;
 }
 
 .loginAvatar {
@@ -24,6 +26,7 @@
     width: 100%; 
     margin-top: -50px;
     opacity: 100% !important;
+    
 }
 
 
@@ -31,21 +34,21 @@
     display: flex;
     justify-content: space-evenly;
     height: 790px;
-    padding: 1rem;
-    
     background-image: url(https://images.unsplash.com/photo-1531854676938-4d5f9703df2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
     background-size: inherit;
     background-position: right;
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     position: relative;
     z-index: 1;
+    padding: -5px !important;
+   
   }
 
     .loginCard {

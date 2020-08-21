@@ -13,7 +13,7 @@ margin-left: 70px;
     width: 250px !important;
     height: 350px !important;
    opacity: 100% !important;
-   border: 5px solid black;
+   border: 3px solid black;
  
 }
 
@@ -56,7 +56,7 @@ justify-content: stretch;
     width: 250px !important;
     height: 350px !important;
    opacity: 100% !important;
-   border: 5px solid black;
+   border: 3px solid black;
  
 }
 
@@ -75,7 +75,7 @@ justify-content: stretch;
    opacity: 100% !important;
    background-size: cover;
    background-position: bottom;
-   border: 5px solid black;
+   border: 3px solid black;
  
 }
 .userItem {

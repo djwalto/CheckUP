@@ -15,6 +15,7 @@ import { Link } from 'react-router-dom';
 import PersonIcon from '@material-ui/icons/Person';
 import Nav from "../NewLandingPage/modules/views/Nav";
 import AppFooter from "../NewLandingPage/modules/views/AppFooter";
+import JournalPageTableItemEffect from '../JournalPageTableItem/JournalPageTableItemEffect';
 
 
 class EditJournalPage extends Component {
@@ -42,6 +43,7 @@ class EditJournalPage extends Component {
             id: rowid
 
         })
+        console.log(this.state.id)
         console.log(this.props.store.formReducer);
         console.log(this.props.store.user.username);
 
@@ -67,6 +69,7 @@ class EditJournalPage extends Component {
 
     onClick = (id) => (event) => {
         console.log(id);
+
         this.setDate();
 
         // if (this.state.feeling === '' || this.state.symptoms === '') {

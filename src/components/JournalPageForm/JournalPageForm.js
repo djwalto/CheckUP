@@ -75,7 +75,10 @@ class JournalPageForm extends Component {
                         <div className="journalGreeting"><h1>{this.props.store.user.username}</h1></div> */}
                     <Link to="/admin">
                         <ArrowBackIcon className="editArrowIcon" />
+
                     </Link>
+                    <br></br>
+                    <h3>Back to Home</h3>
                     {/* </div> */}
                     <Card className="journalFormCard">
                         <Container className="journalFormContainer" component="main" maxWidth="xs">
@@ -141,17 +144,21 @@ class JournalPageForm extends Component {
                                     <center>
                                         <Button
                                             type="submit"
+
+                                            className="longbutton"
                                             variant="contained"
-                                            color="primary"
-                                            className="logbutton"
-                                            variant="contained"
-                                            color="primary"
-                                            type="submit"
+
+
                                             value="Log In"
+                                            className="button"
+                                            color="primary"
+
                                             onClick={this.onClick}
                                         >
                                             Submit
                                         </Button>
+
+
                                     </center>
                                 </form>
                             </div>
