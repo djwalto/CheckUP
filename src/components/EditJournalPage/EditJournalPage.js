@@ -38,14 +38,22 @@ class EditJournalPage extends Component {
         //     id: rowid
         // })
         console.log(rowid);
-
-        this.setState({
-            id: rowid
-
+        console.log(this.props.store.formReducer)
+        console.log(rowid);
+        console.log(this.props.store.formReducer.index);
+        const idArray = this.props.store.formReducer.map((item, index) => {
+            if (item.id === rowid) {
+                console.log("We have a winner", item.id, index);
+                this.setState({
+                    id: this.props.location.state.data,
+                    feeling: item.feeling,
+                    symptoms: item.symptom,
+                    medication: item.medication,
+                    contact: item.contact
+                })
+            }
         })
-        console.log(this.state.id)
-        console.log(this.props.store.formReducer);
-        console.log(this.props.store.user.username);
+
 
     }
 
@@ -67,9 +75,10 @@ class EditJournalPage extends Component {
     }
 
 
-    onClick = (id) => (event) => {
-        console.log(id);
+    onClick = () => (event) => {
 
+        console.log(this.state);
+        console.log(this.state.id)
         this.setDate();
 
         // if (this.state.feeling === '' || this.state.symptoms === '') {
@@ -156,7 +165,7 @@ class EditJournalPage extends Component {
                                         type="text"
                                         name="contact"
                                         required
-                                        value={this.state.contact}
+
                                         onChange={this.onInputChange('contact')}
                                     />
                                     <center>
