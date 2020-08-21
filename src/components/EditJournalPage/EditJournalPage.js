@@ -16,7 +16,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import Nav from "../NewLandingPage/modules/views/Nav";
 import AppFooter from "../NewLandingPage/modules/views/AppFooter";
 import JournalPageTableItemEffect from '../JournalPageTableItem/JournalPageTableItemEffect';
-
+import swal from "sweetalert";
 
 class EditJournalPage extends Component {
 
@@ -76,7 +76,22 @@ class EditJournalPage extends Component {
 
 
     onClick = () => (event) => {
-
+        swal({
+            title: "Edit your journal?",
+            text: "This will update your journal with your new info",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("Updated!", {
+                        icon: "success",
+                    });
+                } else {
+                    return;
+                }
+            });
         console.log(this.state);
         console.log(this.state.id)
         this.setDate();

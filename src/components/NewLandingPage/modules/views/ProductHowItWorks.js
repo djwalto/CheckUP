@@ -68,18 +68,19 @@ const styles = (theme) => ({
         height: 255,
         marginTop: theme.spacing(4),
         marginBottom: theme.spacing(4),
-        marginRight: theme.spacing(15),
+        marginRight: theme.spacing(5),
     },
     image2: {
         height: 255,
         marginTop: theme.spacing(4),
         marginBottom: theme.spacing(4),
+        marginLeft: theme.spacing(-5),
     },
     image3: {
         height: 255,
         marginTop: theme.spacing(4),
         marginBottom: theme.spacing(4),
-        marginLeft: theme.spacing(20),
+        marginLeft: theme.spacing(5),
     }, 
 
 text1: {
@@ -146,13 +147,13 @@ function ProductHowItWorks(props) {
             <Container className={classes.container}>
              
                 <Typography variant="h4" className={classes.title} component="h2">
-                    How it works
+                    {/* How it works */}
         </Typography>
                 <div>
                     <Grid container spacing={5}>
                         <Grid item xs={12} md={4}>
                             <div className={classes.item}>
-                                <div className={classes.number1}>1.</div>
+                                <div className={classes.number1}></div>
                                 <img
                                     src="https://images.unsplash.com/photo-1537072087284-b53024c3f332?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
                                     alt="graph"
@@ -170,7 +171,7 @@ function ProductHowItWorks(props) {
                         </Grid>
                         <Grid item xs={12} md={4}>
                             <div className={classes.item}>
-                                <div className={classes.number2}>2.</div>
+                                <div className={classes.number2}></div>
                                 <img
                                     src="https://images.unsplash.com/photo-1584757283930-246cb931242b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
                                     alt="graph"
@@ -186,7 +187,7 @@ function ProductHowItWorks(props) {
                         </Grid>
                         <Grid item xs={12} md={4}>
                             <div className={classes.item}>
-                                <div className={classes.number3}>3.</div>
+                                <div className={classes.number3}></div>
                                 <img
                                     src="https://images.unsplash.com/photo-1548101307-a757d5f06d27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2089&q=80"
                                     alt="clock"

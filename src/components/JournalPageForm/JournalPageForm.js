@@ -16,6 +16,8 @@ import AppFooter from '../NewLandingPage/modules/views/AppFooter';
 import Nav from "../NewLandingPage/modules/views/Nav";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
+
 
 class JournalPageForm extends Component {
 
@@ -52,6 +54,12 @@ class JournalPageForm extends Component {
 
     }
     onClick = (event) => {
+        swal({
+            title: "Way to go!",
+            text: "You journal entry was saved!",
+            icon: "success",
+            button: "Keep it up!",
+        });
         this.setDate();
         console.log(this.state);
         this.props.dispatch({
