@@ -8,7 +8,7 @@ import {
 
 import { connect } from 'react-redux';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
-import UserPageEffect from '../InfoPage/UserPageEffect.js';
+import UserPageEffect from '../UserPage/UserPageEffect';
 import NewLandingPageEffect from '../NewLandingPage/modules/views/NewLandingPageEffect';
 import LoginFormEffect from '../LoginForm/LoginFormEffect';
 import RegisterPageEffect from '../RegisterPage/RegisterPageEffect';
