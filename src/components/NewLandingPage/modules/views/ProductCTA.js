@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -80,8 +81,7 @@ function ProductCTA(props) {
                         <form onSubmit={handleSubmit} className={classes.cardContent}>
                             <Typography className={classes.text} variant="h2" component="h2" gutterBottom>
                                 We are adding features in the near future!
-              </Typography>
-
+                            </Typography>
                         </form>
                     </div>
                 </Grid>
@@ -103,7 +103,7 @@ function ProductCTA(props) {
             />
         </Container>
     );
-}
+};// end ProductCTA
 
 ProductCTA.propTypes = {
     classes: PropTypes.object.isRequired,

@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 
-import JournalPageForm from '../JournalPageForm/JournalPageForm';
-import AppFooter from '../NewLandingPage/modules/views/AppFooter';
-import './JournalPageTableItem.css';
-
 import TableRow from '@material-ui/core/TableRow';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -17,7 +13,13 @@ import DeleteForeverTwoToneIcon from '@material-ui/icons/DeleteForeverTwoTone';
 import CreateIcon from '@material-ui/icons/Create';
 import swal from 'sweetalert';
 
+// CUSTOM COMPONENTS
+import JournalPageForm from '../JournalPageForm/JournalPageForm';
+import AppFooter from '../NewLandingPage/modules/views/AppFooter';
+import './JournalPageTableItem.css';
 
+// component listing journal entries on table 
+// with ability to edit and delete
 class JournalPageTableItem extends Component {
     state = {
         id: '',
@@ -26,8 +28,9 @@ class JournalPageTableItem extends Component {
         symptoms: '',
         medication: '',
         contact: '',
-    };
+    };// end state
 
+    // sends id and index to EditJournalPage component 
     editJournal = (rowid, index) => (event) => {
         this.props.history.push({
             pathname: `/editjournal/${rowid}`,
@@ -35,9 +38,10 @@ class JournalPageTableItem extends Component {
                 data: rowid
             }
         });
-    }
+    };// end editJournal
 
-
+    // uses alert to confirm entry delete
+    // dispatches to saga for delete with id as payload
     deleteEntry = (id) => (event) => {
         swal({
             title: "Are you sure you want to delete entry?",
@@ -58,14 +62,16 @@ class JournalPageTableItem extends Component {
             type: 'DELETE_FORM',
             payload: { id },
         });
-    }
+    };//end deleteEntry
 
+    // captures change on each input
     onInputChange = (input) => (event) => {
         this.setState({
             [input]: (event.target.value),
         }, () => { console.log(this.state) });
-    };
+    };//end onInputChange
 
+    // sets todays date as entry date on health journal
     setDate() {
         let date = new Date();
         let day = date.getDate();
@@ -75,7 +81,7 @@ class JournalPageTableItem extends Component {
         if (day < 10) day = "0" + day;
         let today = month + "-" + day + "-" + year;
         return today;
-    }
+    }// end setDate
 
     render() {
         const formArray = this.props.store.formReducer.map((item, index) => {
@@ -121,6 +127,6 @@ class JournalPageTableItem extends Component {
             </>
         )
     }
-}
+};// end JournalPageTableItem
 
 export default connect(mapStoreToProps)(JournalPageTableItem);

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./AppPage.css";
+import { Link } from 'react-router-dom';
+
 import {
     MenuItem,
     FormControl,
@@ -7,17 +8,19 @@ import {
     Card,
     CardContent,
 } from "@material-ui/core";
+import { sortData, prettyPrintStat } from "./util";
+import numeral from "numeral";
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import "leaflet/dist/leaflet.css";
+
+// CUSTOM COMPONENTS
+import Map from "./Map";
+import AppFooter from '../NewLandingPage/modules/views/AppFooter';
 import InfoBox from './InfoBox';
 import LineGraph from "./LineGraph";
 import Table from "./Table";
-import { sortData, prettyPrintStat } from "./util";
-import numeral from "numeral";
-import Map from "./Map";
-import AppFooter from '../NewLandingPage/modules/views/AppFooter';
 import Nav from '../Nav/Nav';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import { Link } from 'react-router-dom';
-import "leaflet/dist/leaflet.css";
+import "./AppPage.css";
 
 const AppPage = () => {
     const [country, setInputCountry] = useState("worldwide");

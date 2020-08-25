@@ -1,6 +1,6 @@
 import withRoot from './modules/withRoot';
-// --- Post bootstrap -----
 import React from 'react';
+
 import ProductCategories from './modules/views/ProductCategories';
 import ProductSmokingHero from './modules/views/ProductSmokingHero';
 import AppFooter from './modules/views/AppFooter';
@@ -10,6 +10,7 @@ import ProductHowItWorks from './modules/views/ProductHowItWorks';
 import ProductCTA from './modules/views/ProductCTA';
 import Nav from '../Nav/Nav';
 
+// landing page for new users
 function NewLandingPage() {
     return (
         <React.Fragment>
@@ -23,6 +24,6 @@ function NewLandingPage() {
             <AppFooter />
         </React.Fragment>
     );
-}
+};// end NewLandingPage
 
 export default withRoot(NewLandingPage);

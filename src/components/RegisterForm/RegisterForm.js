@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import mapStoreToProps from '../../redux/mapStoreToProps';
+
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -9,9 +11,11 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import { Link } from 'react-router-dom';
+
+// CUSTOM COMPONENTS
 import "./RegisterForm.css";
 
+// component for registering new users
 class RegisterForm extends Component {
   state = {
     first_name: '',
@@ -19,8 +23,9 @@ class RegisterForm extends Component {
     username: '',
     password: '',
     email: '',
-  };
+  }; // end state
 
+  // event listener to dispatch register
   registerUser = (event) => {
     event.preventDefault();
     console.log(this.state);
@@ -36,11 +41,12 @@ class RegisterForm extends Component {
     });
   } // end registerUser
 
+  // capture change on all the inputs and set that value to state
   handleInputChangeFor = propertyName => (event) => {
     this.setState({
       [propertyName]: event.target.value,
     });
-  }
+  } // end handleInputChangeFor
 
   render() {
     return (
@@ -131,7 +137,7 @@ class RegisterForm extends Component {
                       name="submit"
                       value="Register"
                     >Register
-                     </Button>
+                    </Button>
                     <center>
                       <Link to="/login">
                         <Button
@@ -143,7 +149,6 @@ class RegisterForm extends Component {
                       </Button>
                       </Link>
                     </center>
-
                   </div>
                 </form>
               </div>
@@ -153,6 +158,6 @@ class RegisterForm extends Component {
       </div>
     );
   }
-}
+} // end RegisterForm
 
 export default connect(mapStoreToProps)(RegisterForm);

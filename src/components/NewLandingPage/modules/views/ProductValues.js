@@ -8,6 +8,8 @@ import Typography from '../components/Typography';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import MapIcon from '@material-ui/icons/Map';
 import PersonIcon from '@material-ui/icons/Person';
+
+// CUSTOM COMPONENTS
 import './ProductValues.css';
 
 const styles = (theme) => ({
@@ -56,25 +58,22 @@ function ProductValues(props) {
                 <Grid container spacing={5}>
                     <Grid item xs={12} md={4}>
                         <div className={classes.item}>
-
                             <MenuBookIcon className="book" />
                             <Typography variant="h6" className={classes.title}>
                                 CheckUP Health Journal
-              </Typography>
+                            </Typography>
                             <Typography className={classes.text} variant="h5" align="center">
                                 {'Keep track of your health, self-care, '}
                                 {'or any symptoms that become present with your daily health journal.'}
                             </Typography>
                         </div>
-
                     </Grid>
                     <Grid item xs={12} md={4}>
                         <div className={classes.item}>
-
                             <MapIcon className="map" />
                             <Typography variant="h6" className={classes.title} align="center">
                                 COVID CheckUP Tracker
-              </Typography>
+                            </Typography>
                             <Typography className={classes.text} variant="h5" align="center">
                                 {'Stay up to date with the latest COVID-19 numbers '}
                                 {'from all around the world with our easy to use world map.'}
@@ -83,11 +82,10 @@ function ProductValues(props) {
                     </Grid>
                     <Grid item xs={12} md={4}>
                         <div className={classes.item}>
-
                             <PersonIcon className="person" />
                             <Typography variant="h6" className={classes.title}>
                                 COVID Symptom CheckUP
-              </Typography>
+                            </Typography>
                             <Typography className={classes.text} variant="h5" align="center">
                                 {'Having symptoms? '}
                                 {'Our COVID ChatBot is specifically designed to check your symptoms and give you advice.'}
@@ -98,7 +96,7 @@ function ProductValues(props) {
             </Container>
         </section>
     );
-}
+};// end ProductValues
 
 ProductValues.propTypes = {
     classes: PropTypes.object.isRequired,

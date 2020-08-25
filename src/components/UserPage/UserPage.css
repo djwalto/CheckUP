@@ -3,7 +3,7 @@
     background-image: url(https://images.ctfassets.net/iqo3fk8od6t9/4JIipVtwOQ7oe28tUrZCW4/9f17c4f916f1ffe44a4af0bc01ee499d/group-269_2x.png?fm=webp&w=700&q=60);
     align-items: center; 
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 2.0);
-    margin-left: 0%;
+    margin-left: 10%;
     border-radius: 35px;
     width: 250px !important;
     height: 350px !important;
@@ -22,7 +22,7 @@
 
 }
 .userTextDiv {
-    padding-left: 0% !important;
+    padding-left: 10% !important;
     margin-bottom: 10px;
     width: 430px !important;
     justify-content: stretch;
@@ -41,7 +41,7 @@
     align-items: center; 
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 2.0);
     background-image: url(https://images.ctfassets.net/iqo3fk8od6t9/4h0JXH94YZ1McOM9yAOKhh/abc2e91e0d80cde9268d9b5438168945/virus-icons.png?fm=webp&w=700&q=60);
-    margin-left: 0%;
+    margin-left: 10%;
     border-radius: 35px;
     width: 250px !important;
     height: 350px !important;
@@ -53,7 +53,7 @@
     align-items: center; 
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 2.0);
     background-image: url(https://images.idgesg.net/images/article/2018/02/artificial_intelligence_ai_virtual_assistant_robot_chatbot_thinkstock_856909876-100749925-medium.jpg);
-    margin-left: 0%;
+    margin-left: 10%;
     border-radius: 35px;
     width: 250px !important;
     height: 350px !important;

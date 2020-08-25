@@ -1,7 +1,10 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
+
+// CUSTOM COMPONENTS
 import JournalPageTableItem from './JournalPageTableItem';
 
+// adding react-spring to JournalPageTableItem component
 const JournalPageTableItemEffect = () => {
     const fade = useSpring({
         from: {
@@ -14,6 +17,6 @@ const JournalPageTableItemEffect = () => {
             <JournalPageTableItem />
         </animated.div>
     );
-}
+}// end JournalPageTableItemEffect
 
 export default JournalPageTableItemEffect;

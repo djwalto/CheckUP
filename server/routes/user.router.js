@@ -3,14 +3,13 @@ const { rejectUnauthenticated } = require('../modules/authentication-middleware'
 const encryptLib = require('../modules/encryption');
 const pool = require('../modules/pool');
 const userStrategy = require('../strategies/user.strategy');
-
 const router = express.Router();
 
 // Handles Ajax request for user information if user is authenticated
 router.get('/', rejectUnauthenticated, (req, res) => {
   // Send back user object from the session (previously queried from the database)
   res.send(req.user);
-});
+}); // end get route
 
 // Handles POST request with new user data
 // The only thing different from this and every other post we've seen
@@ -22,12 +21,11 @@ router.post('/register', (req, res, next) => {
   const username = req.body.username;
   const password = encryptLib.encryptPassword(req.body.password);
   const email = req.body.email;
-
   const queryText = 'INSERT INTO "user" (first_name, last_name, username, password, email) VALUES ($1, $2, $3, $4, $5) RETURNING id';
   pool.query(queryText, [first_name, last_name, username, password, email])
     .then(() => res.sendStatus(201))
     .catch(() => res.sendStatus(500));
-});
+}); // end register post route
 
 // Handles login form authenticate/login POST
 // userStrategy.authenticate('local') is middleware that we run on this route
@@ -35,13 +33,13 @@ router.post('/register', (req, res, next) => {
 // this middleware will send a 404 if not successful
 router.post('/login', userStrategy.authenticate('local'), (req, res) => {
   res.sendStatus(200);
-});
+}); //end login post route
 
 // clear all server session information about this user
 router.post('/logout', (req, res) => {
   // Use passport's built-in method to log out the user
   req.logout();
   res.sendStatus(200);
-});
+}); // end logout post route
 
 module.exports = router;

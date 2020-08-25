@@ -1,8 +1,11 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
+
+// CUSTOM COMPONENTS
 import Chatbot from './Chatbot';
 
 
+// adding react-spring to ChatBot component
 const ChatBotEffect = () => {
     const fade = useSpring({
         from: {
@@ -16,6 +19,6 @@ const ChatBotEffect = () => {
             <Chatbot />
         </animated.div>
     );
-}
+} // end ChatBotEffect
 
 export default ChatBotEffect;

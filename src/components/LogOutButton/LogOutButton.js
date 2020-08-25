@@ -11,7 +11,7 @@ const LogOutButton = props => (
   >
     Log Out
   </button>
-);
+);// end LogOutButton
 
 // This component doesn't need 'mapStateToProps'
 // because it doesn't care what the current state is.

@@ -4,10 +4,6 @@ import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 import { Link } from 'react-router-dom';
 
-import Nav from "../Nav/Nav";
-import AppFooter from "../NewLandingPage/modules/views/AppFooter";
-import './EditJournalPage.css';
-
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -19,6 +15,12 @@ import Container from '@material-ui/core/Container';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import swal from "sweetalert";
 
+// CUSTOM COMPONENTS
+import Nav from "../Nav/Nav";
+import AppFooter from "../NewLandingPage/modules/views/AppFooter";
+import './EditJournalPage.css';
+
+// component for editing your journal entries in health journal
 class EditJournalPage extends Component {
     state = {
         id: '',
@@ -27,8 +29,11 @@ class EditJournalPage extends Component {
         symptom: '',
         medication: '',
         contact: '',
-    };
+    }; // end state
 
+    // on page load we get all journal entries from db
+    // capture id sent on props
+    // map through the formReducer to set state as previous entries
     componentDidMount() {
         this.props.dispatch({ type: 'GET_FORM' });
         let rowid = (this.props.location.state.data);
@@ -43,14 +48,16 @@ class EditJournalPage extends Component {
                 })
             }
         })
-    }
+    }; // end componentDidMount
 
+    // captures the change on each input 
     onInputChange = (input) => (event) => {
         this.setState({
             [input]: (event.target.value),
         }, () => { console.log(this.state) });
-    };
+    }; // end onInputChange
 
+    // sets todays date as entry date on health journal
     setDate() {
         let date = new Date();
         let day = date.getDate();
@@ -60,8 +67,10 @@ class EditJournalPage extends Component {
         if (day < 10) day = "0" + day;
         let today = month + "-" + day + "-" + year;
         return today;
-    }
+    };
 
+    // event listener which runs alert to confirm update
+    // dispatches to saga the update with state as payload
     onClick = () => (event) => {
         swal({
             title: "Edit your journal?",
@@ -84,7 +93,8 @@ class EditJournalPage extends Component {
             type: 'PUT_FORM',
             payload: this.state
         });
-    };
+    }; // end onClick
+
     render() {
         return (
             <div>
@@ -109,7 +119,7 @@ class EditJournalPage extends Component {
                                 </Avatar>
                                 <Typography component="h1" variant="h5">
                                     Change Your Journal Entry
-                             </Typography>
+                                </Typography>
                                 <form className="editJournalForm" noValidate>
                                     <TextField
                                         margin="normal"
@@ -178,7 +188,7 @@ class EditJournalPage extends Component {
             </div>
         );
     }
-}
+};// end EditJournalPage
 
 export default connect(mapStoreToProps)(EditJournalPage);
 

@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 
-import "./LoginForm.css";
-
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -15,12 +13,15 @@ import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
+// CUSTOM COMPONENTS
+import "./LoginForm.css";
 
+// component for existing user log in
 class LoginForm extends Component {
   state = {
     username: '',
     password: '',
-  };
+  };// end state
 
   login = (event) => {
     event.preventDefault();
@@ -35,13 +36,14 @@ class LoginForm extends Component {
     } else {
       this.props.dispatch({ type: 'LOGIN_INPUT_ERROR' });
     }
-  } // end login
+  }// end login
 
+  // captures change on each input
   handleInputChangeFor = propertyName => (event) => {
     this.setState({
       [propertyName]: event.target.value,
     });
-  }
+  };// end handleInputChangeFor
 
   render() {
     return (
@@ -101,7 +103,7 @@ class LoginForm extends Component {
                     value="Log In"
                   >
                     Log In
-                        </Button>
+                  </Button>
                   <center>
                     <Link to="/registration">
                       <Button
@@ -121,6 +123,6 @@ class LoginForm extends Component {
       </div >
     );
   }
-}
+};// end LoginForm
 
 export default connect(mapStoreToProps)(LoginForm);

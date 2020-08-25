@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
+
+// CUSTOM COMPONENTS
 import AppBar from '../components/AppBar';
 import Toolbar, { styles as toolbarStyles } from '../components/Toolbar';
 
@@ -37,7 +40,6 @@ const styles = (theme) => ({
 
 function AppAppBar(props) {
     const { classes } = props;
-
     return (
         <div>
             <AppBar position="fixed">
@@ -76,7 +78,7 @@ function AppAppBar(props) {
             {/* <div className={classes.placeholder} />*/}
         </div>
     );
-}
+};// end AppAppBar
 
 AppAppBar.propTypes = {
     classes: PropTypes.object.isRequired,

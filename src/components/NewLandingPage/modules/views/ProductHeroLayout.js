@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import clsx from 'clsx';
 import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -53,19 +54,16 @@ const styles = (theme) => ({
 
 function ProductHeroLayout(props) {
     const { backgroundClassName, children, classes } = props;
-
     return (
         <section className={classes.root}>
             <Container className={classes.container}>
-
                 {children}
                 <div className={classes.backdrop} />
                 <div className={clsx(classes.background, backgroundClassName)} />
-
             </Container>
         </section>
     );
-}
+};// end ProductHeroLayout
 
 ProductHeroLayout.propTypes = {
     backgroundClassName: PropTypes.string.isRequired,

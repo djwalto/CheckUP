@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { withStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
+
+// CUSTOM COMPONENTS
 import "./ProductCategories.css";
 
 const styles = (theme) => ({
@@ -84,9 +87,9 @@ const styles = (theme) => ({
     },
 });
 
+// product categories part of landing page
 function ProductCategories(props) {
     const { classes } = props;
-
     const images = [
         {
             url:
@@ -163,7 +166,7 @@ function ProductCategories(props) {
             </div>
         </Container>
     );
-}
+};// end ProductCategories
 
 ProductCategories.propTypes = {
     classes: PropTypes.object.isRequired,

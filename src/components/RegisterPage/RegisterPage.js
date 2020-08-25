@@ -23,7 +23,7 @@ class RegisterPage extends Component {
       </div>
     );
   }
-}
+};// end RegisterPage
 
 export default connect(mapStoreToProps)(RegisterPage);
 

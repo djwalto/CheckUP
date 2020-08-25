@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { withStyles } from '@material-ui/core/styles';
@@ -30,21 +31,19 @@ const styles = (theme) => ({
 
 function ProductSmokingHero(props) {
     const { classes } = props;
-
     return (
         <Container className={classes.root} component="section">
             <Button className={classes.button}>
                 <Typography variant="h4" component="span">
                     <a className="maillink" href="mailto:davidjwalton2020@gmail.com" target="_blank" rel="noopener noreferrer">Got any questions? Need help?</a>
-
                 </Typography>
             </Button>
             <Typography variant="subtitle1" className={classes.link}>
                 We are here to help. Get in touch!
-      </Typography>
+            </Typography>
         </Container>
     );
-}
+};// end ProductSmokingHero
 
 ProductSmokingHero.propTypes = {
     classes: PropTypes.object.isRequired,

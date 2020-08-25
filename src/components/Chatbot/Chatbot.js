@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import './Chatbot.css';
-
-import Nav from '../Nav/Nav';
-import AppFooter from '../NewLandingPage/modules/views/AppFooter';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
+// CUSTOM COMPONENTS
+import Nav from '../Nav/Nav';
+import AppFooter from '../NewLandingPage/modules/views/AppFooter';
+import './Chatbot.css';
+
+// component for displaying Covid ChatBot
 class Chatbot extends Component {
     state = {
         response: {}
@@ -41,7 +43,7 @@ class Chatbot extends Component {
             </div>
         )
     }
-}
+} // end chatbot
 
 const mapStateToProps = (state) => {
     return {

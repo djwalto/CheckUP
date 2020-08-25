@@ -3,16 +3,18 @@ import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 import { Link } from 'react-router-dom';
 
-import Nav from '../Nav/Nav';
-import AppFooter from '../NewLandingPage/modules/views/AppFooter';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import PersonIcon from '@material-ui/icons/Person';
 import Grid from '@material-ui/core/Grid';
 
+// CUSTOM COMPONENTS
+import Nav from '../Nav/Nav';
+import AppFooter from '../NewLandingPage/modules/views/AppFooter';
 import './UserPage.css';
 
+// main user home page
 class UserPage extends Component {
   render() {
     return (
@@ -37,7 +39,7 @@ class UserPage extends Component {
               <div className="userTextDiv">
                 <Typography className="userText" component="h1" variant="h5">
                   Health Journal
-               </Typography>
+                </Typography>
               </div>
               <CssBaseline />
               <Link to="/journaltable">
@@ -49,7 +51,7 @@ class UserPage extends Component {
               <div className="userTextDiv">
                 <Typography className="userText" component="h1" variant="h5">
                   COVID Tracker
-               </Typography>
+                </Typography>
               </div>
               <CssBaseline />
               <Link to="/tracker">
@@ -61,7 +63,7 @@ class UserPage extends Component {
               <div className="userTextDiv">
                 <Typography className="userText" component="h1" variant="h5">
                   COVID Checker
-               </Typography>
+                </Typography>
               </div>
               <CssBaseline />
               <Link to="/chat">
@@ -75,6 +77,6 @@ class UserPage extends Component {
       </div >
     );
   }
-}
+};// end UserPage
 
 export default connect(mapStoreToProps)(UserPage);

@@ -1,8 +1,10 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
+
+// CUSTOM COMPONENTS
 import LoginPage from '../LoginPage/LoginPage';
 
-
+// adding react-spring to LoginForm component
 const LoginFormEffect = () => {
     const fade = useSpring({
         from: {
@@ -15,6 +17,6 @@ const LoginFormEffect = () => {
             <LoginPage />
         </animated.div>
     );
-}
+}// end LoginFormEffect
 
 export default LoginFormEffect;

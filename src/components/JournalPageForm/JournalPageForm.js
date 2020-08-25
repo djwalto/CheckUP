@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 
-import "./JournalPageForm.css"
-
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -13,11 +11,14 @@ import BookIcon from '@material-ui/icons/Book';
 import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
-import Nav from "../Nav/Nav";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import swal from 'sweetalert';
 
+// CUSTOM COMPONENTS
+import "./JournalPageForm.css";
+import Nav from "../Nav/Nav";
 
+// component for entering in journal entries
 class JournalPageForm extends Component {
     state = {
         user_id: this.props.store.user.id,
@@ -26,18 +27,21 @@ class JournalPageForm extends Component {
         symptoms: '',
         medication: '',
         contact: '',
-    };
+    };// end state
 
+    // on page load we get all journal entries from db
     componentDidMount() {
         this.props.dispatch({ type: 'GET_FORM' });
-    }
+    }// end componentDidMount
 
+    // captures the change on each input
     onInputChange = (input) => (event) => {
         this.setState({
             [input]: (event.target.value),
         }, () => { console.log(this.state) });
-    };
+    };// end onInputChange
 
+    // sets todays date as entry date on health journal
     setDate() {
         let date = new Date();
         let day = date.getDate();
@@ -47,8 +51,10 @@ class JournalPageForm extends Component {
         if (day < 10) day = "0" + day;
         let today = month + "-" + day + "-" + year;
         return today;
-    }
+    }// end setDate
 
+    // event listener which dispatches post to saga
+    // uses alert to confirm journal entry success then push to table
     onClick = (event) => {
         this.setDate();
         this.props.dispatch({
@@ -63,8 +69,8 @@ class JournalPageForm extends Component {
             button: "Keep it up!",
         });
         this.props.history.push('/journaltable');
+    };// end onClick
 
-    };
     render() {
         return (
             <div>
@@ -153,7 +159,7 @@ class JournalPageForm extends Component {
             </div >
         );
     }
-}
+};// end JournalPageForm
 
 
 export default connect(mapStoreToProps)(JournalPageForm);

@@ -5,8 +5,9 @@ import {
   Redirect,
   Switch,
 } from 'react-router-dom';
-
 import { connect } from 'react-redux';
+
+// CUSTOM COMPONENTS
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 import UserPageEffect from '../UserPage/UserPageEffect';
 import NewLandingPageEffect from '../NewLandingPage/modules/views/NewLandingPageEffect';
@@ -20,9 +21,10 @@ import './App.css';
 
 
 class App extends Component {
+
   componentDidMount() {
     this.props.dispatch({ type: 'FETCH_USER' })
-  }
+  } // end componentDidMount
 
   render() {
     return (
@@ -89,6 +91,6 @@ class App extends Component {
       </Router>
     )
   }
-}
+} //end App
 
 export default connect()(App);
