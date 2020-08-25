@@ -28,7 +28,6 @@
     background-image: url(https://infermedica.com/images/4be7301e-ogimage-page-symptom-checker.png);
     background-size: cover;
     background-position: middle;
-    
 }
 
 .chatArrowIcon {
@@ -40,8 +39,6 @@
 
 .backToText {
     font-weight: 900;
-   margin-top: -2.0%;
-   margin-left: 7%;
- 
-    
-  } 
+    margin-top: -1.5%;
+    margin-left: 8%;
+}

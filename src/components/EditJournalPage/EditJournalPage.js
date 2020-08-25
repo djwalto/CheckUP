@@ -2,6 +2,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import mapStoreToProps from '../../redux/mapStoreToProps';
+import { Link } from 'react-router-dom';
+
+import Nav from "../Nav/Nav";
+import AppFooter from "../NewLandingPage/modules/views/AppFooter";
+import './EditJournalPage.css';
+
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -11,15 +17,9 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import { Link } from 'react-router-dom';
-import PersonIcon from '@material-ui/icons/Person';
-import Nav from "../NewLandingPage/modules/views/Nav";
-import AppFooter from "../NewLandingPage/modules/views/AppFooter";
-import JournalPageTableItemEffect from '../JournalPageTableItem/JournalPageTableItemEffect';
 import swal from "sweetalert";
 
 class EditJournalPage extends Component {
-
     state = {
         id: '',
         date: this.setDate(),
@@ -31,19 +31,9 @@ class EditJournalPage extends Component {
 
     componentDidMount() {
         this.props.dispatch({ type: 'GET_FORM' });
-        console.log(this.props.location.state.data);
         let rowid = (this.props.location.state.data);
-
-        // this.setState({
-        //     id: rowid
-        // })
-        console.log(rowid);
-        console.log(this.props.store.formReducer)
-        console.log(rowid);
-        console.log(this.props.store.formReducer.index);
         const idArray = this.props.store.formReducer.map((item, index) => {
             if (item.id === rowid) {
-                console.log("We have a winner", item.id, index);
                 this.setState({
                     id: this.props.location.state.data,
                     feeling: item.feeling,
@@ -53,8 +43,6 @@ class EditJournalPage extends Component {
                 })
             }
         })
-
-
     }
 
     onInputChange = (input) => (event) => {
@@ -74,7 +62,6 @@ class EditJournalPage extends Component {
         return today;
     }
 
-
     onClick = () => (event) => {
         swal({
             title: "Edit your journal?",
@@ -92,16 +79,7 @@ class EditJournalPage extends Component {
                     return;
                 }
             });
-        console.log(this.state);
-        console.log(this.state.id)
         this.setDate();
-
-        // if (this.state.feeling === '' || this.state.symptoms === '') {
-        //     alert('You forgot to answer!');
-        //     return;
-        // }
-        // this.addToState();
-        console.log(this.state);
         this.props.dispatch({
             type: 'PUT_FORM',
             payload: this.state
@@ -111,32 +89,30 @@ class EditJournalPage extends Component {
         return (
             <div>
                 <Nav />
-
-                <div className="journalFormDiv">
-
+                <div className="editJournalFormDiv">
                     <CssBaseline />
                     <div className="userWelcome">
-
                         <Link to="/journaltable">
                             <ArrowBackIcon className="editArrowIcon" />
                         </Link>
                     </div>
-                    <Card className="journalFormCard">
-                        <Container className="journalFormContainer" component="main" maxWidth="xs">
+                    <br></br>
+                    <h3>Back to Journal</h3>
+                    <Card className="editJournalFormCard">
+                        <Container className="editJournalFormContainer" component="main" maxWidth="xs">
                             <CssBaseline />
-                            <div className="journalFormPaper">
+                            <div className="editJournalFormPaper">
                                 <br></br>
                                 <br></br>
-                                <Avatar className="journalFormAvatar">
+                                <Avatar className="editJournalFormAvatar">
                                     <BookIcon />
                                 </Avatar>
                                 <Typography component="h1" variant="h5">
                                     Change Your Journal Entry
                              </Typography>
-                                <form className="journalForm" noValidate>
+                                <form className="editJournalForm" noValidate>
                                     <TextField
                                         margin="normal"
-                                        required
                                         fullWidth
                                         label="How did you feel today?"
                                         autoFocus
@@ -148,7 +124,6 @@ class EditJournalPage extends Component {
                                     />
                                     <TextField
                                         margin="normal"
-                                        required
                                         fullWidth
                                         label="Did you have any symptoms today?"
                                         variant="outlined"
@@ -160,7 +135,6 @@ class EditJournalPage extends Component {
                                     />
                                     <TextField
                                         margin="normal"
-                                        required
                                         fullWidth
                                         label="Did you take any medications today?"
                                         autoFocus
@@ -172,7 +146,6 @@ class EditJournalPage extends Component {
                                     />
                                     <TextField
                                         margin="normal"
-                                        required
                                         fullWidth
                                         label="Have you had contact with anyone diagnosed with COVID-19?"
                                         variant="outlined"
@@ -180,7 +153,6 @@ class EditJournalPage extends Component {
                                         type="text"
                                         name="contact"
                                         required
-
                                         onChange={this.onInputChange('contact')}
                                     />
                                     <center>
@@ -190,9 +162,6 @@ class EditJournalPage extends Component {
                                                 variant="contained"
                                                 color="primary"
                                                 className="logbutton"
-                                                variant="contained"
-                                                color="primary"
-                                                type="submit"
                                                 value="Log In"
                                                 onClick={this.onClick(this.props)}
                                             >
@@ -204,14 +173,12 @@ class EditJournalPage extends Component {
                             </div>
                         </Container>
                     </Card>
-
                 </div >
                 <AppFooter />
             </div>
         );
     }
 }
-
 
 export default connect(mapStoreToProps)(EditJournalPage);
 

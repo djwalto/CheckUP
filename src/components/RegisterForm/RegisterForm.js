@@ -9,7 +9,6 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import HomeIcon from '@material-ui/icons/Home';
 import { Link } from 'react-router-dom';
 import "./RegisterForm.css";
 

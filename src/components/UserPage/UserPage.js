@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import LogOutButton from '../LogOutButton/LogOutButton';
 import mapStoreToProps from '../../redux/mapStoreToProps';
 import { Link } from 'react-router-dom';
-import Nav from '../NewLandingPage/modules/views/Nav';
+import Nav from '../Nav/Nav';
 import AppFooter from '../NewLandingPage/modules/views/AppFooter';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
@@ -12,7 +11,6 @@ import PersonIcon from '@material-ui/icons/Person';
 import Grid from '@material-ui/core/Grid';
 
 import './UserPage.css';
-import { animated } from 'react-spring/renderprops-universal';
 
 // this could also be written with destructuring parameters as:
 // const UserPage = ({ user }) => (

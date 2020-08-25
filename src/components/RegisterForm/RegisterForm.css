@@ -6,13 +6,12 @@
     box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2.0);
     border-radius: 85px;
     width: 100% !important;
-    height: 85% !important;
-   opacity: 100% !important;
-   margin-bottom: 0px;
-   margin-top: 15%;
-   
-    margin-left: 50%; 
-} 
+    height: 100% !important;
+    opacity: 100% !important;
+    margin-bottom: 0px;
+    margin-top: 15%;
+    margin-left: 40%;
+}
 
 .registerAvatar {
     margin-top: -10px;
@@ -26,18 +25,16 @@
     width: 100%; 
     margin-top: -25%;
     margin-bottom: -50px !important;
-} 
+}
 
- .registerDiv {
+.registerDiv {
     display: flex;
     justify-content: space-evenly;
     height: 790px;
     background-image: url(https://images.unsplash.com/photo-1531854676938-4d5f9703df2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
     background-size: inherit;
     background-position: right;
-   
-
-} 
+}
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.5);
@@ -47,13 +44,10 @@
     height: 100%;
     position: relative;
     z-index: 1;
-   
-   
-  }
+}
 
 .registerButton {
     margin-top: 10px !important;
-   
 }
 .loginButton {
     margin-bottom: -10px !important;

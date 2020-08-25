@@ -1,5 +1,9 @@
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
 body {
-color: rgba(0, 0, 0, 0.87);
+    color: rgba(0, 0, 0, 0.87);
     margin: 0;
     font-size: 14px;
     font-family: 'Work Sans', sans-serif;
@@ -7,12 +11,6 @@ color: rgba(0, 0, 0, 0.87);
     line-height: 1.5;
     background-color: #fff;
 }
-
-html {
-  -webkit-font-smoothing: antialiased;
-}
-
-
 
 .nav-title {
   cursor: pointer;

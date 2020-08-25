@@ -8,20 +8,16 @@ import {
 
 import { connect } from 'react-redux';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
-//import AppPage from '../CovidTrackerPage/AppPage';
-
-import AboutPage from '../AboutPage/AboutPage';
 import UserPageEffect from '../InfoPage/UserPageEffect.js';
-
 import NewLandingPageEffect from '../NewLandingPage/modules/views/NewLandingPageEffect';
 import LoginFormEffect from '../LoginForm/LoginFormEffect';
 import RegisterPageEffect from '../RegisterPage/RegisterPageEffect';
-// import JournalPageForm from '../JournalPageForm/JournalPageForm';
 import ChatBotEffect from '../Chatbot/ChatBotEffect';
 import JournalPageTableItem from '../JournalPageTableItem/JournalPageTableItem';
 import EditJournalPage from '../EditJournalPage/EditJournalPage';
-import './App.css';
 import CovidTrackerPageEffect from '../CovidTrackerPage/CovidTrackerPageEffect';
+import './App.css';
+
 
 class App extends Component {
   componentDidMount() {
@@ -32,17 +28,9 @@ class App extends Component {
     return (
       <Router>
         <div>
-
           <Switch>
             {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
             <Redirect exact from="/" to="/home" />
-            {/* Visiting localhost:3000/about will show the about page.
-            This is a route anyone can see, no login necessary */}
-            <Route
-              exact
-              path="/about"
-              component={AboutPage}
-            />
             {/* For protected routes, the view could show one of several things on the same route.
             Visiting localhost:3000/user will show the UserPage if the user is logged in.
             If the user is not logged in, the ProtectedRoute will show the 'Login' or 'Register' page.
@@ -74,42 +62,29 @@ class App extends Component {
               authRedirect="/admin"
               component={NewLandingPageEffect}
             />
-            {/* <ProtectedRoute
-              exact
-              path="/journalform"
-              // authRedirect="/journal"
-              component={JournalPageForm}
-            /> */}
             <ProtectedRoute
               exact
               path="/journaltable"
-              // authRedirect="/journal"
               component={JournalPageTableItem}
             />
             <ProtectedRoute
               exact
               path="/editjournal/:id"
-              // authRedirect="/journal"
               component={EditJournalPage}
             />
             <ProtectedRoute
               exact
               path="/tracker"
-              // authRedirect="/journal"
               component={CovidTrackerPageEffect}
             />
             <ProtectedRoute
               exact
               path="/chat"
-              // authRedirect="/journal"
               component={ChatBotEffect}
             />
-
             {/* If none of the other routes matched, we will show a 404. */}
             <Route render={() => <h1>404</h1>} />
           </Switch>
-
-
         </div>
       </Router>
     )

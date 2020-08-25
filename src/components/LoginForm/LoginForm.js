@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import mapStoreToProps from '../../redux/mapStoreToProps';
+
+import "./LoginForm.css"
+
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -10,9 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Container from '@material-ui/core/Container';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import { Link } from 'react-router-dom';
-import HomeIcon from '@material-ui/icons/Home';
-import "./LoginForm.css"
+
 
 class LoginForm extends Component {
   state = {
@@ -22,7 +24,6 @@ class LoginForm extends Component {
 
   login = (event) => {
     event.preventDefault();
-
     if (this.state.username && this.state.password) {
       this.props.dispatch({
         type: 'LOGIN',
@@ -44,10 +45,8 @@ class LoginForm extends Component {
 
   render() {
     return (
-
       <div className="loginDiv">
         <div className="overlay">
-
           <Card className="loginCard" onSubmit={this.login}>
             <Container className="loginContainer" component="main" maxWidth="xs">
               <CssBaseline />
@@ -71,14 +70,9 @@ class LoginForm extends Component {
                 )}
                 <form className="loginForm" noValidate>
                   <TextField
-
                     margin="normal"
-                    required
                     fullWidth
-
                     label="Username"
-
-
                     autoFocus
                     type="text"
                     name="username"
@@ -87,57 +81,44 @@ class LoginForm extends Component {
                     onChange={this.handleInputChangeFor('username')}
                   />
                   <TextField
-
                     margin="normal"
-                    required
                     fullWidth
                     name="password"
                     label="Password"
-                    type="password"
                     id="password"
                     autoComplete="current-password"
                     type="password"
-                    name="password"
                     required
                     value={this.state.password}
                     onChange={this.handleInputChangeFor('password')}
                   />
-
                   <Button
                     type="submit"
                     fullWidth
-                    variant="contained"
                     color="primary"
                     className="logbutton"
                     variant="contained"
-                    color="primary"
-                    type="submit"
                     value="Log In"
                   >
                     Log In
-                         </Button>
+                        </Button>
                   <center>
                     <Link to="/registration">
                       <Button
                         className="button"
                         color="primary"
                         type="button"
-
-
                       >
                         Register
-          </Button>
+                      </Button>
                     </Link>
                   </center>
-
                 </form>
               </div>
             </Container>
           </Card>
         </div>
       </div >
-
-
     );
   }
 }

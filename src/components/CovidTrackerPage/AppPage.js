@@ -14,7 +14,7 @@ import { sortData, prettyPrintStat } from "./util";
 import numeral from "numeral";
 import Map from "./Map";
 import AppFooter from '../NewLandingPage/modules/views/AppFooter';
-import Nav from '../NewLandingPage/modules/views/Nav';
+import Nav from '../Nav/Nav';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { Link } from 'react-router-dom';
 import "leaflet/dist/leaflet.css";
@@ -52,15 +52,11 @@ const AppPage = () => {
                     setTableData(sortedData);
                 });
         };
-
         getCountriesData();
     }, []);
 
-    console.log(casesType);
-
     const onCountryChange = async (e) => {
         const countryCode = e.target.value;
-
         const url =
             countryCode === "worldwide"
                 ? "https://disease.sh/v3/covid-19/all"
@@ -74,7 +70,6 @@ const AppPage = () => {
                 setMapZoom(4);
             });
     };
-
     return (
         <div>
             <Nav />
@@ -140,7 +135,6 @@ const AppPage = () => {
                         </div>
                     </CardContent>
                 </Card>
-
             </div>
             <AppFooter />
         </div>

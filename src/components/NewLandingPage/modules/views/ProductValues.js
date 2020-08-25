@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
@@ -8,7 +9,6 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import MapIcon from '@material-ui/icons/Map';
 import PersonIcon from '@material-ui/icons/Person';
 import './ProductValues.css';
-import Card from "@material-ui/core/Card";
 
 const styles = (theme) => ({
     root: {
@@ -70,11 +70,7 @@ function ProductValues(props) {
                     </Grid>
                     <Grid item xs={12} md={4}>
                         <div className={classes.item}>
-                            <img
-                            // className={classes.image}
-                            // src="/static/themes/onepirate/productValues2.svg"
-                            // alt="graph"
-                            />
+
                             <MapIcon className="map" />
                             <Typography variant="h6" className={classes.title} align="center">
                                 COVID CheckUP Tracker
@@ -87,11 +83,7 @@ function ProductValues(props) {
                     </Grid>
                     <Grid item xs={12} md={4}>
                         <div className={classes.item}>
-                            {/* <img
-                                className={classes.image}
-                                src="/static/themes/onepirate/productValues3.svg"
-                                alt="clock"
-                            /> */}
+
                             <PersonIcon className="person" />
                             <Typography variant="h6" className={classes.title}>
                                 COVID Symptom CheckUP

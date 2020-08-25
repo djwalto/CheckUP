@@ -8,7 +8,7 @@ import ProductHero from './modules/views/ProductHero';
 import ProductValues from './modules/views/ProductValues';
 import ProductHowItWorks from './modules/views/ProductHowItWorks';
 import ProductCTA from './modules/views/ProductCTA';
-import Nav from './modules/views/Nav';
+import Nav from '../Nav/Nav';
 
 function NewLandingPage() {
     return (

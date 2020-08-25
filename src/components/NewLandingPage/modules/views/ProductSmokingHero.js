@@ -35,7 +35,7 @@ function ProductSmokingHero(props) {
         <Container className={classes.root} component="section">
             <Button className={classes.button}>
                 <Typography variant="h4" component="span">
-                    <a className="maillink" href="mailto:davidjwalton2020@gmail.com" target="_blank">Got any questions? Need help?</a>
+                    <a className="maillink" href="mailto:davidjwalton2020@gmail.com" target="_blank" rel="noopener noreferrer">Got any questions? Need help?</a>
 
                 </Typography>
             </Button>

@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Nav from '../NewLandingPage/modules/views/Nav';
+import { Link } from 'react-router-dom';
+
+import './Chatbot.css';
+
+import Nav from '../Nav/Nav';
 import AppFooter from '../NewLandingPage/modules/views/AppFooter';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import { Link } from 'react-router-dom';
-import './Chatbot.css';
 
 class Chatbot extends Component {
     state = {
@@ -25,7 +27,6 @@ class Chatbot extends Component {
 
     render() {
         return (
-
             <div>
                 <Nav />
                 <div className="chatDiv">
@@ -38,7 +39,6 @@ class Chatbot extends Component {
                 </div>
                 <AppFooter />
             </div>
-
         )
     }
 }

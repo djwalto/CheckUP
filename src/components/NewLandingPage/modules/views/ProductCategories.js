@@ -5,7 +5,6 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 import Container from '@material-ui/core/Container';
 import Typography from '../components/Typography';
 import "./ProductCategories.css";
-import { useSpring, animated } from 'react-spring';
 
 const styles = (theme) => ({
     root: {

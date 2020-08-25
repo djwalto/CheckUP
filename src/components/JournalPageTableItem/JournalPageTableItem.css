@@ -2,40 +2,35 @@
     padding-top: 20px;
     width: 100%; 
     background-color: rgb(26, 25, 25);
-    
-  
 }
 
 .tableRow {
-   height: 100px;
-  
+    height: 100px;
 }
 
 .tableCell {
-  font-weight: 900;
+    font-weight: 900;
 }
 
 .titleCell {
     font-weight: 900 !important;
     font-size: 1.0rem !important;
-     justify-content: space-evenly !important; 
-   
+    justify-content: space-evenly !important;
 }
 
-  .journalTableItemRow:hover {
+.journalTableItemRow:hover {
     background-color: #b1b1b1;
     width: 100% !important;
-   
-  }
+}
 
-  .tableEditIcon {
-      transform: scale(1.5);
-      color: rgb(49, 209, 9);
-      cursor: pointer;
-      width: 100% !important;
-  }
+.tableEditIcon {
+    transform: scale(1.5);
+    color: rgb(49, 209, 9);
+    cursor: pointer;
+    width: 100% !important;
+}
 
-  .tableDeleteIcon {
+.tableDeleteIcon {
     transform: scale(1.5);
     color: red;
     cursor: pointer;
@@ -46,26 +41,17 @@
     padding: 0px;
     width: 100% !important;
     border-radius: 50px!important;
-    
 }
 
 .mainTable {
     margin: 0px;
     padding: 0px;
-    /* width: 100% !important; */
-    /* justify-content: space-evenly !important; */
-   
-   
-   
 }
 
 .headerMain{
-   /* // justify-content: space-between !important; */
     background-color: rgb(243, 169, 78);
-   
 }
 
 .tableBody {
     background-color: rgb(238, 238, 236);
-    
 }

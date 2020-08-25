@@ -3,13 +3,8 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import Button from '../components/Button';
 import Typography from '../components/Typography';
-import MenuBookIcon from '@material-ui/icons/MenuBook';
-import MapIcon from '@material-ui/icons/Map';
-import PersonIcon from '@material-ui/icons/Person';
-import { Link } from 'react-router-dom';
-import { useSpring, animated } from 'react-spring';
+
 
 
 

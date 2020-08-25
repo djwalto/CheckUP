@@ -5,13 +5,12 @@
     align-items: center;
     box-shadow: 0 0 8px -4px rgba(0, 0, 0, 2.0);
     border-radius: 85px;
-    width: 400px !important;
-    height: 400px !important;
-   opacity: 100% !important;
-   margin-bottom: 0px;
-   margin-top: 45%;
-   
-   margin-left: 50%;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 100% !important;
+    margin-bottom: 0px;
+    margin-top: 45%;
+    margin-left: 40%;
 }
 
 .loginAvatar {
@@ -24,19 +23,15 @@
     padding: 80px;
     flex: 1;
     justify-content: space-between;
-    width: 100%; 
+    width: 100%;
     margin-top: -50px;
     opacity: 100% !important;
-    
 }
-
 
 .loginDiv {
     display: flex;
     justify-content: space-evenly;
     height: 790px;
-    /* padding: 1rem; */
-    
     background-image: url(https://images.unsplash.com/photo-1531854676938-4d5f9703df2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
     background-size: inherit;
     background-position: right;
@@ -51,19 +46,16 @@
     position: relative;
     z-index: 1;
     padding: -5px !important;
-   
-  }
+}
 
-    .loginCard {
-        width: 1500px !important;
-        justify-content: space-around !important;
-        display: flex;
-        flex-direction: column; 
-        /* margin-right:100px ; */
-        background-position: left;
-        background-color: transparent !important;
-      
-}  
+.loginCard {
+    width: 1500px !important;
+    justify-content: space-around !important;
+    display: flex;
+    flex-direction: column;
+    background-position: left;
+    background-color: transparent !important;
+}
 
 .loginArrow {
     margin-top: 20px !important;
@@ -75,8 +67,7 @@
 
 
 .loginHome {
-   color: black;
+    color: black;
     transform: scale(2.0);
     opacity: 100% !important;
-   
 }

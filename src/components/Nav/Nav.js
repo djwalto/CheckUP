@@ -1,11 +1,12 @@
 import React from "react";
 import { connect } from 'react-redux';
-import LogOutButton from '../../../LogOutButton/LogOutButton';
-import '../../../../components/Nav/Nav.css';
-import mapStoreToProps from '../../../../redux/mapStoreToProps';
+import mapStoreToProps from '../../redux/mapStoreToProps';
 import { Link } from 'react-router-dom';
+
+import LogOutButton from '../LogOutButton/LogOutButton';
+import './Nav.css';
+
 import Typography from "@material-ui/core/Typography";
-import MenuIcon from '@material-ui/icons/Menu';
 
 const Nav = (props) => {
     let loginLinkData = {
