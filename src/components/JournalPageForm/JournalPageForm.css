@@ -5,7 +5,7 @@
     flex-direction: column;
     background-position: top;
     align-items: center !important;
-    padding-right: 26% !important;
+    padding-right: 31% !important;
 }
 
 .journalFormDiv {
@@ -68,5 +68,5 @@
 h3 {
     color: white;
     font-weight: 900;
-    margin-top: 6%;
+    margin-top: 8% !important;
 }
