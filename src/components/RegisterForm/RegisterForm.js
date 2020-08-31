@@ -147,7 +147,6 @@ class RegisterForm extends Component {
                       </Button>
                     </Link>
                   </center>
-
                 </form>
               </div>
             </Container>
