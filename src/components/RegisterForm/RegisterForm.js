@@ -104,52 +104,50 @@ class RegisterForm extends Component {
                     required
                     onChange={this.handleInputChangeFor('username')}
                   />
-                  <div>
-                    <TextField
-                      margin="normal"
-                      fullWidth
-                      name="password"
-                      label="Password"
-                      type="password"
-                      id="password"
-                      value={this.state.password}
-                      required
-                      onChange={this.handleInputChangeFor('password')}
-                    />
-                    <TextField
-                      margin="normal"
-                      fullWidth
-                      label="Email"
-                      autoFocus
-                      type="text"
-                      name="email"
-                      id="email"
-                      value={this.state.email}
-                      required
-                      onChange={this.handleInputChangeFor('email')}
-                    />
-
-                    <Button className="registerButton"
-                      type="submit"
-                      fullWidth
-                      variant="contained"
-                      color="primary"
-                      name="submit"
-                      value="Register"
-                    >Register
+                  <TextField
+                    margin="normal"
+                    fullWidth
+                    name="password"
+                    label="Password"
+                    type="password"
+                    id="password"
+                    value={this.state.password}
+                    required
+                    onChange={this.handleInputChangeFor('password')}
+                  />
+                  <TextField
+                    margin="normal"
+                    fullWidth
+                    label="Email"
+                    autoFocus
+                    type="text"
+                    name="email"
+                    id="email"
+                    value={this.state.email}
+                    required
+                    onChange={this.handleInputChangeFor('email')}
+                  />
+                  <Button className="registerButton"
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    color="primary"
+                    name="submit"
+                    value="Register"
+                  >Register
                     </Button>
-                    <center>
-                      <Link to="/login">
-                        <Button
-                          type="logbutton"
-                          className="loginButton"
-                          color="primary"
-                        >
-                          Login
+                  <center>
+                    <Link to="/login">
+                      <Button
+                        type="logbutton"
+                        className="loginButton"
+                        color="primary"
+                      >
+                        Login
                       </Button>
-                      </Link>
-                    </center>
-                  </div>
+                    </Link>
+                  </center>
+
                 </form>
               </div>
             </Container>
