@@ -12,7 +12,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute'
 import UserPageEffect from '../UserPage/UserPageEffect';
 import NewLandingPageEffect from '../NewLandingPage/modules/views/NewLandingPageEffect';
 import LoginFormEffect from '../LoginForm/LoginFormEffect';
-import RegisterPageEffect from '../RegisterPage/RegisterPageEffect';
+import RegisterPage from '../RegisterPage/RegisterPage';
 import ChatBotEffect from '../Chatbot/ChatBotEffect';
 import JournalPageTableItem from '../JournalPageTableItem/JournalPageTableItem';
 import EditJournalPage from '../EditJournalPage/EditJournalPage';
@@ -56,7 +56,7 @@ class App extends Component {
               exact
               path="/registration"
               authRedirect="/admin"
-              component={RegisterPageEffect}
+              component={RegisterPage}
             />
             <ProtectedRoute
               exact
