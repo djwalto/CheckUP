@@ -23,6 +23,7 @@ import Nav from '../Nav/Nav';
 import "./AppPage.css";
 
 const AppPage = () => {
+    // hooks that set initial state 
     const [country, setInputCountry] = useState("worldwide");
     const [countryInfo, setCountryInfo] = useState({});
     const [countries, setCountries] = useState([]);
@@ -33,6 +34,9 @@ const AppPage = () => {
     const [mapZoom, setMapZoom] = useState(3);
 
     useEffect(() => {
+        // useEffect fires off async when page loads then we use fetch
+        // to make api call and then we take the json data from response
+        // then the data set countryInfo with the data
         fetch("https://disease.sh/v3/covid-19/all")
             .then((response) => response.json())
             .then((data) => {
@@ -41,13 +45,16 @@ const AppPage = () => {
     }, []);
 
     useEffect(() => {
+        // useEffect fires off async when page loads then we use fetch
+        // to make api call and then we take the json data from response
+        // then map through data and set the name and value
         const getCountriesData = async () => {
             fetch("https://disease.sh/v3/covid-19/countries")
                 .then((response) => response.json())
                 .then((data) => {
                     const countries = data.map((country) => ({
-                        name: country.country,
-                        value: country.countryInfo.iso2,
+                        name: country.country, // United Kingdom, United States
+                        value: country.countryInfo.iso2, // UK, USA, FR
                     }));
                     let sortedData = sortData(data);
                     setCountries(countries);
@@ -58,7 +65,14 @@ const AppPage = () => {
         getCountriesData();
     }, []);
 
+
     const onCountryChange = async (e) => {
+        // listens for countryCode then makes api call
+        // using the countryCode to get specific data for country
+        // it uses ternary operator to check if countryCode is worldwide
+        // then it will make call to /all, otherwise
+        // make call to /countries/countryCode
+        // gets json format data resonse and sets countryInfo to data
         const countryCode = e.target.value;
         const url =
             countryCode === "worldwide"
@@ -67,9 +81,9 @@ const AppPage = () => {
         await fetch(url)
             .then((response) => response.json())
             .then((data) => {
-                setInputCountry(countryCode);
-                setCountryInfo(data);
-                setMapCenter([data.countryInfo.lat, data.countryInfo.long]);
+                setInputCountry(countryCode); //set country to countryCode
+                setCountryInfo(data); // set to all the data from response
+                setMapCenter([data.countryInfo.lat, data.countryInfo.long]);  // set the lat and long
                 setMapZoom(4);
             });
     };
