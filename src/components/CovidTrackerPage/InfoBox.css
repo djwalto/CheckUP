@@ -7,7 +7,7 @@
     margin-right: 10px;
 }
 
-.covidnfoBox--selected {
+.covidinfoBox--selected {
     border-top: 10px solid greenyellow;
 }
 
@@ -33,7 +33,7 @@
     margin-top: 15px !important;
 }
 
-.icovidnfoBox {
+.covidinfoBox {
     width: 275px;
     text-align: center;
     border-radius: 20px !important;

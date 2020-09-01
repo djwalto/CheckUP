@@ -7,7 +7,7 @@ function InfoBox({ title, cases, total, active, isRed, ...props }) {
     return (
         <Card
             onClick={props.onClick}
-            className={`icovidnfoBox ${active && "icovidnfoBox--selected"} ${
+            className={`covidinfoBox ${active && "covidinfoBox--selected"} ${
                 isRed && "covidinfoBox--red"
                 }`}
         >

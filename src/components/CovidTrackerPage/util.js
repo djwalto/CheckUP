@@ -36,7 +36,11 @@ export const prettyPrintStat = (stat) =>
     stat ? `+${numeral(stat).format("0.0a")}` : "+0";
 
 // draw circles on map with interactive tooltip
-// takes center from country
+// takes center of circle from country lat and long
+// uses Math.sqrt to get a number and multiplies it by
+// the multiplier in the casesTypeColors object and uses that
+// as the radius to determine size of the circle
+// creates popup of flag, country, cases, recoveries, deaths when clicked
 export const showDataOnMap = (data, casesType = "cases") =>
     data.map((country) => (
         <Circle
