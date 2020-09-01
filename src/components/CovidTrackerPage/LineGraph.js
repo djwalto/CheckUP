@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import numeral from "numeral";
 
+// pre defined options from documentation
+// uses numeral to display the value at the tooltip on graph
 const options = {
     legend: {
         display: false,
@@ -47,6 +49,11 @@ const options = {
     },
 };
 
+// takes data and turns it into object for ChartJS
+// loops through all the cases from data
+// sets x to the date and y to subtract the last date from new date total
+// for the difference of the new cases then push newDataPoint
+// into chartData and then return the chartData
 const buildChartData = (data, casesType) => {
     let chartData = [];
     let lastDataPoint;
@@ -64,7 +71,11 @@ const buildChartData = (data, casesType) => {
 };
 
 function LineGraph({ casesType }) {
+    // set inital state 
     const [data, setData] = useState({});
+    // useEffect to make api call to this endpoint
+    // get the json response as our data for
+    // all worldwide data from the last 120 days
     useEffect(() => {
         const fetchData = async () => {
             await fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=120")
@@ -73,8 +84,7 @@ function LineGraph({ casesType }) {
                 })
                 .then((data) => {
                     let chartData = buildChartData(data, casesType);
-                    setData(chartData);
-                    console.log(chartData);
+                    setData(chartData); // set Data to chartData
                 });
         };
         fetchData();

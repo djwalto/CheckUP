@@ -34,7 +34,7 @@ const AppPage = () => {
     const [mapZoom, setMapZoom] = useState(3);
 
     useEffect(() => {
-        // useEffect fires off async when page loads then we use fetch
+        // useEffect fires off when page loads then we use fetch
         // to make api call and then we take the json data from response
         // then the data set countryInfo with the data
         fetch("https://disease.sh/v3/covid-19/all")
@@ -45,7 +45,7 @@ const AppPage = () => {
     }, []);
 
     useEffect(() => {
-        // useEffect fires off async when page loads then we use fetch
+        // useEffect fires off when page loads then we use fetch
         // to make api call and then we take the json data from response
         // then map through data and set the name and value
         const getCountriesData = async () => {
@@ -56,10 +56,10 @@ const AppPage = () => {
                         name: country.country, // United Kingdom, United States
                         value: country.countryInfo.iso2, // UK, USA, FR
                     }));
-                    let sortedData = sortData(data);
-                    setCountries(countries);
-                    setMapCountries(data);
-                    setTableData(sortedData);
+                    let sortedData = sortData(data); // sorts the data using util.js
+                    setCountries(countries); // set countries with countries
+                    setMapCountries(data); // set mapCountries with data
+                    setTableData(sortedData); // set tableData with the sortedData
                 });
         };
         getCountriesData();
@@ -83,7 +83,7 @@ const AppPage = () => {
             .then((data) => {
                 setInputCountry(countryCode); //set country to countryCode
                 setCountryInfo(data); // set to all the data from response
-                setMapCenter([data.countryInfo.lat, data.countryInfo.long]);  // set the lat and long
+                setMapCenter([data.countryInfo.lat, data.countryInfo.long]);  // set the lat and long to pass to map
                 setMapZoom(4);
             });
     };

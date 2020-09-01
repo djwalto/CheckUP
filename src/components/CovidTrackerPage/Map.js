@@ -3,6 +3,10 @@ import { Map as LeafletMap, TileLayer } from "react-leaflet";
 import "./Map.css";
 import { showDataOnMap } from "./util";
 
+// uses Tile Layer and Leaflet Map
+// brings center, zoom, casesType, and countries as props
+// creates map then uses showDataOnMap to loop
+// through countries and draw circles on map
 function Map({ countries, casesType, center, zoom }) {
     return (
         <div className="covidmap">
