@@ -7,9 +7,9 @@
     border-radius: 85px;
     width: 100% !important;
     height: 100% !important;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px;
     margin-top: 15%;
-    margin-left: 35% !important;
+    margin-left: 35% !important; */
 }
 
 .registerAvatar {
@@ -29,7 +29,7 @@
 .registerDiv {
     display: flex;
     justify-content: space-evenly;
-    height: 790px;
+    height: 700px;
     background-image: url(https://images.unsplash.com/photo-1531854676938-4d5f9703df2e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80);
     background-size: inherit;
     background-position: right;
@@ -54,7 +54,8 @@
 }
 
 .registerCard {
-    width: 1500px !important;
+    width: 100% !important;
+    height: 100%;
     justify-content: space-around !important;
     display: flex;
     flex-direction: column;
