@@ -19,7 +19,7 @@ To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.he
 
 ## Screen Shot
 
-<img src="/djwalto/CheckUP/master/Checkup1.png?raw=true" alt="CheckUP1.png">
+<img src="/djwalto/CheckUP/blob/master/Checkup1.png?raw=true" alt="CheckUP1.png">
 
 
 ### Prerequisites
