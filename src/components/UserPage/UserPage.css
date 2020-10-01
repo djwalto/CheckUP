@@ -1,5 +1,5 @@
 .userPaperJournal {
-    background-color: rgb(30, 232, 247) !important;
+    /* background-color: rgb(30, 232, 247) !important; */
     background-image: url("../../../journal.png");
     align-items: center; 
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 2.0);
@@ -37,7 +37,7 @@
 }
 
 .userPaperTracker {
-    background-color: rgb(98, 228, 195) !important;
+    /* background-color: rgb(98, 228, 195) !important; */
     align-items: center; 
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 2.0);
     background-image: url("../../../virus.png");
@@ -49,7 +49,7 @@
 }
 
 .userPaperChat {
-    background-color: rgb(32, 144, 230) !important;
+    /* background-color: rgb(32, 144, 230) !important; */
     align-items: center; 
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 2.0);
     background-image: url("../../../bot.jpg");
