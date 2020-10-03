@@ -25,7 +25,7 @@ Link to software that is required to install the app (e.g. node).
 
 ## Local Development
 
-Create a database named `your database name` and run the following queries.
+- Create a database named `your database name` and run the following queries.
 ``` SQL
 CREATE TABLE "user"
 (
