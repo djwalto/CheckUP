@@ -26,7 +26,8 @@ Link to software that is required to install the app (e.g. node).
 ## Local Development
 
 Create a database named `your database name` and run the following queries.
-`CREATE TABLE "user"
+``` SQL
+CREATE TABLE "user"
 (
     "id" SERIAL PRIMARY KEY,
     "first_name" VARCHAR (80) NOT NULL,
@@ -45,19 +46,19 @@ CREATE TABLE "feedback"
     "comments" text,
     "flagged" boolean default false,
     "date" date not null default CURRENT_DATE
-);`
-
-Open up your editor of choice and run an `npm install`.
-Run `npm run server` in your terminal.
-Run `npm run client` in your terminal.
-The `npm run client` command will open up a new browser tab for you!
+);
+```
+- Open up your editor of choice and run an `npm install`.
+- Run `npm run server` in your terminal.
+- Run `npm run client` in your terminal.
+- The `npm run client` command will open up a new browser tab for you!
 
 
 ## Built With
 
-React
-Redux
-Redux-Saga
-Node
-PostgreSQL
+- React
+- Redux
+- Redux-Saga
+- Node
+- PostgreSQL
 
