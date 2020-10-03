@@ -26,26 +26,26 @@ Link to software that is required to install the app (e.g. node).
 ## Local Development
 
 1. Create a database named `your database name` and run the following queries.
-2. `CREATE TABLE "user"
-`(`
-   ` "id" SERIAL PRIMARY KEY,`
-   ` "first_name" VARCHAR (80) NOT NULL,`
-   ` "last_name" VARCHAR (120) NOT NULL,`
-   ` "username" VARCHAR (80) UNIQUE NOT NULL,`
-   ` "password" VARCHAR (1000) NOT NULL,`
-   ` "email" VARCHAR (1000) UNIQUE NOT NULL`
-`);`
+2. `CREATE TABLE "user"`
+(
+    "id" SERIAL PRIMARY KEY,
+    "first_name" VARCHAR (80) NOT NULL,
+    "last_name" VARCHAR (120) NOT NULL,
+    "username" VARCHAR (80) UNIQUE NOT NULL,
+    "password" VARCHAR (1000) NOT NULL,
+    "email" VARCHAR (1000) UNIQUE NOT NULL
+);
 
 `CREATE TABLE "feedback"`
-`(`
-   ` "id" serial primary key,`
-   ` "feeling" INT not null,`
-   ` "understanding" INT not null,`
-   ` "support" INT not null,`
-   ` "comments" text,`
-   ` "flagged" boolean default false,`
-   ` "date" date not null default CURRENT_DATE`
-`);` 
+(
+    "id" serial primary key,
+    "feeling" INT not null,
+    "understanding" INT not null,
+    "support" INT not null,
+    "comments" text,
+    "flagged" boolean default false,
+    "date" date not null default CURRENT_DATE
+);
 3. Open up your editor of choice and run an `npm install`
 4. Run `npm run server` in your terminal
 5. Run `npm run client` in your terminal
