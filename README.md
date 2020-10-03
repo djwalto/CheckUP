@@ -15,7 +15,6 @@ Second is the ability to have the most recent worldwide data for COVID-19 availa
 
 And lastly is the ability to use a chatbot to perform a COVID-19 screening test on the user, to help determine whether quartantine is advised, or seeking out professional healthcare advice is needed to further conclude testing.
 
-To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com)
 
 ### Prerequisites
 
