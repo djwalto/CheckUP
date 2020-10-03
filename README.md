@@ -25,8 +25,8 @@ Link to software that is required to install the app (e.g. node).
 
 ## Local Development
 
-1. Create a database named `your database name` and run the following queries.
-2. `CREATE TABLE "user"
+Create a database named `your database name` and run the following queries.
+`CREATE TABLE "user"
 (
     "id" SERIAL PRIMARY KEY,
     "first_name" VARCHAR (80) NOT NULL,
@@ -36,7 +36,7 @@ Link to software that is required to install the app (e.g. node).
     "email" VARCHAR (1000) UNIQUE NOT NULL
 );
 
-`CREATE TABLE "feedback"`
+CREATE TABLE "feedback"
 (
     "id" serial primary key,
     "feeling" INT not null,
@@ -45,11 +45,12 @@ Link to software that is required to install the app (e.g. node).
     "comments" text,
     "flagged" boolean default false,
     "date" date not null default CURRENT_DATE
-);
-3. Open up your editor of choice and run an `npm install`.
-4. Run `npm run server` in your terminal.
-5. Run `npm run client` in your terminal.
-6. The `npm run client` command will open up a new browser tab for you!
+);`
+
+Open up your editor of choice and run an `npm install`.
+Run `npm run server` in your terminal.
+Run `npm run client` in your terminal.
+The `npm run client` command will open up a new browser tab for you!
 
 
 ## Built With
